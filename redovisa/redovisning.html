@@ -2,7 +2,7 @@
 <html lang="sv">
 <head>
 <meta charset="utf-8">
-<title>Redovisning | Javascript</title>
+<title>Redovisning | Databas</title>
 <link rel="stylesheet" href="style/style.css">
 </head>
 
@@ -14,8 +14,7 @@
     <nav>
         <a href="me.html">Me</a> |
         <a href="redovisning.html">Redovisning</a> |
-        <a href="om.html">Om</a> |
-        <a href="../kmom05/dom/">DOM</a>
+        <a href="om.html">Om</a>
     </nav>
 </header>
 
@@ -38,341 +37,40 @@
 
     <section>
     <a id="kmom01"><h2>Kmom01</h2></a>
-    <p>Jag ser mycket fram emot att jobba med JavaScript. Jag vill veta varför
-        det är så efterfrågat att företag faktiskt sätter upp egna utbildningar
-        för att fylla sitt personalbehov. Det är också ett språk som hela tiden
-        har funnits precis i periferin av det som jag skapat så långt. Det är
-        hög tid att göra mina hemsidesprojekt dynamiska.</p>
-    <p>Vid denna första anblick har Javascript visat sig vara en trevlig upplevelse.
-        Språket är tydligt, med deklarationer, och (optionella) semikolon som visar
-        rad- och satsslut. Jag har inte haft några större bekymmer att jobba igenom
-        uppgifterna ännu, och jag förstår de här grundläggande konstruktionerna.</p>
-    <p>Längre fram skulle jag vilja vet mer om hur man kan koppla ihop de tekniker
-        vi tittat på. Sambanden PHP-HTML-CSS-JS är ju ganska tydligt, databaser och
-        textfiler också. Men därutöver? Var hör Python hemma? Hur används JavaScript
-        för att bygga mobilapplikatinoer? Fungerar Python bara i terminalen, eller
-        kan man bygga lättillgängliga program med det? Jag saknar det ledet såhär
-        långt.</p>
-
-    <h3>Sandbox</h3>
-    <p>Jag satte ihop min sandbox i en version av min redovisningssida från
-        htmlphp. Mest för att se hur mycket, eller lite, jag behövde ändra för
-        att återanvända stilen. Det var inom rimliga gränser men det känns lite
-        tungt att använda den arsenalen för sidor som egentligen skulle kunna
-        göras väldigt lätta. Jag kommer nog att göra enklare sidor till
-        kommande kursmoment.</p>
-    <p>Jag upptäckte att jag kunde fylla på HTML i samma element som JS uppdaterade.
-        Det jag skrev hamnade ovanför det som main.js genererade. Anledningen att
-        jag gjorde så var för att validatorerna gnällde på mig när jag inte hade
-        någon enda rubrik i ett article-element. Det som skapas i Javascript
-        renderas i efterhand, och hamnar inte i källkoden. Därför kan validatorn
-        inte läsa det. Synd om man skall behöva göra ett sådant hack för att
-        sidan skall validera.</p>
-    <p>För att formatera datum och tid använde jag "toLocaleDateString('sv-SE'),
-        och toLocaleTimeString. Det gjorde hela jobbet åt mig.</p>
+    <p>Det är alltid roligt att starta upp en ny kurs. Även om det än en gång
+        skulle börja med installationsbekymmer. Av någon anledning gav jag mig
+        sjutton på att jag skulle använda MySQL, och det ville inte min version
+        av Debian. Därefter gick jag över till MariaDB, och det gick inte heller.</p>
+    <p>Efter att en mycket tålmodig Mikael Roos handlett mig en stund kom vi fram
+        till att det rörde sig om en officiell bug. Det kändes ganska så bra,
+        i vanliga fall brukar det bara vara användarfel.</p>
+    <p>Bekymren fortsatte. Att uppgradera från MySQL till MariaDB verkar inte
+        vara någon bra idé. Det blir en massa rester kvar av MySQL som stör,
+        alldeles oavsett om man kör <code>purge</code> eller ej.</p>
 
     <h3>Kort och koncist</h3>
     <ul>
-        <li><strong>Vilken utvecklingsmiljö använder du?</strong><br \>
-            Jag använder en egen LAMP-stack. Apache och PHP 7.2. Jag har börjat
-            inse att linuxdistron spelar roll. Inte minst vilka installationer
-            LAMP-stacken gör automatiskt. Jag kör Ubuntu, och det jag får via
-            apt-get verkar vara väldigt rena utgåvor, så jag sitter hela tiden
-            och fyller på med moduler och bibliotek.</li>
-        <li><strong>Är du bekant med HTML, CSS tillsammans med JavaScript sedan tidigare?</strong><br \>
-            Nej, det kan jag inte säga. Jag har bara kört några enstaka JS-kommandon lokalt
-            i HTML-koden nu och då.</li>
-        <li><strong>Gick det bra med JSFiddle/CodePen, några funderingar kring verktygen?</strong><br \>
-            Jag tyckte att CodePen var en smula snällare att jobba med, så kanske
-            blir det min favorit. Precis sådär skall utveckling vara, att saker och ting
-            ändras i real-tid, det blir både enkelt och roligt att testa sin kod.</li>
-        <li><strong>Gick det bra att komma i gång med kursmomentet?</strong><br \>
-            Det var väldigt trevligt med en kurs där installationen av utvecklingsmiljön
-            inte tog flera dagar! Det var ju bara att köra på, jag hade allt på plats.
-            Bra att finna att verktyg man inte använt redan ligger i verktygslådan.</li>
         <li><strong>Vilken är din TIL för detta kmom?</strong><br \>
-            Styrkan i att använda en riktig manual (MDN). JavaScript är ett relativt
-            gammalt språk som sattes ihop lite för fort. Det har ändrats mycket mellan
-            versionerna. Hittar man någon guide eller lösning på stackexchange så
-            består den kanske av legacy-kod, även om den är publicerad för bara något
-            år sedan.</li>
+            <p></p></li>
+        <li><strong>Fråga?</strong><br \>
+            <p>Svar...</p></li>
     </ul>
     </section>
 
     <section>
     <a id="kmom02"><h2>Kmom02</h2></a>
-    <p>Nu börjar jag bli ganska varm i kläderna. Jag kan släppa greppet en smula
-    och finna mina egna vägar, trots att språket är helt nytt för mig. Det känns
-    logiskt på något sätt, en blandning mellan PHP och Python.</p>
-    <p>Jag lyckades köra hela kmom01 utan att inse hur console.log fungerade.
-    Så jag löste allt mer eller mindre utan möjlighet till felsökning. Fungerade
-    scriptet så renderade sidan, innan dess var det vitt. Det blev enklare i
-    kmom02...</p>
-    <p>Jag hade för avsikt att byta ut min rätt sirliga sandlåda mot en enklare
-    design, men kände att det var bättre att lägga tid på annat. Kanske är det
-    dumt att göra om något som redan fungerar? Bättre att bara kopiera och jobba
-    vidare med rätt saker? Det är ändå rätt trevligt med lite skog och gröna
-    träd i bakgrunden.</p>
-    <h3>Flaggor</h3>
-    <p>Att rita flaggor med HTML och CSS kändes som en klassisk problemlösare.
-    Trevligt, och inte särskilt svårt egentligen. Jag utmanade mig själv lite
-    extra och provade med Puerto Ricos flagga. Där behövs en stjärna, och en
-    triangel. Jag blev tvungen att slå upp hur man formulerade sådant i CSS.
-    Sen tog det lite tid att tweaka allt så att det verkligen stämde.</p>
-    <p>En stor missräkning är <em>Dannebrogen</em>. Dess proportioner är sådana
-    att jag inte kunde räkna ut hur flaggan skulle se ut i samma storlek som de
-    övriga, så den fick helt enkelt bli större.</p>
-    <h3>Pacman</h3>
-    <p>Övningen med den vandrande diven var riktigt rolig. Även här blev jag
-    tvungen att slå upp hur någon nörd (sagt med all aktning) skapat en
-    pacman-figur med hjälp av CSS. Jag funderade en hel del över extrauppgiften
-    att begränsa rörligheten till div-content. Försökte hitta nollpunkten
-    vänster, uppåt för content, och jobba med CSS kring overflow, men hittade
-    ingen lösning.</p>
-
-    <h3>Kort och koncist</h3>
-    <ul>
-        <li><strong>Har du programmerat i JavaScript tidigare?</strong><br \>
-            Nej, inte egentligen. Klart att jag fuskat lite när jag pysslat med
-            någonting som jag inte kunde lösa annars. Javascript har alltid
-            varit lite suspekt för mig. Något man skulle undvika därför att
-            olika webbläsare hanterade det så olika.</li>
-        <li><strong>Vad tycker du är det svåraste i utveckling med JavaScript
-            HTML och CSS?</strong><br \>
-            Just nu är det formulering av funktioner, med de olika parenteserna
-            för olika scope. Jag har inte riktigt greppat det där ännu.</li>
-        <li><strong>Vilken uppgift tog mest tid och vilken var mest lärorik?</strong><br \>
-            Uppgiften som tog mest tid var nog det rörliga elementet. Jag hade
-            en del jag fick fixa med där. Jag fick använda <em>keyCode</em> istället
-            för <em>key</em>. Jag jobbade som sagt en hel del med att få
-            elementet att inte lämna sandlådan, men lyckades inte med det.</li>
-        <li><strong>Vilken är din TIL för det här kursmomentet?</strong><br \>
-            Inget direkt omskakande den här gången. Kanske någon lite ökad
-            förståelse för hur man kan använda CSS för att skapa former med?
-            Annars var det som sagt hemtamt den här gången.</li>
-    </ul>
     </section>
 
     <section>
     <a id="kmom03"><h2>Kmom03</h2></a>
-    <p>Jag börjar hamna lite väl på efterkälken och skall försöka att hinna
-    ikapp innan jul. Jag har satt av lite extra tid för studier framgent. Det
-    känns inte som att jag har svårt för ämnena, men det blir klart svårare om
-    jag gör flera dagars uppehåll. Jag tappar kontinuiteten och behöver i någon
-    mån börja om när jag sätter mig med uppgifterna igen.</p>
-    <p>Över lag så är jag helt med på vad vi pysslar med. Konstruktionerna i
-    JavaScript påminner om en blandning mellan C++ och Python. Jag behöver - typ -
-    deklarera mina variabler, och jobbar med moduler och bibliotek som i
-    Python.</p>
-    <p>En fin sak är att jag inte har för stora problem med negativ transferens,
-    utan jag lär mig JavaScript som om det vore ett alldeles nytt
-    programmeringsspråk, utan att egentligen jämföra. Jag behöver lära mig en
-    del syntax, och i det här fallet hur saker och ting kan triggas, men
-    därutöver så är ett språk väldigt likt det andra. Kanske skall jag tillägga
-    att jag är glad att slippa Basic, Pascal, .net och andra (Fortran,
-    Kobold...).</p>
-    <p>Jag har en hel en del positiv transferens. Jag behöver inte längre
-    fundera över operatorer, loopar, funktioner. Det fungerar uten större
-    problem. Med just funktioner känner jag mig halvbra på att skapa olika
-    varianter i JavaScript. Jag försöker använda <em>best practise</em>,
-    och tycker att det kan vara väldigt praktiskt attlägga en funktion direkt
-    i en <em>eventListener</em> eller liknande. Men för att hålla det läsbart
-    föredrar jag att deklarera funktioner på ett klassiskt vis.</p>
-
-    <h3>Övningar</h3>
-    <p>Labben var rätt enkel den här gången, men som vanligt nöjer jag mig med
-    just och jämnt godkänt. Jag saknar inte ambitionen, tvärt om måste jag slita
-    mig från uppgiften för att istället jobba vidare. Jag ligger verkligen
-    efter och behöver rationalisera. De stora övningarna tenderar att ta mer tid
-    än jag räknar med från början.</p>
-    <p>Framför allt lägger jag för mycket tid på stil och utseende. Som i
-    uppgiften med flaggor, där jag valde att göra Costa Ricas flagga. Det måste
-    väl anses vara lite överkurs? Och gissa om den sprack när jag ritade ut den
-    med JavaScript. Där fick jag fundera lite mer än nödvändigt. Problemet hade
-    med arvet i CSS att göra. Jag hade lagt till en extra <em>div</em> runt
-    flaggan, och då ändras ju ordningen - child-element, relativ och absolut
-    placering.</p>
-    <p>Tärningsspelet var inga större problem. Även här fick jag slita mig lite,
-    för det skulle vara ganska enkelt att skriva ett Yatzy-spel. Jag lade till
-    en CSS-fil med tärningar, som fungerar ungefär som FontAwesome. Man sätter
-    storleken med <em>em</em> och hämtar rätt tärningssida med en CSS-klass.
-    Inget anmärkningsvärt, och inte alltför tidskrävande.</p>
-
-    <h3>Kort och koncist</h3>
-    <ul>
-        <li><strong>Hur känner du för funktioner i JavaScript?</strong><br \>
-            Jag känner igen mig från andra programmeringsspråk. Något skiljer
-            det sig alltid, men det känns tydligt med JavaScript att man
-            utvecklat det för att emulera det bästa med andra språk. Vissa sätt
-            att skriva funktioner måste anses lite legacy, men det går alldeles
-            utmärkt att använda de konstruktionerna. Jag väljer att skriva dem
-            ungefär som man skriver funktioner i C++, det blir liksom <em>min
-            stil</em>. Sen finner jag möjlgiheten att skriva inline-funktioner
-            lite fascinerande. Det kan säkert vara användbart, men ger också en
-            ganska rörig kod att läsa och underhålla.</li>
-        <li><strong>Vad tyckte du om de olika uppgifterna?</strong><br \>
-            Jag har som sagt inga större bekymmer med uppgifterna just nu. Det
-            är mer som trevlig problemlösning, som korsord eller pussel. Jag
-            kommer in i zonen, och så skriver jag på. Det händer alltid en del
-            när man validerar, men på det hela taget känner jag att jag hänger
-            med.</li>
-        <li><strong>Vilken är din TIL för det här kursmomentet?</strong><br \>
-            Att det kan vara nödvändigt att avbryta för några dagar, men att man
-            skall akta sig så att det inte blir för besvärligt att komma igång
-            igen. Det är inte mycket arbete, men helst skall man försöka att
-            jobba linjärt. Inte hoppa mellan kurserna, eller andra projekt här i
-            livet. Gör klart en sak i taget.</li>
-    </ul>
-
     </section>
 
     <section>
     <a id="kmom04"><h2>Kmom04</h2></a>
-    <p>Nu börjar jag äntligen få det riktigt tufft. Jag har väntat på det, och längtat
-    en smula. Alltför ofta har jag känt att jag redan har förståelse nog att lösa
-    de flesta uppgifterna med rätt tänk och lite googlande kring själva syntaxen.
-    Så var det inte här.</p>
-    <p>Objekt som koncept i JavaScript är rätt invecklat. På andra håll skriver man
-    sina egna objekt och så är det bra med det. Det finns dessutom bara ett enda
-    sätt att deklarera objekt. Här kan man skapa objekt direkt som variabler, eller
-    ställa upp dem snyggt och prydligt, nästan så att det liknar C. Jag väljer
-    alltid det prydliga sättet, för det förstår jag. Även om jag förstår att
-    det måste finnas fördelar med det andra sättet också. Att deklarerar funktioner
-    <em>in-line</em> visade sig till slut användbart när man jobbade med
-    <em>event-listeners</em>, trots att jag mer eller mindre avfärdat det som
-    arbetssätt.</p>
-
-    <h3>Övningar</h3>
-    <p>Labbar är alltid avslappnande och lärorika. Kanske har det med den
-    omedelbara återkopplingen att göra? Arrayer var inte så svårt, och objekt
-    bara lite klurigare. Bekymret med det senare är hur deklarationen av själva
-    objeketet skall se ut.</p>
-    <p>Det kändes lite overkill att sätta flaggorna som objekt. De skillde sig
-    helt enkelt åt alldeles för mycket, eller inte mycket alls beroende på hur
-    man tänker. Om alla flaggor hade samma former och mönster så skulle det leda
-    till en ganska naturlig uppdelning i metoder som returnerade HTML-kod. Nu
-    var det olika HTML till i stort sett varje flagga, och så löste CSS hur de
-    skulle renderas.</p>
-    <p>Det jag fick en känsla för var hur det skulle te sig om jag hade 203
-    flaggor att jobba med. (Möjligen skulle jag ha brutit ut funktionen för HTML
-    då så att inte alla flaggor skulle släpa runt på mönstret till alla andra
-    flaggor?) Att initiera 302 objekt med rätt ingångsvärden och sedan glömma allt
-    utom objektens namn, det underlättar när man kommer upp i volymer.</p>
-
-    <h3>Svårigheter</h3>
-    <p>Jag har som sagt längtat efter svårigheter, för det är i svårigheterna som
-    man verkligen lär sig. Det var min önskan när jag började plugga att det
-    skulle vara riktigt svårt, att man var tvungen att sätta sig ner och läsa
-    samma stycken om och om igen. Hittills har jag varit lite besviken.</p>
-    <p>Jag har hela tiden känt en progression. Det har blivit lättare och lättare
-    att läsa och förstå kod, men jag har inte kommit vidare i faktiskt kunskap
-    kring enskilda element i specifika språk. Om jag till exempel skulle behöva
-    skilja på arrayer, listor och tupler i Python så blir jag tvungen att slå
-    upp det någonstans. Det är lite sådant jag skulle vilja komma förbi.</p>
-    <p>Funktioner och objekt i JavaScript är lite samma, jag kan inte lära mig
-    syntax och inbyggda verktyg utantill.</p>
-    <p>För att komma dithän behöver man väl jobba i ett enda språk hela tiden, men
-    så länge jag studerar kommer jag inte att kunna avgöra vilket språk det i så
-    fall skulle vara. <em>Kanske</em> blir det möjligt i yrkeslivet, men nu får jag
-    nöja mig med förståelsen och hoppas att kunskap kommer med erfarenhet någon gång.</p>
-
-
-    <h3>Kort och koncist</h3>
-    <ul>
-        <li><strong>Hur kändes det att bekanta sig med begreppet array?</strong><br \>
-            <p>Arrayen är inga problem. Man tänker som i alla andra programmeringsspråk
-            vi berört hittills, och möjligen får man slå upp rätt syntax på webben. Det
-            går raskt och smidigt.</p></li>
-        <li><strong>Hur kändes det att bekanta sig med begreppet objekt?</strong><br \>
-            <p>Jag har använt objekt i PHP tidigare, och där är det ju mera strikt hur
-            ett objekt skall formuleras. Jag har inte riktigt greppat det för JavaScript
-            ännu. Det finns väldigt många sätt att formulera funktioner. Objekt verkar
-            vara lite striktare, men så är allt objekt å andra sidan, så det rör ihop
-            sig alldeles oavsett. Jag behöver lära mig vidare om det här.</p></li>
-        <li><strong>Kan du relatera till andra programmeringsspråk för arrayer och objekt?</strong><br \>
-            <p>Arrayer finns som sagt i alla språk vi tittat på; PHP, Python och JavaScript.</p>
-            <p>Objekt har vi inte berört, även om det finns i både PHP och Python. Det finns
-            likheter om man jämför med modulerna som vi delade upp Python-koden i. Och även
-            där verkar inbyggda funktioner bygga på <em>dot-notation</em> vilket
-            åtminstone antyder likhet med funktioner. Vi får säkert lära oss mer om det
-            framöver.</p></li>
-        <li><strong>Hur kändes omfattningen på detta kursmoment jämfört med övriga kmom?</strong><br \>
-            <p>För mig var det här rätt tungt. Jag ligger mycket långt efter nu, och
-            kanske är det därför jag känner så, men jag har som sagt haft svårt för att
-            lära mig hur funktioner fungerar på olika sätt. Det tar emot just nu.</p></li>
-        <li><strong>Är det någon av uppgifterna, eller materialet i allmänhet,
-                som du vill lyfta upp som extra lärorik?</strong><br \>
-            <p>Jag använder "Speaking Javascript" mycket initialt, och försöker att
-            använda MDN när jag Googlar det jag behöver reda ut under själva arbetet.</p>
-            <p>Jag uppskattar också föreläsningarna. Jag önskar att jag var med i
-            realtid igen, så att jag kunde ställa frågor. Även i forumen börjar jag
-            känna att jag ligger för långt efter för att kunna delta i samtalet.</p></li>
-        <li><strong>Vilken är din TIL för det här kursmomentet?</strong><br \>
-            <p><em>Allt</em> är objekt.</p></li>
-    </ul>
     </section>
 
     <section>
     <a id="kmom05"><h2>Kmom05</h2></a>
-    <h3>DOM</h3>
-    <p>Nu funderar jag på allvar på att faktiskt ge upp mina studier. Jag ligger
-    hela tiden alldeles för långt efter. Trots att jag nu valt att i stort sett
-    lägga ner designkursen så har jag inte hunnit ikapp i Javascript. Det känns
-    nedslående.</p>
-    <p>Uppgifterna är egentligen inte så svåra, och jag är gott och väl med på vad
-    vi försöker att uppnå, men jag hinner inte med i studietakten. Jag är ju också
-    en av dem som gör det här som en väg till karriärväxling, så jag behöver jobba
-    också. Det är nog för mycket.</p>
-    <p>Jag försöker ändå att ta in och förstå lite mer än själva uppgifterna.
-    I det här kursmomentet anar jag verktyg för att på olika sätt göra data mer
-    överskådligt. Att rita upp diagram i realtid, eller flytta fält i
-    koordinatmatriser. Dessvärre kan jag också se hur det kan användas till att
-    göra flashigare reklam, och spelmiljöer för online-casinon.</p>
-    <p>Konceptet DOM var inte helt nytt för mig, men jag har aldrig riktigt
-    fördjupat mig i det tidigare. Här någonstans finns också anledningen till
-    att jag varit så misstänksam mot JavaScript. Det finns för stora skillnader
-    mellan vad de olika webbläsarna klarar av. Man behöver koda lite för många
-    "om/ifall" för att det skall vara riktigt roligt. Men, nu när jag angriper
-    det här mer strukturerat och med avsikten att göra det till mitt yrke så kan
-    jag enklare acceptera att det inte är så roligt. Det är därför folk vill
-    betala pengar för att få det gjort.</p>
-    <h3>Svårigheter</h3>
-    <p>Jag kan inte riktigt förstå vad det var som var så krångligt med allt det
-    här. Kanske borde jag ha förstått från början hur stort programmet skulle bli?
-    Kanske hade jag vunnit mycket på att objektorientera koden redan från början,
-    men när jag insåg det var det liksom för sent. Det skulle vara lika mycket
-    jobb att bygga om allting som jag möjligen kunde ha sparat från den punkten
-    och framåt.</p>
-    <p>Jag övervägde att hoppa över övningen 4.2, skälet var tidsbrist. Jag kastade
-    ändå ett öga på den och fann att jag hade allt på plats. Möjligheter att
-    slumpa fram färg, form och position. Så jag gjorde den i ett nafs.</p>
-    <h3>Uppgift 5</h3>
-    <p>Min egen funktion bygger på 4.2 och ger elementen ett segervarv. Välj en
-    eller flera och tryck "f" så får ni se. I ett setInterval räknar jag upp en
-    iterator för varje varv. Fyra if-satser delar in intervalet i fyra delar.</p>
-    <p>Varje del är tjugo steg, varje steg tar 2 tiondelar av en sekund.</p>
-    <p>För varje steg flyttas alla valda element tjugo steg à 10px. Så länge
-    iteratorn är under 20 flyttas elementen uppåt, mellan 20 och 40 flyttar de
-    till vänster, och så vidare. När iteratorn når 81 stannar klockan.</p>
-
-    <h3>Kort och koncist</h3>
-    <ul>
-        <li><strong>Hur upplevde du DOM-uppgiften?</strong><br \>
-            <p>Momentet DOM var digert. Det var tungt och svårt. Programmet växte och
-            växte. Till slut hade jag över 600 rader, som jag verkligen kämpat ihop.
-            Jag är inte den som gnäller, men den här övningen var övermäktig. Jag har
-            jobbat mycket mer än 20 timmar bara på den.</p></li>
-        <li><strong>Vad anser du om Crockfords videor?</strong><br \>
-            <p>Jag har tittat igenom dem rätt flyktigt, då jag känner att han snart
-            hamnar en smula över huvudet på mig. Jag gillade särskilt historiken,
-            och Crockfords misstro till alla som publicerar på webben...</p>
-            <p>Videorna ger mig inte direkt kunskap, men de ökar min förståelse
-            en smula.</p></li>
-        <li><strong>Vilken är din TIL för det här kursmomentet?</strong><br \>
-            <p>Att jobba med <em>state</em> som en given förutsättning. I den
-            här uppgiften återgick inte allt till noll varje gång jag tryckte
-            på knappen som skulle utlösa händelsen.</p></li>
-    </ul>
     </section>
 
     <section>
@@ -384,10 +82,6 @@
     <a id="kmom07"><h2>Kmom07 - 10</h2></a>
     <p>Tänk, tryck, tala.</p>
     </section>
-
-    <footer>
-    <p>"Less isn't more. More is more!"</p>
-    </footer>
 
 </article>
 
