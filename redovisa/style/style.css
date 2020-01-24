@@ -36,3 +36,9 @@ figure {
 img {
     width: 100%;
 }
+
+code {
+    color: #000;
+    background: #efefef;
+    border: 1px solid #777;
+}
