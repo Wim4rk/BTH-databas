@@ -37,8 +37,16 @@ img {
     width: 100%;
 }
 
-code {
+code,
+kbd,
+samp,
+var {
     color: #000;
     background: #efefef;
     border: 1px solid #777;
+}
+
+code {
+    overflow: auto;
+    overflow-y: hidden;
 }
