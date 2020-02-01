@@ -1,28 +1,4 @@
-<!doctype html>
-<html lang="sv">
-<head>
-    <meta charset="utf-8">
-    <title>Me | Databas</title>
-    <link rel="stylesheet" href="style/style.css">
-</head>
-
-<body>
-
-
-
-<header>
-    <nav>
-        <a href="me.html">Me</a> |
-        <a href="redovisning.php">Redovisning</a> |
-        <a href="om.html">Om</a>
-    </nav>
-</header>
-
-
-
-<article>
-
-<h1>Databas</h1>
+#Databas#
 
 <figure>
     <img src="img/Selfie.jpg" width="500" alt="Bild på mig">
@@ -64,18 +40,3 @@
     att ta hand om. När jag hinner med så ger jag mig gärna ut och fotograferar.
     Alternativt kan jag sitta ner en stund och löda ihop någon trevlig elektronisk
     apparat. På senare år har jag blivit grym på att laga leksaker!</p>
-
-</article>
-
-<footer id="site-footer">
-    <h4>Valideringsverktyg</h4>
-    <p>
-        <a href="http://validator.w3.org/check/referer" target="_blank">HTML5</a> |
-        <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">CSS</a> |
-        <a href="http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance" target="_blank">Unicorn</a>
-    </p>
-</footer>
-
-<script src="js/main.js"></script>
-</body>
-</html>
