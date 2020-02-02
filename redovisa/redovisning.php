@@ -43,7 +43,13 @@
     </section>
 
     <section>
-    <a id="kmom02"><h2>Kmom02</h2></a>
+    <?php
+        $filename = __DIR__ . "/texter/kmom02.md";
+        $text     = file_get_contents($filename);
+        $filter   = new \Anax\TextFilter\TextFilter();
+        $parsed   = $filter->parse($text, ["shortcode", "markdown"]);
+        echo $parsed->text;
+    ?>
     </section>
 
     <section>
