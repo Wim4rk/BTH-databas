@@ -1,3 +1,4 @@
+USE skolan;
 --
 -- Create tables for DB 'skolan'
 -- Olov Wimark

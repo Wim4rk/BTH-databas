@@ -1,3 +1,4 @@
+USE skolan;
 --
 -- Delete from database skolan.
 -- Olov Wimark

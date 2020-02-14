@@ -4,6 +4,8 @@
 -- 2020-01-23
 --
 
+USE skolan;
+
 DROP TABLE IF EXISTS larare;
 CREATE TABLE larare
 (

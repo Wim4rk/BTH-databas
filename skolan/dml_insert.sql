@@ -4,6 +4,8 @@
 -- 2020-01-23
 --
 
+USE skolan;
+
 -- Add teacher staff
 --
 DELETE FROM larare;

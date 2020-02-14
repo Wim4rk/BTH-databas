@@ -1,4 +1,4 @@
-<a id="kmom01"><h2>Kmom02</h2></a>
+<a id="kmom02"><h2>Kmom02</h2></a>
 
 Ja tuffar vidare. Förmodligen i lite lägre fart än de flesta andra, men jag är
 fast besluten om att faktiskt ta mig igenom ett par kurser i mer eller mindre

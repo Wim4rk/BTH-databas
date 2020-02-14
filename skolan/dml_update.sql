@@ -1,3 +1,5 @@
+USE skolan;
+
 --
 -- Update a column value
 --

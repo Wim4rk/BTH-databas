@@ -1,6 +1,22 @@
 -- Lönerevision Hogwarts
 --
 
+-- VI SKA KOPIERA TABELLEN OCKSÅ
+-- =============================
+--
+-- Make copy of table
+--
+DROP TABLE IF EXISTS larare_pre;
+CREATE TABLE larare_pre LIKE larare;
+INSERT INTO larare_pre SELECT * FROM larare;
+
+-- Lönekolumnen på fel ställe, ändra ordning på kolumnerr
+ALTER TABLE larare
+    MODIFY COLUMN lon int(11)
+    AFTER kon;
+
+USE skolan;
+
 -- Beräkna lönepotten
 -- Summa löner. 6,4%.
 SELECT ROUND(SUM(lon)*0.064, 0) as Pott FROM larare;

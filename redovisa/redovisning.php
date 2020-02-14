@@ -53,7 +53,13 @@
     </section>
 
     <section>
-    <a id="kmom03"><h2>Kmom03</h2></a>
+        <?php
+            $filename = __DIR__ . "/texter/kmom03.md";
+            $text     = file_get_contents($filename);
+            $filter   = new \Anax\TextFilter\TextFilter();
+            $parsed   = $filter->parse($text, ["shortcode", "markdown"]);
+            echo $parsed->text;
+        ?>
     </section>
 
     <section>

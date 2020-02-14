@@ -1,3 +1,5 @@
+USE skolan;
+
 ALTER TABLE larare
     DROP COLUMN IF EXISTS kompetens;
 

@@ -1,3 +1,5 @@
+USE skolan;
+
 SELECT akronym, avdelning FROM larare;
 
 SELECT akronym AS '1' FROM larare WHERE avdelning = 'DIDD';
