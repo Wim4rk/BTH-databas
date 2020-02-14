@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Wim4rk/BTH-databas/issues"
   },
-  "homepage": "https://github.com/Wim4rk/BTH-databas#readme"
+  "homepage": "https://github.com/Wim4rk/BTH-databas#readme",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "promise-mysql": "^4.1.3"
+  }
 }
