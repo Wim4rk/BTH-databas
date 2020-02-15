@@ -4,6 +4,9 @@ Det går skapligt just nu. Möjligen har jag lite dålig struktur på mitt läsa
 kring just den här kursen. Det känns som att jag missat något i tidigare
 kursmoment. Jag får läsa baklänges när jag kommer på vad det är.
 
+Jag har också kunnat plocka lite kunskaper från kmom04. Det känns nästan som
+att de här bägge momenten sitter ihop.
+
 Jag känner inte att SQL-satserna är särdeles svåra. Jag kan omformulera den
 klartext som beskriver frågan. "Alla som jobbar på avdelningen och inte har
 katt..." blir snabbt och enkelt till SQL. Mer eftertanke, och efterforskning,
@@ -62,12 +65,13 @@ $$
 DELIMITER ;
 </code>
 
-Coolt va?
+Coolt va? Den ville jag visa upp, för det är väl några kursmoment innan vi
+kommer till procedurer, eller hur?
 
 ### ER-modellering
 
 Mitt första intryck av ER-modellering är att det rör sig om en dåligt
-organiserad mind-map. Framför allt kardinaliteten känns för mig som 
+organiserad mind-map. Framför allt kardinaliteten känns för mig som
 något man behandlar i steget "Logisk modellering". Från och med steg
 sju känns det som att man håller på att bygga en databas. På sätt och
 vis har jag redan mitt sinne på det stadiet när jag börjar ställa de
