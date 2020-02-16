@@ -2,11 +2,11 @@ USE skolan
 
 SELECT avdelning, COUNT(akronym) FROM larare GROUP BY avdelning;
 
-SELECT avdelning, SUM(ny_lon) FROM larare GROUP BY avdelning;
+SELECT avdelning, SUM(lon) FROM larare GROUP BY avdelning;
 
-SELECT avdelning, AVG(ny_lon) FROM larare GROUP BY avdelning;
+SELECT avdelning, AVG(lon) FROM larare GROUP BY avdelning;
 
-SELECT kon, AVG(ny_lon) FROM larare GROUP BY kon;
+SELECT kon, AVG(lon) FROM larare GROUP BY kon;
 
 SELECT avdelning, AVG(kompetens) AS Kompetens
     FROM larare
@@ -17,7 +17,7 @@ SELECT avdelning, AVG(kompetens) AS Kompetens
 
 SELECT avdelning AS Avdelning,
     kompetens AS Kompetens,
-    ROUND(ny_lon) AS Snittlon,
+    ROUND(lon) AS Snittlon,
     COUNT(akronym) AS antal
     FROM larare
     GROUP BY Avdelning, Kompetens
@@ -26,8 +26,8 @@ SELECT avdelning AS Avdelning,
 
 SELECT
     avdelning,
-    ROUND(AVG(ny_lon)) AS Snittlon,
-    COUNT(ny_lon) AS Antal
+    ROUND(AVG(lon)) AS Snittlon,
+    COUNT(lon) AS Antal
 FROM larare
 GROUP BY
     avdelning
@@ -37,8 +37,8 @@ ORDER BY
 
 SELECT
     avdelning,
-    ROUND(AVG(ny_lon)) AS Snittlon,
-    COUNT(ny_lon) AS Antal
+    ROUND(AVG(lon)) AS Snittlon,
+    COUNT(lon) AS Antal
 FROM larare
 GROUP BY
     avdelning
@@ -50,8 +50,8 @@ ORDER BY
 
 SELECT
     avdelning,
-    ROUND(AVG(ny_lon)) AS Snittlon,
-    COUNT(ny_lon) AS Antal
+    ROUND(AVG(lon)) AS Snittlon,
+    COUNT(lon) AS Antal
 FROM larare
 GROUP BY
     avdelning
@@ -63,8 +63,8 @@ ORDER BY
 
 SELECT
     avdelning,
-    ROUND(AVG(ny_lon)) AS Snittlon,
-    COUNT(ny_lon) AS Antal
+    ROUND(AVG(lon)) AS Snittlon,
+    COUNT(lon) AS Antal
 FROM larare
 WHERE
     kompetens = 1
@@ -76,8 +76,8 @@ ORDER BY
 
 SELECT
     avdelning,
-    ROUND(AVG(ny_lon)) AS Snittlon,
-    COUNT(ny_lon) AS Antal
+    ROUND(AVG(lon)) AS Snittlon,
+    COUNT(lon) AS Antal
 FROM larare
 WHERE
     kompetens = 1
@@ -91,7 +91,7 @@ ORDER BY
 
 SELECT
     avdelning AS Avdelning,
-    ROUND(AVG(ny_lon)) AS Snittlon,
+    ROUND(AVG(lon)) AS Snittlon,
     COUNT(akronym) AS Antal
 FROM larare
 GROUP BY Avdelning
@@ -101,7 +101,7 @@ GROUP BY Avdelning
 SELECT
     avdelning AS Avdelning,
     kompetens AS Kompetens,
-    ROUND(AVG(ny_lon)) AS Snittlon,
+    ROUND(AVG(lon)) AS Snittlon,
     COUNT(akronym) AS Antal
 FROM larare
 GROUP BY Avdelning, Kompetens
@@ -111,7 +111,7 @@ GROUP BY Avdelning, Kompetens
 SELECT
     avdelning AS Avdelning,
     kompetens AS Kompetens,
-    ROUND(AVG(ny_lon)) AS Snittlon,
+    ROUND(AVG(lon)) AS Snittlon,
     COUNT(akronym) AS Antal
 FROM larare
 WHERE Kompetens < 4
@@ -122,7 +122,7 @@ GROUP BY Avdelning, Kompetens
 SELECT
     avdelning AS Avdelning,
     kompetens AS Kompetens,
-    ROUND(AVG(ny_lon)) AS Snittlon,
+    ROUND(AVG(lon)) AS Snittlon,
     COUNT(akronym) AS Antal
 FROM larare
 WHERE Kompetens < 4

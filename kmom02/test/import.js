@@ -5,7 +5,7 @@
  *
  */
 
-"use strict"
+"use strict";
 
 let utils = require("./stringRange1.js");
 let res;

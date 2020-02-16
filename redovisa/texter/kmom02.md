@@ -26,12 +26,13 @@ mot den som inte gjort ett iota JavaScript, och även om jag släpar i den kurse
 så kändes den helt inom min *comfort zone*. Punkterna om async och await var
 intressanta, och jag vet hur de kommer att användas i senare kursmoment.
 
-### Uppgiften
+### Node JS mot MySQL
 
 Att skriva nodejs mot MySQL var inte några stora bekymmer. Jag lade en del tid
 på att försöka skapa en universaltabell för utskrifter, men det är ju ett
 jättestort jobb. Nu hade vi ju dessutom turen att alla sökningar kom att rymmas
-inom likadana tabeller. Så jag skapade en funktion den vägen.
+inom likadana tabeller. Så jag skapade en enda funktion ändå, och såg till att
+resultatet passade i tabellen.
 
 ###Kort och koncist
 

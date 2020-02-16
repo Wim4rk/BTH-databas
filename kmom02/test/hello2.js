@@ -16,7 +16,7 @@ function main() {
     var date = new Date();
 
     console.log(date);
-    
+
     b = a + 1;
 
     for (let i = 0; i < 9; i++) {

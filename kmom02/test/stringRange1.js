@@ -5,7 +5,7 @@
  *
  */
 
-"use strict"
+"use strict";
 
 module.exports = {
     "stringRange": stringRange

@@ -1,3 +1,5 @@
+USE skolan;
+
 -- Lönerevision Hogwarts
 --
 
@@ -14,8 +16,6 @@ INSERT INTO larare_pre SELECT * FROM larare;
 ALTER TABLE larare
     MODIFY COLUMN lon int(11)
     AFTER kon;
-
-USE skolan;
 
 -- Beräkna lönepotten
 -- Summa löner. 6,4%.
