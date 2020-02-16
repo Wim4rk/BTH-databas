@@ -27,21 +27,24 @@ const rl = readline.createInterface({
 (async function() {
     const db = await mysql.createConnection(config);
     let res;
+    let max;
 
     // Ask question and handle answer in async arrow funciton
-    console.info("You can't search birthdates.");
-    rl.question("Search: ", async (search) => {
-        // Run query:
-        res = await searchTeachers(db, search);
+    console.info("Search salary range.");
+    rl.question("Search, min: ", async (min) => {
+        rl.question("Search, max: ", async(max) => {
+            // Run query:
+            res = await searchSalary(db, min, max);
 
-        //Print result
-        let str = pt.table(res);
+            //Print result
+            let str = pt.table(res);
 
-        console.info(str);
+            console.info(str);
 
-        //Clean up
-        rl.close();
-        db.end();
+            //Clean up
+            rl.close();
+            db.end();
+        });
     });
 })();
 
@@ -62,12 +65,11 @@ const rl = readline.createInterface({
  *
  * @returns {array} SQL result.
  */
-async function searchTeachers(db, search) {
+async function searchSalary(db, min, max) {
     let sql;
     let res;
-    let like = `%${search}%`;
 
-    console.info(`Searching for: ${search}`);
+    console.info(`Searching between: ${min} - ${max}.`);
 
     sql = `
         SELECT
@@ -78,15 +80,10 @@ async function searchTeachers(db, search) {
             kompetens,
             DATE_FORMAT(fodd, "%Y-%m-%d") AS fodd
         FROM larare
-        WHERE
-            akronym LIKE ?
-            OR fornamn LIKE ?
-            OR efternamn LIKE ?
-            OR avdelning LIKE ?
-            OR lon = ?
-        ORDER BY akronym;
+        WHERE lon BETWEEN ${min} AND ${max}
+        ORDER BY lon;
     `;
-    res = await db.query(sql, [like, like, like, like, search]);
+    res = await db.query(sql);
 
     return res;
 }

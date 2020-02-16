@@ -4,11 +4,34 @@ Ja tuffar vidare. Förmodligen i lite lägre fart än de flesta andra, men jag �
 fast besluten om att faktiskt ta mig igenom ett par kurser i mer eller mindre
 rätt tidsram.
 
+Det har blivit så att jag jobbar med tre kursmoment samtidigt här. Det var inte
+direkt meningen, men det finns vissa fördelar med det. Det kan bli svårt att
+redovisa exakt vad som hörde till vilket kursmoment, men jag gör mitt bästa.
+
+När jag nu sitter här så inser jag att jag är klar med kmom02 sedan länge.
+
 ### Svårigheter
 
+Jag har gått vilse i min planering. Jag har jobbat parallellt med kmom03 och
+-04 bara för att nu inse att jag inte gjort kmom02 färdigt. Jag tar in kunskap,
+vissa saker bättre just för att jag läser baklänges. Jag kan async och await
+när jag börjar på artikeln om asynkron programmering.
+
+Annars är mina stora svårigheter inom JavaScript snarare än inom SQL.
 
 ###Introduktion, labb
 
+Jag skummade artikeln [JavaScript och Nodejs][1]. Den kändes mest orienterad
+mot den som inte gjort ett iota JavaScript, och även om jag släpar i den kursen
+så kändes den helt inom min *comfort zone*. Punkterna om async och await var
+intressanta, och jag vet hur de kommer att användas i senare kursmoment.
+
+### Uppgiften
+
+Att skriva nodejs mot MySQL var inte några stora bekymmer. Jag lade en del tid
+på att försöka skapa en universaltabell för utskrifter, men det är ju ett
+jättestort jobb. Nu hade vi ju dessutom turen att alla sökningar kom att rymmas
+inom likadana tabeller. Så jag skapade en funktion den vägen.
 
 ###Kort och koncist
 
@@ -49,3 +72,5 @@ Jag har lärt mig att skriva Bash-script.
 Det finns mer än `<code>`-elementet för att skriva kod-liknande text i
 HTML-text. Till exempel `<kbd>` som står för input, `<samp>` som står
 för output och `<var>` som står för variabel.
+
+[1]: https://dbwebb.se/kunskap/javascript-och-nodejs-med-async-och-await

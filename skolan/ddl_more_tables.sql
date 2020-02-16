@@ -12,7 +12,7 @@ DROP TABLE IF EXISTS kurs;
 
 CREATE TABLE kurs
 (
-    kod CHAR(6),
+    kod CHAR(6) NOT NULL PRIMARY KEY,
     namn VARCHAR(15),
     poang FLOAT,
     niva CHAR(3)
@@ -41,5 +41,7 @@ CREATE TABLE kurstillfalle
     -- FOREIGN KEY (kurskod) REFERENCES kurs(kod),
     FOREIGN KEY (kursansvarig) REFERENCES larare(akronym)
 )
-CHARACTER SET 'utf8'
-COLLATE 'utf8_swedish_ci';
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8
+COLLATE=utf8_swedish_ci
+;

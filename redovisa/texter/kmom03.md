@@ -28,6 +28,19 @@ Jag undrar om jag missat någon övning eller föreläsning där?
 
 Nu löste det sig, men efter mycket möda.
 
+Än så länge är det JavaScript som är svårast i den här kursen, även om jag den
+här gången träffade jag ett kvistigt problem. Jag kunde inte få *Foreign
+keys* att fungera när jag skapade en tabell mellan två andra tabeller-
+(Övningen [skapa fler tabeller][2].) MariaDB anmälde hela tiden att det var ett
+bekymmer med tabellen där jag försökte att skapa en referens, och jag felsökte
+där i timmar. Niklas Andersson hjälpte mig på lördagskvällen och fann att det
+inte fanns någon primärnyckel på den av tabellerna jag länkade till, och då
+fungerar det ju inte.
+
+Som en trevlig bieffekt så lärde jag mig en del om teckenkodning och
+databas-motorer. Och att det finns otroligt formella sätt att uttrycka
+beroenden, kopplingar med mera.
+
 ###Introduktion, labb
 
 Jag tuffade på ganska bra genom de instruerade övningarna. Vid ett tillfälle
@@ -121,3 +134,4 @@ HTML-text. Till exempel `<kbd>` som står för input, `<samp>` som står
 för output och `<var>` som står för variabel.
 
 [1]: https://sv.wikipedia.org/wiki/Idempotent
+[2]: https://dbwebb.se/guide/kom-igang-med-sql-i-mysql/skapa-fler-tabeller
