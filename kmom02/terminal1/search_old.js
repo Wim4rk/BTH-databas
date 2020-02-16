@@ -26,40 +26,11 @@ const rl = readline.createInterface({
     rl.question("Search for: ", async (search) => {
         str = await searchTeachers(db, search);
         console.info(str);
-        
+
         rl.close();
         db.end();
     });
 })();
-
-/**
- * Get a report with teacher details, formatted as a table
- *
- * @async
- * @param {connection} db Database connection.
- * @returns {string} Formatted table to print out.
- */
-
-async function viewTeachers(db) {
-    let sql;
-    let res;
-    let str;
-
-    sql = `
-        SELECT
-            akronym,
-            fornamn,
-            efternamn,
-            avdelning,
-            lon
-        FROM larare
-        ORDER BY akronym;
-    `;
-
-    res = await db.query(sql);
-    str = teacherAsTable(res);
-    return str;
-}
 
 /**
  * Output resultset as formatted table with details on a teacher.

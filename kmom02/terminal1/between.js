@@ -27,12 +27,11 @@ const rl = readline.createInterface({
 (async function() {
     const db = await mysql.createConnection(config);
     let res;
-    let max;
 
     // Ask question and handle answer in async arrow funciton
     console.info("Search salary range.");
     rl.question("Search, min: ", async (min) => {
-        rl.question("Search, max: ", async(max) => {
+        rl.question("Search, max: ", async (max) => {
             // Run query:
             res = await searchSalary(db, min, max);
 
@@ -53,7 +52,9 @@ const rl = readline.createInterface({
  *
  * @async
  * @param {connection} db Database connection.
- * @returns {string} Formatted table to print out.
+ * @param {int} min Search criteria
+ * @param {int} max Search criteria
+ * @returns {array} SQL result
  */
 
 /**

@@ -11,11 +11,10 @@
 "use strict";
 
 module.exports = {
-    "table":printTable
+    "table": printTable
 };
 
 function printTable(res) {
-
     //console.info(res);
     let str = "";
 
@@ -23,7 +22,7 @@ function printTable(res) {
     str += "Akronym  Namn                Avd     Lön   Komp  Född \n";
     str += "-----------------------------------------------------------\n";
 
-        // Loop through each row the resultset
+    // Loop through each row the resultset
     for (const row of res) {
         // console.info(row);
 

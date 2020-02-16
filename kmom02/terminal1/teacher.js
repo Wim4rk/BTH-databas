@@ -22,7 +22,6 @@ const pt = require("./print_table.js");
     const db = await mysql.createConnection(config);
     let sql;
     let res;
-    let data;
 
     sql = `
         SELECT

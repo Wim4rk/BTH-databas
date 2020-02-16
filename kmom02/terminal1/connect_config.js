@@ -5,6 +5,7 @@
  */
 "use strict";
 
+const mysql = require("promise-mysql");
 const config = require("./config.json");
 
 /**

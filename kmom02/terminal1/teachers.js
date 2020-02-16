@@ -15,7 +15,7 @@ const config = require("./config.json");
     const db = await mysql.createConnection(config);
     let sql;
     let res;
-    let data;
+    // let data;
 
     sql = `
         SELECT
@@ -29,31 +29,31 @@ const config = require("./config.json");
     `;
     res = await db.query(sql);
 
-    data = JSON.stringify(res, null, 4);
+    // data = JSON.stringify(res, null, 4);
 
     // Output as formatted text in table
-let str;
+    let str;
 
-str  = "+-----------+---------------------+-----------+----------+\n";
-str += "| Akronym   | Namn                | Avdelning |   Lön    |\n";
-str += "|-----------|---------------------|-----------|----------|\n";
+    str  = "+-----------+---------------------+-----------+----------+\n";
+    str += "| Akronym   | Namn                | Avdelning |   Lön    |\n";
+    str += "|-----------|---------------------|-----------|----------|\n";
 
     // Loop through each row the resultset
-for (const row of res) {
-    // console.info(row);
+    for (const row of res) {
+        // console.info(row);
 
-    str += "| ";
-    str += row.akronym.padEnd(10);
-    str += "| ";
-    str += (row.fornamn + " " + row.efternamn).padEnd(20);
-    str += "| ";
-    str += row.avdelning.padEnd(10);
-    str += "| ";
-    str += row.lon.toString().padStart(8);
-    str += " |\n";
-}
+        str += "| ";
+        str += row.akronym.padEnd(10);
+        str += "| ";
+        str += (row.fornamn + " " + row.efternamn).padEnd(20);
+        str += "| ";
+        str += row.avdelning.padEnd(10);
+        str += "| ";
+        str += row.lon.toString().padStart(8);
+        str += " |\n";
+    }
 
-str  += "+-----------+---------------------+-----------+----------+\n";
+    str  += "+-----------+---------------------+-----------+----------+\n";
 
     // console.info(data);
     console.info(str);
