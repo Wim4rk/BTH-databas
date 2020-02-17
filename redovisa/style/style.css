@@ -41,17 +41,16 @@ code,
 kbd,
 samp,
 var {
+    display: inline;
     font-family: "Courier New", Courier, monospace;
     font-style: normal;
     color: #000;
     background: #efefef;
     border: 1px solid #777;
-    padding: 0 .2em;
+    padding: 0 0.2em;
 }
 
 code {
     display: block;
     white-space: pre-wrap;
-    /* overflow: auto;
-    overflow-y: hidden; */
 }

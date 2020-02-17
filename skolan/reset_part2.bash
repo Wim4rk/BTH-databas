@@ -10,7 +10,7 @@ read -r -sp ">>> Root password: " passvar
 mysql -uroot -p"$passvar" skolan < setup.sql > /dev/null
 
 file="ddl.sql"
-printf "\n>>> Create tables ($file)\n"
+printf "\n>>> Create tables (%s)\n" $file
 mysql -uroot -p"$passvar" skolan < $file > /dev/null
 
 file="dml_insert.sql"

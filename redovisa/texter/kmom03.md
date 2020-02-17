@@ -43,44 +43,6 @@ beroenden, kopplingar med mera.
 
 ###Introduktion, labb
 
-Jag tuffade på ganska bra genom de instruerade övningarna. Vid ett tillfälle
-skulle vi kopiera tabellen för lönerevision, och där råkade jag på bekymmer.
-Just för att kunna räkna ut löneutveckling och dylikt så skapade jag en
-kolumn "ny_lon". Därmed räknade jag ut uppgifter om löneutveckling redan i
-föregående kursmoment.
-
-Det fungerade ju naturligtvis hur bra som helst, men det var ju inte enligt
-instruktion så jag fick fortsätta att improvisera när det var dags att kopiera
-tabeller. Längst upp i filen <var>dml_union</var> raderade jag kolumnen *lon*
-och bytte namn på *ny_lon* till *lon*.
-
-För att göra mitt script [idempotent][1] fick jag skapa en PROCEDURE:
-
-<code>-- Replace my column ny_lon-
-DROP PROCEDURE IF EXISTS column_lon;
-DELIMITER $$
-CREATE PROCEDURE column_lon()
-BEGIN
-    IF EXISTS(
-        SELECT NULL
-        FROM information_schema.COLUMNS
-        WHERE TABLE_NAME = 'larare'
-        AND TABLE_SCHEMA = 'skolan'
-        AND COLUMN_NAME = 'ny_lon'
-    )
-    THEN
-        ALTER TABLE larare DROP COLUMN lon;
-        ALTER TABLE larare CHANGE ny_lon lon int(11) DEFAULT NULL;
-        ALTER TABLE larare MODIFY COLUMN lon int(11) AFTER kon;
-    END IF;
-END
-$$
-DELIMITER ;
-</code>
-
-Coolt va? Den ville jag visa upp, för det är väl några kursmoment innan vi
-kommer till procedurer, eller hur?
-
 ### ER-modellering
 
 Mitt första intryck av ER-modellering är att det rör sig om en dåligt
@@ -129,9 +91,9 @@ __Vilken är din TIL för detta moment?__
 
 Jag har lärt mig att skriva Bash-script.
 
-Det finns mer än `<code>`-elementet för att skriva kod-liknande text i
-HTML-text. Till exempel `<kbd>` som står för input, `<samp>` som står
-för output och `<var>` som står för variabel.
+Det finns mer än <samp>\<code\></samp>-elementet för att skriva kodliknande
+text i HTML-text. Till exempel <samp>\<kbd\></samp> som står för input,
+<samp>\<amp\></samp> som står för output och <samp>\<var\></samp> som står för
+variabel.
 
-[1]: https://sv.wikipedia.org/wiki/Idempotent
 [2]: https://dbwebb.se/guide/kom-igang-med-sql-i-mysql/skapa-fler-tabeller
