@@ -8,6 +8,9 @@ SET NAMES 'utf8';
 ALTER TABLE larare CONVERT TO CHARSET utf8 COLLATE utf8_swedish_ci;
 ALTER TABLE larare_pre CONVERT TO CHARSET utf8 COLLATE utf8_swedish_ci;
 
+
+-- Delete tables in the right order, because dependencies.
+DROP TABLE IF EXISTS kurstillfalle;
 DROP TABLE IF EXISTS kurs;
 
 CREATE TABLE kurs
@@ -17,8 +20,9 @@ CREATE TABLE kurs
     poang FLOAT,
     niva CHAR(3)
 )
-CHARSET utf8
-COLLATE utf8_swedish_ci
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8
+COLLATE=utf8_swedish_ci
 ;
 
 SELECT TABLE_NAME, ENGINE, TABLE_COLLATION
@@ -28,7 +32,6 @@ SELECT TABLE_NAME, ENGINE, TABLE_COLLATION
 --
 -- Create table: kurstillfalle
 --
-DROP TABLE IF EXISTS kurstillfalle;
 
 CREATE TABLE kurstillfalle
 (
@@ -38,10 +41,32 @@ CREATE TABLE kurstillfalle
     kursansvarig CHAR(3) NOT NULL,
     lasperiod INT NOT NULL,
     PRIMARY KEY (id),
-    -- FOREIGN KEY (kurskod) REFERENCES kurs(kod),
+    FOREIGN KEY (kurskod) REFERENCES kurs(kod),
     FOREIGN KEY (kursansvarig) REFERENCES larare(akronym)
 )
 ENGINE=InnoDB
 DEFAULT CHARSET=utf8
 COLLATE=utf8_swedish_ci
 ;
+
+--
+-- Ange vilket sätt som tabeller skall lagras på
+--
+CREATE TABLE t1
+(
+    i INT
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8
+COLLATE=utf8_swedish_ci
+;
+
+CREATE TABLE t2
+(
+    i INT
+) ENGINE=InnoDB
+DEFAULT CHARSET=utf8
+COLLATE=utf8_swedish_ci
+;
+
+SHOW CREATE TABLE kurs \G;
