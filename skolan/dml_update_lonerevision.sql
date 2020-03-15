@@ -21,6 +21,7 @@ ALTER TABLE larare
 -- Summa löner. 6,4%.
 SELECT ROUND(SUM(lon)*0.064, 0) as Pott FROM larare;
 -- Det behövs en kolumn för att lagra den nya lönen
+ALTER TABLE larare DROP COLUMN IF EXISTS ny_lon;
 ALTER TABLE larare ADD COLUMN ny_lon INT;
 -- Lägger gamla lönen där (kommer behövas för vissa uträkningar)
 UPDATE larare SET ny_lon = lon;
@@ -73,3 +74,30 @@ SELECT  SUM(ny_lon) AS Lönesumma,
 SELECT akronym, avdelning, fornamn, kon, ny_lon, kompetens
     FROM larare
     ORDER BY ny_lon DESC;
+
+
+-- Replace my column ny_lon. IF needed
+DROP PROCEDURE IF EXISTS column_lon;
+DELIMITER $$
+CREATE PROCEDURE column_lon()
+BEGIN
+    IF EXISTS(
+        SELECT NULL
+        FROM information_schema.COLUMNS
+        WHERE TABLE_NAME = 'larare'
+        AND TABLE_SCHEMA = 'skolan'
+        AND COLUMN_NAME = 'ny_lon'
+    )
+    THEN
+        ALTER TABLE larare DROP COLUMN lon;
+        ALTER TABLE larare CHANGE ny_lon lon int(11) DEFAULT NULL;
+        ALTER TABLE larare MODIFY COLUMN lon int(11) AFTER kon;
+    END IF;
+END
+$$
+DELIMITER ;
+
+-- Run procedure
+CALL column_lon();
+
+DROP PROCEDURE column_lon;

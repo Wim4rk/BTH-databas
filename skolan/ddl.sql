@@ -5,6 +5,9 @@ USE skolan;
 -- 2020-01-23
 --
 
+-- Delete tables in the right order, because dependencies.
+DROP TABLE IF EXISTS kurstillfalle;
+DROP TABLE IF EXISTS kurs;
 DROP TABLE IF EXISTS larare;
 CREATE TABLE larare
 (

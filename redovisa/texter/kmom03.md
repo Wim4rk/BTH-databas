@@ -24,17 +24,18 @@ JavaScript-kursen.
 
 Jag har en diffus känsla av att jag halkar efter rent kunskapsmässigt, bara det
 att jag tydligen ganska enkelt borde kunna skriva en CLI-meny för *nodejs*...
-Jag undrar om jag missat någon övning eller föreläsning där?
+Jag undrar om jag missat någon övning eller föreläsning där? Det kan vara lite
+svårt att avgöra i efterhand.
 
-Nu löste det sig, men efter mycket möda.
+Nu löste det sig, men efter viss möda.
 
 Än så länge är det JavaScript som är svårast i den här kursen, även om jag den
 här gången träffade jag ett kvistigt problem. Jag kunde inte få *Foreign
 keys* att fungera när jag skapade en tabell mellan två andra tabeller-
 (Övningen [skapa fler tabeller][2].) MariaDB anmälde hela tiden att det var ett
 bekymmer med tabellen där jag försökte att skapa en referens, och jag felsökte
-där i timmar. Niklas Andersson hjälpte mig på lördagskvällen och fann att det
-inte fanns någon primärnyckel på den av tabellerna jag länkade till, och då
+där i timmar. Niklas Andersson hjälpte mig och vi fann att det saknades
+en primärnyckel på den av tabellerna jag länkade till, och då
 fungerar det ju inte.
 
 Som en trevlig bieffekt så lärde jag mig en del om teckenkodning och
@@ -48,12 +49,13 @@ beroenden, kopplingar med mera.
 Mitt första intryck av ER-modellering är att det rör sig om en dåligt
 organiserad mind-map. Framför allt kardinaliteten känns för mig som
 något man behandlar i steget "Logisk modellering". Från och med steg
-sju känns det som att man håller på att bygga en databas. På sätt och
+sju (*kokboken*) känns det som att man håller på att bygga en databas.
+På sätt och
 vis har jag redan mitt sinne på det stadiet när jag börjar ställa de
 inledande frågorna.
 
 Kanske är det till min nackdel, kanske är det inte en relationsdatabas
-som kunden beskriver, utan en txt- eller json-fil?
+som kunden beskriver den här gången, utan en txt- eller json-fil?
 
 ### Kort och koncist
 
@@ -89,10 +91,11 @@ Vill man ha det mer dynamiskt får man koppla SQL samman med ett annat språk.
 
 __Vilken är din TIL för detta moment?__
 
-Jag har lärt mig att skriva Bash-script.
+Jag har lärt mig att skriva Bash-script, en smula utöver det som försiggick i
+kursen.
 
 Det finns mer än <samp>\<code\></samp>-elementet för att skriva kodliknande
-text i HTML-text. Till exempel <samp>\<kbd\></samp> som står för input,
+text i HTML. Till exempel <samp>\<kbd\></samp> som står för input,
 <samp>\<amp\></samp> som står för output och <samp>\<var\></samp> som står för
 variabel.
 

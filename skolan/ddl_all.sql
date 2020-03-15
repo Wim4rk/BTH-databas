@@ -23,6 +23,7 @@ CREATE TABLE larare
     kon CHAR(1),
     lon INT,
     fodd DATE,
+    kompetens INT DEFAULT 1,
 
     PRIMARY KEY (akronym)
 );
@@ -87,19 +88,12 @@ DEFAULT CHARSET=utf8
 COLLATE=utf8_swedish_ci
 ;
 
--- SHOW CREATE TABLE kurs;
-
-ALTER TABLE larare
-    DROP COLUMN IF EXISTS kompetens;
-
--- Add column to table
-ALTER TABLE larare ADD COLUMN kompetens INT DEFAULT 1;
-
 
 DROP TABLE IF EXISTS larare_pre;
 CREATE TABLE larare_pre LIKE larare;
 -- INSERT INTO larare_pre SELECT * FROM larare;
 -- Table should be empty at this stage
+
 
 DROP VIEW IF EXISTS v_name_alder;
 -- Skapa vyn

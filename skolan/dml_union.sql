@@ -1,6 +1,6 @@
 USE skolan;
 
--- Ewplace my column ny_lon. IF needed
+-- Replace my column ny_lon. IF needed
 DROP PROCEDURE IF EXISTS column_lon;
 DELIMITER $$
 CREATE PROCEDURE column_lon()

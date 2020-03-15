@@ -49,6 +49,8 @@ DEFAULT CHARSET=utf8
 COLLATE=utf8_swedish_ci
 ;
 
+DROP TABLE IF EXISTS t1;
+DROP TABLE IF EXISTS t2;
 --
 -- Ange vilket sätt som tabeller skall lagras på
 --
@@ -69,4 +71,13 @@ DEFAULT CHARSET=utf8
 COLLATE=utf8_swedish_ci
 ;
 
-SHOW CREATE TABLE kurs \G;
+SHOW CREATE TABLE kurs\G
+
+--
+-- Update table larare and larare_pre to use same charset
+-- and collation.
+--
+ALTER TABLE larare CONVERT TO CHARSET utf8 COLLATE utf8_swedish_ci;
+ALTER TABLE larare_pre CONVERT TO CHARSET utf8 COLLATE utf8_swedish_ci;
+
+SHOW CREATE TABLE kurs\G

@@ -85,7 +85,6 @@ CREATE TABLE `larare` (
   `lon` int(11) DEFAULT NULL,
   `fodd` date DEFAULT NULL,
   `kompetens` int(11) DEFAULT 1,
-  `ny_lon` int(11) DEFAULT NULL,
   PRIMARY KEY (`akronym`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -96,7 +95,7 @@ CREATE TABLE `larare` (
 
 LOCK TABLES `larare` WRITE;
 /*!40000 ALTER TABLE `larare` DISABLE KEYS */;
-INSERT INTO `larare` VALUES ('ala','DIPT','Alastor','Moody','M',30000,'1943-04-03',1,27594),('dum','ADM','Albus','Dumbledore','M',80000,'1941-04-01',7,85000),('fil','ADM','Argus','Filch','M',25000,'1946-04-06',3,27594),('gyl','DIPT','Gyllenroy','Lockman','M',30000,'1952-05-02',1,27594),('hag','ADM','Hagrid','Rubeus','M',25000,'1956-05-06',2,30000),('hoc','DIDD','Madam','Hooch','K',35000,'1948-04-08',1,37580),('min','DIDD','Minerva','McGonagall','K',40000,'1955-05-05',2,49880),('sna','DIPT','Severus','Snape','M',40000,'1951-05-01',2,45000);
+INSERT INTO `larare` VALUES ('ala','DIPT','Alastor','Moody','M',27594,'1943-04-03',1),('dum','ADM','Albus','Dumbledore','M',85000,'1941-04-01',7),('fil','ADM','Argus','Filch','M',27594,'1946-04-06',3),('gyl','DIPT','Gyllenroy','Lockman','M',27594,'1952-05-02',1),('hag','ADM','Hagrid','Rubeus','M',30000,'1956-05-06',2),('hoc','DIDD','Madam','Hooch','K',37580,'1948-04-08',1),('min','DIDD','Minerva','McGonagall','K',49880,'1955-05-05',2),('sna','DIPT','Severus','Snape','M',45000,'1951-05-01',2);
 /*!40000 ALTER TABLE `larare` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -317,4 +316,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-02-17 21:09:17
+-- Dump completed on 2020-03-14 21:23:35
