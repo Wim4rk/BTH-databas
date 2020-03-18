@@ -2,7 +2,7 @@
 
 Det går skapligt just nu. Möjligen har jag lite dålig struktur på mitt läsande
 kring just den här kursen. Det känns som att jag missat något i tidigare
-kursmoment. Jag får läsa baklänges när jag kommer på vad det är.
+kursmoment. Jag läser runt i cirklar.
 
 Jag har också kunnat plocka lite kunskaper från kmom04. Det känns nästan som
 att de här bägge momenten sitter ihop.
@@ -19,84 +19,71 @@ helt enkelt skaplig koll på det.
 
 När vi sedan talar om hur vi skall slå samman detta med JavaScript och Node så
 blir det genast betydligt svårare. Mest för att jag aldrig tidigare jobbat med
-JavaScript i CLI. Och säkert också för att jag fortfarande släpar i
-JavaScript-kursen.
+JavaScript i CLI.
 
-Jag har en diffus känsla av att jag halkar efter rent kunskapsmässigt, bara det
-att jag tydligen ganska enkelt borde kunna skriva en CLI-meny för *nodejs*...
-Jag undrar om jag missat någon övning eller föreläsning där? Det kan vara lite
-svårt att avgöra i efterhand.
+Än så länge är det JavaScript som är svårast i den här kursen, även om vissa
+av SQL-problemen är riktigt kvistiga. Den sista JOIN-uppgiften, om vilka
+kurser de tre äldsta lärarna undervisade, tog mig en timme att räkna ut.
 
-Nu löste det sig, men efter viss möda.
-
-Än så länge är det JavaScript som är svårast i den här kursen, även om jag den
-här gången träffade jag ett kvistigt problem. Jag kunde inte få *Foreign
-keys* att fungera när jag skapade en tabell mellan två andra tabeller-
-(Övningen [skapa fler tabeller][2].) MariaDB anmälde hela tiden att det var ett
-bekymmer med tabellen där jag försökte att skapa en referens, och jag felsökte
-där i timmar. Niklas Andersson hjälpte mig och vi fann att det saknades
-en primärnyckel på den av tabellerna jag länkade till, och då
-fungerar det ju inte.
-
-Som en trevlig bieffekt så lärde jag mig en del om teckenkodning och
-databas-motorer. Och att det finns otroligt formella sätt att uttrycka
-beroenden, kopplingar med mera.
+En sak som jag inte trodde skulle vara ett problem är att skriva rapporter. Jag
+skulle behöva en del mallar. Inte heller själva dokumenthanteringen var så
+enkel som jag minns att det var. Jag använder LibreOffice Writer, och det
+känns rätt primitivt.
 
 ###Introduktion, labb
 
+Det är alltid ett nöje att följa med i övningarna. Vissa var ganska svåra,
+men ändå inte oöverstigliga. Vissa saker kan jag sedan
+tidigare, och då är det bara att rassla på, men så sätter man sågen i en spik
+emellanåt.
+
+Det var många övningar den här gången, och det tog sin tid.
+
 ### ER-modellering
 
-Mitt första intryck av ER-modellering är att det rör sig om en dåligt
-organiserad mind-map. Framför allt kardinaliteten känns för mig som
-något man behandlar i steget "Logisk modellering". Från och med steg
-sju (*kokboken*) känns det som att man håller på att bygga en databas.
-På sätt och
-vis har jag redan mitt sinne på det stadiet när jag börjar ställa de
-inledande frågorna.
+Rent instinktivt känner jag en viss aversion mot UML och ER. Det tar tid, och
+det *känns* inte så nödvändigt. Jag får jobba lite på det, för jag tror säkert
+att ER kan vara ett bra verktyg, inte minst i dokumentationen.
 
-Kanske är det till min nackdel, kanske är det inte en relationsdatabas
-som kunden beskriver den här gången, utan en txt- eller json-fil?
+Det är ett problem för mig att mitt sinne redan ligger längre in i framtiden än
+vad det borde göra. Så fort jag formulerat vad databasen skall göra känner jag
+mig färdig att börja bygga den. Jag hoppar från steg 1 till 7 (*kokboken*).
+
+Jag tror att det är till min nackdel, kanske är det inte en relationsdatabas
+som kunden beskriver, utan en txt- eller json-fil?
 
 ### Kort och koncist
 
-__Berätta kort om den utvecklingsmiljö du sitter i__ och vilka
-databaser/klienter du installerat och vilka versioner de har.
+__Några generella reflektioner på att skriva och jobba med menydrivna
+terminalprogram i JavaScript och Node.js?__
 
-Jag sitter på Ubuntu (Debian) och har hamnat på MariaDB. Jag har
-MySQL Workbench som GUI.
+Jag gillar verkligen att skriva för terminalen. Det känns som det gjorde när
+jag började koda en gång i tiden.
 
-__Hur känns det att komma igång med databaser, klienter och SQL?__
+__Berätta om din kodstruktur i ditt terminalprogram mot databasen, är du nöjd
+eller ser du förbättringspotential?__
 
-När jag väl tog mig igenom installationsbekymren så var det inga
-problem alls. Jag har seglat igenom uppgifterna. Mest tid har jag
-lagt på att snygga till resultaten.
+Det finns massor av saker som kan bli bättre. Felhanteringen, till exempel, och
+indata-saniteten. Det är svårt begränsa sig så att jag inte sitter och skriver
+fullständiga program. Jag har svårt att strunta i de fel jag hittar, även om
+jag kanske borde rikta in mig mer på kärnan i exemplet.
 
-__Har du jobbat med databaser eller liknande tidigare?__
+__Något att nämna kring det aktuella stycket i guiden skolan med till exempel
+outer joins och subqueries?__
 
-Ja, en hel del. Dels som del av en eller annan hemsida, och dels genom
-databasprogram som MS Access.
+Jag har svårt för att avgöra vilken tabell som är till höger och vilken som är
+till vänster, annars är det mesta lugnt.
 
-__Hur gick det att jobba med SQL i guiden?__
+__Hur gick det att jobba med ER-modelleringen, några reflektioner?__
 
-Det var inga bekymmer.
+Det var tungt. Inte att förstå, eller föreställa sig. Utan själva arbetet, att
+skriva ner allting i en motvillig ordbehandlare.
 
-__Jämför SQL med andra sätt att programmera.__
+__Fanns det några extra svårigheter/utmaningar du kämpade med i kursmomentet?__
 
-Det känns inte som att vi programmerat i SQL ännu. Det finns ju IF - ELSE-
-strukturer och lite annat, men det är klart begränsat om man jämför med
-regelrätta programmeringsspråk. I SQL programmerar man inte, man ställer
-frågor och begränsar resultatet. Man flyttar runt data.
-
-Vill man ha det mer dynamiskt får man koppla SQL samman med ett annat språk.
+Javascript, alltid Javascript. Men med tanke på de framsteg jag faktiskt
+lyckats göra med Python så kanske jag inte skall misströsta?
 
 __Vilken är din TIL för detta moment?__
 
-Jag har lärt mig att skriva Bash-script, en smula utöver det som försiggick i
-kursen.
-
-Det finns mer än <samp>\<code\></samp>-elementet för att skriva kodliknande
-text i HTML. Till exempel <samp>\<kbd\></samp> som står för input,
-<samp>\<amp\></samp> som står för output och <samp>\<var\></samp> som står för
-variabel.
-
-[2]: https://dbwebb.se/guide/kom-igang-med-sql-i-mysql/skapa-fler-tabeller
+Outer joins, tror jag. I alla fall om man skall se till användbarheten.

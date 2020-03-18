@@ -20,3 +20,11 @@ mysql -uroot -p"$passvar" skolan < $file > /dev/null
 file="dml_update_lonerevision.sql"
 printf "\n>>> Perform salary revision (%s)\n" $file
 mysql -uroot -p"$passvar" skolan < $file > /dev/null
+
+file="dml_insert_csv.sql"
+printf "\n>>> Get data from CSV (%s)\n" $file
+mysql -uroot -p"$passvar" skolan < $file > /dev/null
+
+file="dml_join2.sql"
+printf "\n>>> Create planning view (%s)\n" $file
+mysql -uroot -p"$passvar" skolan < $file > /dev/null

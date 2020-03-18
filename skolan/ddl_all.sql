@@ -100,6 +100,7 @@ DROP VIEW IF EXISTS v_name_alder;
 CREATE VIEW v_name_alder
 AS
 SELECT
+    akronym AS Akronym,
     CONCAT(fornamn, ' ', efternamn, ' (', LOWER(avdelning), ')') AS Namn,
     TIMESTAMPDIFF(YEAR, fodd, CURDATE()) AS Ålder
 FROM larare;

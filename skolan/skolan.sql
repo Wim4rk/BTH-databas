@@ -37,6 +37,7 @@ CREATE TABLE `kurs` (
 
 LOCK TABLES `kurs` WRITE;
 /*!40000 ALTER TABLE `kurs` DISABLE KEYS */;
+INSERT INTO `kurs` VALUES ('AST101','Astronomi',5,'G1N'),('DJU101','Skötsel och vår',4,'G1F'),('DRY101','Trolldryckslära',6,'G1N'),('DRY102','Trolldryckslära',6,'G1F'),('KVA101','Kvastflygning',4,'G1N'),('MUG101','Mugglarstudier',6,'G1F'),('SVT101','Försvar mot sva',8,'G1N'),('SVT201','Försvar mot sva',6,'G1F'),('SVT202','Försvar mot sva',6,'G1F'),('SVT401','Försvar mot sva',6,'G2F'),('VAN101','Förvandlingskon',5,'G1F');
 /*!40000 ALTER TABLE `kurs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -57,7 +58,7 @@ CREATE TABLE `kurstillfalle` (
   KEY `kursansvarig` (`kursansvarig`),
   CONSTRAINT `kurstillfalle_ibfk_1` FOREIGN KEY (`kurskod`) REFERENCES `kurs` (`kod`),
   CONSTRAINT `kurstillfalle_ibfk_2` FOREIGN KEY (`kursansvarig`) REFERENCES `larare` (`akronym`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,6 +67,7 @@ CREATE TABLE `kurstillfalle` (
 
 LOCK TABLES `kurstillfalle` WRITE;
 /*!40000 ALTER TABLE `kurstillfalle` DISABLE KEYS */;
+INSERT INTO `kurstillfalle` VALUES (50,'SVT101','gyl',1),(51,'SVT101','gyl',3),(52,'SVT201','ala',1),(53,'SVT202','ala',2),(54,'SVT401','sna',1),(55,'KVA101','hoc',1),(56,'DJU101','hag',3),(57,'DRY101','sna',2),(58,'DRY102','sna',3),(59,'MUG101','min',4);
 /*!40000 ALTER TABLE `kurstillfalle` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -95,7 +97,7 @@ CREATE TABLE `larare` (
 
 LOCK TABLES `larare` WRITE;
 /*!40000 ALTER TABLE `larare` DISABLE KEYS */;
-INSERT INTO `larare` VALUES ('ala','DIPT','Alastor','Moody','M',27594,'1943-04-03',1),('dum','ADM','Albus','Dumbledore','M',85000,'1941-04-01',7),('fil','ADM','Argus','Filch','M',27594,'1946-04-06',3),('gyl','DIPT','Gyllenroy','Lockman','M',27594,'1952-05-02',1),('hag','ADM','Hagrid','Rubeus','M',30000,'1956-05-06',2),('hoc','DIDD','Madam','Hooch','K',37580,'1948-04-08',1),('min','DIDD','Minerva','McGonagall','K',49880,'1955-05-05',2),('sna','DIPT','Severus','Snape','M',45000,'1951-05-01',2);
+INSERT INTO `larare` VALUES ('ala','DIPT','Alastor','Moody','M',27594,'1943-04-03',1),('dum','ADM','Albus','Dumbledore','M',85000,'1941-04-01',7),('fil','ADM','Argus','Filch','M',27594,'1946-04-06',3),('gyl','DIPT','Gyllenroy','Lockman','M',27594,'1952-05-02',1),('hag','ADM','Hagrid','Rubeus','M',30000,'1956-05-06',2),('hoc','DIDD','Madam','Hooch','K',37580,'1948-04-08',1),('min','DIDD','Minerva','McGonagall','K',49880,'1955-05-05',2),('sna','DIPT','Severus','Snape','M',41000,'1951-05-01',2);
 /*!40000 ALTER TABLE `larare` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -245,8 +247,37 @@ DROP TABLE IF EXISTS `v_name_alder`;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
 /*!50001 CREATE TABLE `v_name_alder` (
+  `Akronym` tinyint NOT NULL,
   `Namn` tinyint NOT NULL,
   `Ålder` tinyint NOT NULL
+) ENGINE=MyISAM */;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary table structure for view `v_planering`
+--
+
+DROP TABLE IF EXISTS `v_planering`;
+/*!50001 DROP VIEW IF EXISTS `v_planering`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE TABLE `v_planering` (
+  `kod` tinyint NOT NULL,
+  `namn` tinyint NOT NULL,
+  `poang` tinyint NOT NULL,
+  `niva` tinyint NOT NULL,
+  `id` tinyint NOT NULL,
+  `kurskod` tinyint NOT NULL,
+  `kursansvarig` tinyint NOT NULL,
+  `lasperiod` tinyint NOT NULL,
+  `akronym` tinyint NOT NULL,
+  `avdelning` tinyint NOT NULL,
+  `fornamn` tinyint NOT NULL,
+  `efternamn` tinyint NOT NULL,
+  `kon` tinyint NOT NULL,
+  `lon` tinyint NOT NULL,
+  `fodd` tinyint NOT NULL,
+  `kompetens` tinyint NOT NULL
 ) ENGINE=MyISAM */;
 SET character_set_client = @saved_cs_client;
 
@@ -301,8 +332,27 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8 */;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `v_name_alder` AS select concat(`larare`.`fornamn`,' ',`larare`.`efternamn`,' (',lcase(`larare`.`avdelning`),')') AS `Namn`,timestampdiff(YEAR,`larare`.`fodd`,curdate()) AS `Ålder` from `larare` */;
+/*!50013 DEFINER=`user`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_name_alder` AS select `larare`.`akronym` AS `Akronym`,concat(`larare`.`fornamn`,' ',`larare`.`efternamn`,' (',lcase(`larare`.`avdelning`),')') AS `Namn`,timestampdiff(YEAR,`larare`.`fodd`,curdate()) AS `Ålder` from `larare` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_planering`
+--
+
+/*!50001 DROP TABLE IF EXISTS `v_planering`*/;
+/*!50001 DROP VIEW IF EXISTS `v_planering`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`user`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_planering` AS select `k`.`kod` AS `kod`,`k`.`namn` AS `namn`,`k`.`poang` AS `poang`,`k`.`niva` AS `niva`,`kt`.`id` AS `id`,`kt`.`kurskod` AS `kurskod`,`kt`.`kursansvarig` AS `kursansvarig`,`kt`.`lasperiod` AS `lasperiod`,`l`.`akronym` AS `akronym`,`l`.`avdelning` AS `avdelning`,`l`.`fornamn` AS `fornamn`,`l`.`efternamn` AS `efternamn`,`l`.`kon` AS `kon`,`l`.`lon` AS `lon`,`l`.`fodd` AS `fodd`,`l`.`kompetens` AS `kompetens` from ((`kurs` `k` join `kurstillfalle` `kt` on(`k`.`kod` = `kt`.`kurskod`)) join `larare` `l` on(`l`.`akronym` = `kt`.`kursansvarig`)) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -316,4 +366,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-03-14 21:23:35
+-- Dump completed on 2020-03-16 11:17:57
