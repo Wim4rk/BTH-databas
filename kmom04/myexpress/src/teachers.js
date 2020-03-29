@@ -25,13 +25,13 @@ async function getAll() {
     `;
 
     let res = await db.query(sql);
-    console.log(res);
+
+    // console.log(res);
     return res;
 }
 
 let teachers = {
     larare: async function() {
-
         let sql = `
         SELECT
             akronym,
@@ -146,4 +146,4 @@ function teachersAsTable(res) {
 module.exports = {
     "getAll": getAll,
     "teachers": teachers
-}
+};

@@ -5,26 +5,44 @@ const express = require("express");
 const app = express();
 const indexRoutes = require("./routes/index.js");
 const path = require("path");
+const middleware = require("./middleware/index.js");
 
 app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use((req, res, next) => {
-    console.info(`Request: ${req.path} (${req.method})`);
-    next();
-});
+app.use(middleware.incoming);
 
 app.use("/", indexRoutes);
 
-app.listen(port, () => {
-    console.log("Server listening on: " + port);
+app.listen(port, startupStats);
 
-    // Show which routes are supported
-    console.info("Available routes are:");
-    app._router.stack.forEach((r) => {
-        if (r.route && r.route.path) {
-            console.info(r.route.path);
+
+/**
+ * Log app details to console when starting up.
+ *
+ * @return {void}
+ */
+function startupStats() {
+    let routes = [];
+
+    // Find what routes are supported
+    app._router.stack.forEach((middleware) => {
+        if (middleware.route) {
+            // Routes registered directly on the app
+            routes.push(middleware.route);
+        } else if (middleware.name === "router") {
+            // Routes added as router middleware
+            middleware.handle.stack.forEach((handler) => {
+                let route;
+
+                route = handler.route;
+                route && routes.push(route);
+            });
         }
     });
-});
+
+    console.info(`Listening at port ${port}.`);
+    console.info("Available routes:");
+    console.info(routes);
+}
