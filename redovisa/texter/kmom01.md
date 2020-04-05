@@ -1,4 +1,4 @@
-<a id="kmom01"><h2>Kmom01</h2></a>
+## <a id="kmom01">Kmom01</a>
 
 Det är alltid roligt att starta upp en ny kurs. Även om det än en gång
 skulle börja med installationsbekymmer. Det är roligt att ställa upp en

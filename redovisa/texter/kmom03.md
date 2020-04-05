@@ -1,4 +1,4 @@
-<a id="kmom03"><h2>Kmom03</h2></a>
+## <a id="kmom03">Kmom03</a>
 
 Det går skapligt just nu. Möjligen har jag lite dålig struktur på mitt läsande
 kring just den här kursen. Det känns som att jag missat något i tidigare

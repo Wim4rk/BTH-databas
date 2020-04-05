@@ -2,5 +2,6 @@
     "host":     "localhost",
     "user":     "user",
     "password": "pass",
-    "database": "dbwebb"
+    "database": "banken",
+    "multipleStatements": true
 }

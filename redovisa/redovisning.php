@@ -63,11 +63,18 @@
     </section>
 
     <section>
-    <a id="kmom04"><h2>Kmom04</h2></a>
+        <?php
+            $filename = __DIR__ . "/texter/kmom04.md";
+            $text     = file_get_contents($filename);
+            $filter   = new \Anax\TextFilter\TextFilter();
+            $parsed   = $filter->parse($text, ["shortcode", "markdown"]);
+            echo $parsed->text;
+        ?>
     </section>
 
     <section>
     <a id="kmom05"><h2>Kmom05</h2></a>
+    <p>Tänk, tryck, tala.</p>
     </section>
 
     <section>
