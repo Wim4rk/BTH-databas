@@ -1,4 +1,8 @@
 <?php
+include __DIR__ . "/Parsedown.php";
+use Michelf\SmartyPants;
+
+$kmom = isset($_GET["page"]) ? $_GET["page"] : "kmom01";
 
 $title = "Redovisning";
 
