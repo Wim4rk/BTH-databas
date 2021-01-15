@@ -1,39 +1,42 @@
-## <a id="kmom01">Kmom01</a>
+## Kmom01
 
-Det är alltid roligt att starta upp en ny kurs. Även om det än en gång
-skulle börja med installationsbekymmer. Det är roligt att ställa upp en
-ny presentationssida. Jag lär mig mer och mer och kan skapa bättre sidor
-enklare.
+Jag gjorde ett försök att ta mig igenom den här kursen förra vårterminen, men
+corona-pandemien kom emellan. Min arbetssituation förändrades och jag hade inte
+samma möjlighet att studera som jag hade tänkt mig.
+
+Jag kommer därför att använda kod från förra året närhelst det fungerar, men
+jag skriver nya redovisningar.
+
+Jag har valt att bygga min me-sida. Jag uppdaterar den ju för varje kurs
+och inom några iterationer kommer jag att ha mitt eget flat-file-ramverk, så
+jag fortsätter att jobba med det. Säg ifrån om det inte beter sig som det
+borde.
 
 ### Svårigheter
 
-Av någon anledning gav jag mig
-sjutton på att jag skulle använda MySQL, och det ville inte min version
-av Debian. Därför gick jag över till MariaDB, men det gick inte heller.
-
-Efter att en mycket tålmodig Mikael Roos handlett mig en stund kom vi fram
-till att det rörde sig om en officiell bugg. Det kändes ganska så bra,
-eller i alla fall bättre än att lägga tre dagars felhantering på ett
-enkelt användarfel.
+När jag startade upp den här kursen försökte jag att använda MySQL, men
+det ville inte fungera. När jag sedan bytta över till MariaDB så fungerade inte det heller.
+Det fanns en bugg som gjorde det svårt att flytta emellan dessa varianter. Jag 
+lade några dagar på installationen, vilket alltid är lite tråkigt.
 
 ###Introduktion, labb
 
-Jag har ju kört en hel del SQL tidigare, så själva koden är ganska enkel
-att hänga med i för mig. När jag väl fått igång allting så är jag mycket
-imponerad av hur smidigt det är att köra CLI-klienten. Särskilt när man
-anropar sql-filer, antingen direkt från terminalen, eller genom att
-ange <em>source</em> inifrån klienten.
+Jag har ju kört en hel del SQL tidigare, så själva koden var från början
+ganska enkel att hänga med i. CLI-klienten var en nyhet, och jag upplevde
+den som väldigt smidig. Det har heller inte ändrat sig, efter linux-kursen
+så föredrar jag att jobba i terminalen när det fungerar. Jag skriver detta
+i Vim.
 
-Att spara SQL i filer som _back up_ har jag gjort förut, men jag har aldrig
-tänkt på att det borde vara uppdelat i olika typer; _ddl_, _dml_ och så
-vidare. Det var rätt smart. Innan vi lärde oss att skriva ett bash-script
-valde jag att kopiera över alla SQL-uttryck till en enda fil --
-<code>reset.sql</code>. Det hade i stort sett samma funktion men kunde
-dessutom köras inifrån MariaDB-klienten.
+Att spara SQL i filer som _back up_ hade jag gjort förut, men uppdelning i
+_ddl_, _dml_ och så vidare var nytt. Det är ett bra sätt att hålla ordning på
+sin kod. Över lag lärde jag mig att det är bra att följa vissa konventioner
+när man jobbar med databaser. Det finns en hel filosofi som har utvecklats
+genom årtioenden, och det är bara att lära sig att tillämpa den.
 
-Det var inte särdeles svåra övningar den här gången. Jag har gjort det här
-tidigare. När jag väl fått miljön på plats gjorde jag övningarna på en dag.
-Skönt med en mjukstart.
+En sak som var ny för mig senast var att skriva bash-script. Jag hade gjort
+några smarta alias och genvägar i <samp>.bashrc</samp>, men inget rent
+script. Det har jag nu, rätt mycket, både i linux-kursen och i mina privata
+projekt.
 
 ###Kort och koncist
 
@@ -41,7 +44,8 @@ __Berätta kort om den utvecklingsmiljö du sitter i__ och vilka
 databaser/klienter du installerat och vilka versioner de har.
 
 Jag sitter på Ubuntu (Debian) och har hamnat på MariaDB. Jag har
-MySQL Workbench som GUI.
+MySQL Workbench som GUI, men jag använder det inte mycket. Det mesta sker
+i terminalen.
 
 __Hur känns det att komma igång med databaser, klienter och SQL?__
 

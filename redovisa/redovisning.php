@@ -1,103 +1,74 @@
-<!doctype html>
-
 <?php
-    require __DIR__ . "/vendor/autoload.php";
+    // Install PSR-0-compatible class autoloader
+    // spl_autoload_register(function($class){
+    // 	require preg_replace('{\\\\|_(?!.*\\\\)}', DIRECTORY_SEPARATOR, ltrim($class, '\\')).'.php';
+    // });
+    include __DIR__ . "/Parsedown.php";
+    // require_once dirname(__FILE__) . 'SmartyPants/SmartyPants.php';
+    // include "SmartyPants/SmartyPants.inc.php";
+
+    // Install PSR-0-compatible class autoloader
+    spl_autoload_register(function($class){
+    	require preg_replace('{\\\\|_(?!.*\\\\)}', DIRECTORY_SEPARATOR, ltrim($class, '\\')).'.php';
+    });
+
+    // Get SmartyPants and Markdown classes
+    use Michelf\SmartyPants;
+
+    $kmom = isset($_GET["page"]) ? $_GET["page"] : "kmom01";
 ?>
 
+<!doctype html>
 <html lang="sv">
 <head>
 <meta charset="utf-8">
-<title>Redovisning | Databas</title>
+<title>Redovisning | vlinux</title>
 <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
 
-<?php
-    include __DIR__ . "/view/header_nav.php";
-?>
+
+
+<header>
+    <nav>
+        <a href="me.html">Me</a> |
+        <a href="redovisning.php">Redovisning</a> |
+        <a href="om.html">Om</a>
+    </nav>
+</header>
+
+
 
 <article>
     <h1>Redovisning av kursmoment</h1>
     <header>
-        <p>Snabblänkar till respektive kursmoment:</p>
+        <p>Snabblänkar till respektive moment</p>
 
-        <a href="#kmom01">Kmom01</a> |
-        <a href="#kmom02">Kmom02</a> |
-        <a href="#kmom03">Kmom03</a> |
-        <a href="#kmom04">Kmom04</a> |
-        <a href="#kmom05">Kmom05</a> |
-        <a href="#kmom06">Kmom06</a> |
-        <a href="#kmom07">Slutredovisning</a>
-
+        <a href="?page=kmom01">Kmom01</a> |
+        <a href="?page=kmom02">Kmom02</a> |
+        <a href="?page=kmom03">Kmom03</a> |
+        <a href="?page=kmom04">Kmom04</a> |
+        <a href="?page=kmom05">Kmom05</a> |
+        <a href="?page=kmom06">Kmom06</a> |
+        <a href="?page=kmom10">Slutredovisning</a>
     </header>
 
-    <section>
-    <?php
-        $filename = __DIR__ . "/texter/kmom01.md";
-        $text     = file_get_contents($filename);
-        $filter   = new \Anax\TextFilter\TextFilter();
-        $parsed   = $filter->parse($text, ["shortcode", "markdown"]);
-        echo $parsed->text;
-    ?>
-    </section>
-
-    <section>
-    <?php
-        $filename = __DIR__ . "/texter/kmom02.md";
-        $text     = file_get_contents($filename);
-        $filter   = new \Anax\TextFilter\TextFilter();
-        $parsed   = $filter->parse($text, ["shortcode", "markdown"]);
-        echo $parsed->text;
-    ?>
-    </section>
-
-    <section>
-        <?php
-            $filename = __DIR__ . "/texter/kmom03.md";
-            $text     = file_get_contents($filename);
-            $filter   = new \Anax\TextFilter\TextFilter();
-            $parsed   = $filter->parse($text, ["shortcode", "markdown"]);
-            echo $parsed->text;
-        ?>
-    </section>
-
-    <section>
-        <?php
-            $filename = __DIR__ . "/texter/kmom04.md";
-            $text     = file_get_contents($filename);
-            $filter   = new \Anax\TextFilter\TextFilter();
-            $parsed   = $filter->parse($text, ["shortcode", "markdown"]);
-            echo $parsed->text;
-        ?>
-    </section>
-
-    <section>
-    <a id="kmom05"><h2>Kmom05</h2></a>
-    <p>Tänk, tryck, tala.</p>
-    </section>
-
-    <section>
-    <a id="kmom06"><h2>Kmom06</h2></a>
-    <p>Tänk, tryck, tala.</p>
-    </section>
-
-    <section>
-    <a id="kmom07"><h2>Kmom07 - 10</h2></a>
-    <p>Tänk, tryck, tala.</p>
-    </section>
+<section>
+<?php
+if (file_exists(__DIR__ . "/texter/{$kmom}.md")) {
+    $filename   = __DIR__ . "/texter/{$kmom}.md";
+    $text       = file_get_contents($filename);
+    $Pants      = new SmartyPants();
+    $Pars       = new Parsedown();
+    echo $Pants->defaultTransform($Pars->text($text));
+} else { ?>
+    <h2>Texten finns inte</h2>
+    <p>Antagligen så har jag inte hunnit redovisa det här kurs-momentet...</p>
+<?php } ?>
 
 </article>
 
-<footer id="site-footer">
-    <h4>Valideringsverktyg</h4>
-    <p>
-        <a href="http://validator.w3.org/check/referer" target="_blank">HTML5</a> |
-        <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">CSS</a> |
-        <a href="http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance" target="_blank">Unicorn</a>
-    </p>
-</footer>
 
-<script src="js/main.js"></script>
 </body>
 </html>
