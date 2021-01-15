@@ -12,6 +12,10 @@ och inom några iterationer kommer jag att ha mitt eget flat-file-ramverk, så
 jag fortsätter att jobba med det. Säg ifrån om det inte beter sig som det
 borde.
 
+För varje kursmoment kommer jag att läsa igenom övningarna, och genomföra
+ett eller annat för att få bort ringrosten till de moment som jag _inte_
+har genomfört ännu.
+
 ### Svårigheter
 
 När jag startade upp den här kursen försökte jag att använda MySQL, men
