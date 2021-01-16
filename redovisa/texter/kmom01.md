@@ -1,5 +1,7 @@
 ## Kmom01
 
+Välkommen att läsa min redovisning [online][1].
+
 Jag gjorde ett försök att ta mig igenom den här kursen förra vårterminen, men
 corona-pandemien kom emellan. Min arbetssituation förändrades och jag hade inte
 samma möjlighet att studera som jag hade tänkt mig.
@@ -7,7 +9,7 @@ samma möjlighet att studera som jag hade tänkt mig.
 Jag kommer därför att använda kod från förra året närhelst det fungerar, men
 jag skriver nya redovisningar.
 
-Jag har valt att bygga min me-sida. Jag uppdaterar den ju för varje kurs
+Jag har valt att bygga om min me-sida. Jag uppdaterar den ju för varje kurs
 och inom några iterationer kommer jag att ha mitt eget flat-file-ramverk, så
 jag fortsätter att jobba med det. Säg ifrån om det inte beter sig som det
 borde.
@@ -82,3 +84,5 @@ Jag har lärt mig att skriva Bash-script.
 Det finns mer än `<code>`-elementet för att skriva kod-liknande text i
 HTML-text. Till exempel `<kbd>` som står för input, `<samp>` som står
 för output och `<var>` som står för variabel.
+
+[1]: http://www.student.bth.se/~olai19/dbwebb-kurser/databas/me/redovisa/redovisning.php?page=kmom01
