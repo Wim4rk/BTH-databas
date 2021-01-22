@@ -25,13 +25,16 @@ det ville inte fungera. När jag sedan bytta över till MariaDB så fungerade in
 Det fanns en bugg som gjorde det svårt att flytta emellan dessa varianter. Jag 
 lade några dagar på installationen, vilket alltid är lite tråkigt.
 
-###Introduktion, labb
+Atom &ndash; texteditorn jag använder i GUI &ndash; valde att ge upp. Jag hade begått misstaget att installera den med Ubuntus mjukvaruhantering, och när jag återinstallerade den (på rätt sätt) via terminalen så blev jag av med alla mina genvägar och inställningar.
+
+Jag skriver mest i Vim ändå.
+
+### Introduktion, labb
 
 Jag har ju kört en hel del SQL tidigare, så själva koden var från början
 ganska enkel att hänga med i. CLI-klienten var en nyhet, och jag upplevde
 den som väldigt smidig. Det har heller inte ändrat sig, efter linux-kursen
-så föredrar jag att jobba i terminalen när det fungerar. Jag skriver detta
-i Vim.
+så föredrar jag att jobba i terminalen när det fungerar.
 
 Att spara SQL i filer som _back up_ hade jag gjort förut, men uppdelning i
 _ddl_, _dml_ och så vidare var nytt. Det är ett bra sätt att hålla ordning på
@@ -79,10 +82,8 @@ Vill man ha det mer dynamiskt får man koppla SQL samman med ett annat språk.
 
 __Vilken är din TIL för detta moment?__
 
-Jag har lärt mig att skriva Bash-script.
-
 Det finns mer än `<code>`-elementet för att skriva kod-liknande text i
-HTML-text. Till exempel `<kbd>` som står för input, `<samp>` som står
+HTML. Till exempel `<kbd>` som står för input, `<samp>` som står
 för output och `<var>` som står för variabel.
 
 [1]: http://www.student.bth.se/~olai19/dbwebb-kurser/databas/me/redovisa/redovisning.php?page=kmom01
