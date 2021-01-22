@@ -11,7 +11,7 @@
     "url": "git+https://github.com/Wim4rk/BTH-databas.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Olov Wimark",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Wim4rk/BTH-databas/issues"
@@ -20,6 +20,7 @@
   "dependencies": {
     "console.table": "^0.10.0",
     "mysql": "^2.18.1",
-    "promise-mysql": "^4.1.3"
-  }
+    "promise-mysql": "^4.1.4"
+  },
+  "devDependencies": {}
 }

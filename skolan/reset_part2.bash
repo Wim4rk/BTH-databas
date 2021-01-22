@@ -40,7 +40,7 @@ mysql -uroot -p"$passvar" skolan < $file > /dev/null
 file="dml_join.sql"
 echo ">>> Kontrollräknar med JOIN ($file)"
 mysql -uroot -p"$passvar" skolan < $file > /dev/null
-echo ">>> Check Lönesumman = 330242, Kompetens = 19."
+# echo ">>> Check Lönesumman = 330242, Kompetens = 19."
 
 mysql -uroot -p"$passvar" skolan -e 'SELECT
     * FROM v_lonerevision

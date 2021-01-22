@@ -7,8 +7,8 @@ SELECT
     l.akronym,
     l.lon,
     l.kompetens,
-    p.lon AS "pre-lon",
-    p.kompetens AS "pre-kompetens"
+    p.lon AS "salary",
+    p.kompetens AS "kompetens"
 FROM larare AS l
     JOIN larare_pre AS p
         ON l.akronym = p.akronym
@@ -17,8 +17,8 @@ ORDER BY akronym
 
 SELECT
     CONCAT(l.fornamn, " ", l.efternamn) AS name,
-    p.lon AS pre,
-    l.lon AS nu,
+    p.lon AS salary,
+    l.lon AS "new sal.",
     l.lon - p.lon AS diff,
     ROUND(((l.lon - p.lon) / p.lon) * 100, 2) AS proc
 FROM larare AS l
@@ -30,8 +30,8 @@ ORDER BY l.akronym
 SELECT
     l.akronym,
     CONCAT(l.fornamn, " ", l.efternamn) AS name,
-    p.lon AS pre,
-    l.lon AS nu,
+    p.lon AS salary,
+    l.lon AS "new sal.",
     l.lon - p.lon AS diff,
     ROUND(((l.lon - p.lon) / p.lon) * 100, 2) AS proc,
     IF(ROUND(((l.lon - p.lon) / p.lon) * 100, 2) > 3, "ok", "nok") as mini

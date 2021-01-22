@@ -1,5 +1,5 @@
 /**
- * Output resultset as formatted table based on query result.
+ * Output resultset as formated table based on query result.
  *
  * @author "Olov Wimark"
  *

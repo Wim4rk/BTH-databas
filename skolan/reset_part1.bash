@@ -31,7 +31,7 @@ echo ">>> Utför lönerevision ($file)"
 mysql -uroot -p"$passvar" skolan < $file > /dev/null
 
 echo ">>> Check Lönesumman = 330242, Kompetens = 19."
-# mysql -uroot -p$passvar skolan -e "SELECT SUM(ny_lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare;"
+# mysql -uroot -p$passvar skolan -e "SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare;"
 mysql -uroot -p"$passvar" skolan -e 'SELECT  SUM(ny_lon) AS Lönesumma,
         ((SUM(ny_lon)-SUM(lon))/SUM(lon))*100 AS "Ökning %",
         SUM(kompetens) AS Kompetens

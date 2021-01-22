@@ -29,11 +29,11 @@ const rl = readline.createInterface({
     let res;
 
     // Ask question and handle answer in async arrow funciton
-    console.info("Search salary range.");
+    console.info("Search range.");
     rl.question("Search, min: ", async (min) => {
         rl.question("Search, max: ", async (max) => {
             // Run query:
-            res = await searchSalary(db, min, max);
+            res = await searchBetween(db, min, max);
 
             //Print result
             let str = pt.table(res);
@@ -66,7 +66,7 @@ const rl = readline.createInterface({
  *
  * @returns {array} SQL result.
  */
-async function searchSalary(db, min, max) {
+async function searchBetween(db, min, max) {
     let sql;
     let res;
 
@@ -82,6 +82,7 @@ async function searchSalary(db, min, max) {
             DATE_FORMAT(fodd, "%Y-%m-%d") AS fodd
         FROM larare
         WHERE lon BETWEEN ${min} AND ${max}
+        OR kompetens BETWEEN ${min} AND ${max}
         ORDER BY lon;
     `;
     res = await db.query(sql);

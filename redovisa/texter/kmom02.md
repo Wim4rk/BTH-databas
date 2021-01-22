@@ -1,24 +1,16 @@
-## <a id="kmom02">Kmom02</a>
+## Kmom02
 
-Jag tuffar vidare. Förmodligen i lite lägre fart än de flesta andra, men jag är
-fast besluten om att faktiskt ta mig igenom ett par kurser i mer eller mindre
-rätt tidsram.
+Här lär vi oss lite om nodejs. Det är en efter&shy;frågad förmåga och
+jag känner att jag vill lägga mer tid på det. Vi jobbade mot en
+node-server i kursen _vlinux_, så koncepten är inte så främmande för
+mig. Det rör sig mest om JS-programmering, så det borde gå hyggligt
+enkelt att lära sig. Här är node både server och klient, vi får
+infor&shy;mationen utskriven direkt i terminalen.
 
-Det har blivit så att jag jobbar med tre kursmoment samtidigt här. Det var inte
-direkt meningen, men det finns vissa fördelar. Det kan bli svårt att
-redovisa exakt vad som hörde till vilket kursmoment, men jag gör mitt bästa.
 
 ### Svårigheter
 
-Jag har gått vilse i min planering. Jag har jobbat parallellt med kmom03 och
--04 bara för att nu inse att jag inte gjort kmom02 färdigt. Det är inte utan
-att man känner sig lite asyncron själv, jag har liksom jobbat i cirklar.
-
-Trots ovanstående tar jag in kunskap, vissa saker bättre just för att jag
-läser baklänges. Jag kan async och await när jag börjar på artikeln om
-asynkron programmering.
-
-Mina stora svårigheter inom JavaScript snarare än inom SQL.
+Jag minns det här som ett svårt
 
 ### Skolan
 
