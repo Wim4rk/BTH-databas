@@ -11,7 +11,7 @@ const config = require("./config.json");
  * @async
  * @returns void
  */
-(async function() {
+(async function () {
     const db = await mysql.createConnection(config);
     let sql;
     let res;

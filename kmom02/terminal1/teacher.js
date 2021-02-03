@@ -18,7 +18,7 @@ const pt = require("./print_table.js");
  * @async
  * @returns void
  */
-(async function() {
+(async function () {
     const db = await mysql.createConnection(config);
     let sql;
     let res;

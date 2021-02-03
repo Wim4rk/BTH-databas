@@ -14,7 +14,8 @@ module.exports = {
     "table": printTable
 };
 
-function printTable(res) {
+function printTable(res)
+{
     //console.info(res);
     let str = "";
 

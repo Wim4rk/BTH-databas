@@ -8,7 +8,8 @@
 
 "use strict";
 
-function main() {
+function main()
+{
     let a = 1;
     let b;
     let range = "";

@@ -23,7 +23,7 @@ router.get("/index", (req, res) => {
     res.render("bank/index", data);
 });
 
-router.get("/balance", async (req, res) => {
+router.get("/balance", async(req, res) => {
     let data = {
         title: "Account balance | The Bank"
     };
@@ -33,7 +33,7 @@ router.get("/balance", async (req, res) => {
     res.render("bank/balance", data);
 });
 
-router.get("/move-to-adam", async (req, res) => {
+router.get("/move-to-adam", async(req, res) => {
     let data = {
         title: "Adam says | The Bank",
         amount: 1.5,

@@ -1,5 +1,7 @@
 ## Kmom02
 
+Välkommen att läsa min redovisning [online][2].
+
 Här lär vi oss lite om nodejs. Det är en efter&shy;frågad förmåga och
 jag känner att jag vill lägga mer tid på det. Vi jobbade mot en
 node-server i kursen _vlinux_, så koncepten är inte så främmande för
@@ -10,7 +12,11 @@ infor&shy;mationen utskriven direkt i terminalen.
 
 ### Svårigheter
 
-Jag minns det här som ett svårt
+Jag minns det här som ett svårt kurs&shy;moment förra året, och det är verkligen
+inte självklart i år heller. Då har jag ändå läst igenom några kurser där vi
+jobbat med server och klient. Jag har nog aldrig tänkt på databasen som en
+server tidigare, men på sätt och vis är det så. Våra node-script begär data och
+presenterar den på ett (för människor) läsbart vis.
 
 ### Skolan
 
@@ -44,8 +50,9 @@ $$
 DELIMITER ;
 </code>
 
-Coolt va? Den ville jag visa upp, för det är väl några kursmoment innan vi
-kommer till procedurer, eller hur?
+Coolt va? Den ville jag visa upp, för den var jag nöjd med. Nu med lite mer
+efter&shy;klokhet så hade det varit minst lika enkelt att gå tillbaks och göra
+uppgiften på rätt sätt.
 
 ### Node JS mot MySQL
 
@@ -58,7 +65,7 @@ till att resultatet passade i tabellen.
 Terminalprogram som använder databasen är ett nytt arbetssätt för mig, men det
 känns helt naturligt och till och med rätt smidigt. Istället för att nå min
 databas via browsern eller MariaDB:s egen CLI-klient kan jag köra sql-filer
-med hjälp av mitt eget program. Suveränt.
+utifrån mitt eget script. Suveränt.
 
 ### Kort och koncist
 
@@ -77,12 +84,13 @@ __Är detta den första bekantskap med JavaScript på serversidan och Node.js__,
 hur känns det och vilken uppfattning, eller förutfattade meningar, har du om
 detta?
 
-Det är första gången jag kör node. Att köra JavaScript i terminalen känns lite
-som att köra Python.
+Förra året var det första gången jag kör node. Att köra JavaScript i terminalen
+känns lite som att köra Python. Efter _vlinux_ har jag dessutom lärt mig mer om
+att skriva servrar och API med node, så nu börjar det kännas hemtamt.
 
 Varje gång vi provar något gammalt i ett nytt sammanhang så ökar min förståelse.
 Python känns mer relevant nu när vi börjat med FLASK-lösningar. JavaScript och
-MySQL i terminalen blir påtagligt och omedelbart än att sitta och ladda om
+MySQL i terminalen blir mer påtagligt och omedelbart än att sitta och ladda om
 en browser.
 
 I stort sett allt blir bättre om det kan hanteras via CLI. Jag har kommit att
@@ -103,8 +111,11 @@ Allt fungerar direkt.
 
 __Vilken är din TIL för detta moment?__
 
-Jag behöver hålla ordning på mina studier. Jag har läst runt i cirklar ett tag
-nu, och det är lite onödigt. Det är svårt nog att vi skall läsa flera kodspråk,
-CLI-klienter och serverlösningar parallellt.
+Jag lärde mig om <samp>php_codesniffer</samp>. Jag blev tvungen att linta 1500
+rader kod i en modul jag använder på min redovisa-sida. Någon annan skrev alltså
+koden, och 2013 dessutom. Nu slipper den som rättar hos er få huvudvärk, och jag
+kan fortsätta att skriva markdown.
 
 [1]: https://sv.wikipedia.org/wiki/Idempotent
+[2]: http://www.student.bth.se/~olai19/dbwebb-kurser/databas/me/redovisa/redovisning.php?page=kmom02
+

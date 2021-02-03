@@ -11,7 +11,7 @@ const config = require("./config.json");
  * @async
  * @returns void
  */
-(async function() {
+(async function () {
     const db = await mysql.createConnection(config);
     let str;
     let search;
@@ -32,13 +32,14 @@ const config = require("./config.json");
  *
  * @returns {string} Formatted table to print out.
  */
-async function searchTeachers(db, search) {
+async function searchTeachers(db, search)
+{
     let sql;
     let res;
     let str;
     let like = `%${search}%`;
 
-    console.info(`Searching for: ${search}`);
+    console.info(`Searching for : ${search}`);
 
     sql = `
         SELECT
@@ -68,7 +69,8 @@ async function searchTeachers(db, search) {
  *
  * @returns {string} Formatted table to print out.
  */
-function teacherAsTable(res) {
+function teacherAsTable(res)
+{
     let str;
 
     str  = "+-----------+---------------------+-----------+----------+\n";

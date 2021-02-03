@@ -18,12 +18,12 @@ const rl = readline.createInterface({
  * @async
  * @returns void
  */
-(async function() {
+(async function () {
     const db = await mysql.createConnection(config);
     let str;
 
     // Ask question and handle answer in async arrow funciton
-    rl.question("Search for: ", async (search) => {
+    rl.question("Search for: ", async(search) => {
         str = await searchTeachers(db, search);
         console.info(str);
 
@@ -41,13 +41,14 @@ const rl = readline.createInterface({
  *
  * @returns {string} Formatted table to print out.
  */
-async function searchTeachers(db, search) {
+async function searchTeachers(db, search)
+{
     let sql;
     let res;
     let str;
     let like = `%${search}%`;
 
-    console.info(`Searching for: ${search}`);
+    console.info(`Searching for : ${search}`);
 
     sql = `
         SELECT
@@ -77,7 +78,8 @@ async function searchTeachers(db, search) {
  *
  * @returns {string} Formatted table to print out.
  */
-function teacherAsTable(res) {
+function teacherAsTable(res)
+{
     let str;
 
     str  = "+-----------+---------------------+-----------+----------+\n";

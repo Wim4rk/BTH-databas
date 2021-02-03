@@ -10,14 +10,14 @@ const rl = readline.createInterface({
 
 const teachers = require("./teachers.js");
 
-(async function() {
+(async function () {
     showMenu();
 
     rl.setPrompt("--> ");
     rl.prompt();
 
     rl.on("close", process.exit);
-    rl.on("line", async (line) => {
+    rl.on("line", async(line) => {
         line = line.trim();
         let lineArray = line.split(" ");
 
@@ -54,18 +54,23 @@ const teachers = require("./teachers.js");
     });
 })();
 
-function showMenu() {
-    console.info(`
-Menu:
-=======================================
-larare:                   Information om lärare
-sok <string>:             Sök efter lärare
-kompetens:                Visa lärarnas kompetensutveckling
-lon:                      Se lärarnas löneutveckling
-nylon <akronym> <lon>:    Ange ny lön för lärare med akronym
-menu, help:               Visa den här menyn
-exit, quit:               Avsluta programmet
-=======================================`);
+function showMenu()
+{
+    console.info(
+        `
+        Menu:
+        =======================================
+        larare:                   Information om lärare
+        sok <string>:             Sök efter lärare
+        kompetens:                Visa lärarnas kompetensutveckling
+        lon:                      Se lärarnas löneutveckling
+        nylon <akronym> <lon>:    Ange ny lön för lärare med akronym
+        menu,
+        help:               Visa den här menyn
+        exit,
+        quit:               Avsluta programmet
+        =======================================`
+    );
 }
 
 
@@ -76,7 +81,8 @@ exit, quit:               Avsluta programmet
  *
  * @returns {void}
  */
-function exitProgram(code) {
+function exitProgram(code)
+{
     code = code || 0;
 
     console.info("Exiting with status code " + code);

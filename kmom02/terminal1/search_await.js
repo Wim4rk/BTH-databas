@@ -29,7 +29,7 @@ const question = util.promisify(rl.question);
  * @async
  * @returns void
  */
-(async function() {
+(async function () {
     const db = await mysql.createConnection(config);
     let str;
     let search;
@@ -52,13 +52,14 @@ const question = util.promisify(rl.question);
  *
  * @returns {string} Formatted table to print out.
  */
-async function searchTeachers(db, search) {
+async function searchTeachers(db, search)
+{
     let sql;
     let res;
     let str;
     let like = `%${search}%`;
 
-    console.info(`Searching for: ${search}`);
+    console.info(`Searching for : ${search}`);
 
     sql = `
         SELECT
@@ -88,7 +89,8 @@ async function searchTeachers(db, search) {
  *
  * @returns {string} Formatted table to print out.
  */
-function teacherAsTable(res) {
+function teacherAsTable(res)
+{
     let str;
 
     str  = "+-----------+---------------------+-----------+----------+\n";

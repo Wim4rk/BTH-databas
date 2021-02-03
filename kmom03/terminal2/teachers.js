@@ -5,7 +5,7 @@ const mysql = require("promise-mysql");
 
 
 let teachers = {
-    larare: async function() {
+    larare: async function () {
         const db = await mysql.createConnection(config);
 
         let sql = `
@@ -25,7 +25,8 @@ let teachers = {
 
         db.end();
     },
-    sok: async function searchTeachers(search) {
+    sok: async function searchTeachers(search)
+    {
         const db = await mysql.createConnection(config);
         let sql;
         let res;
@@ -56,7 +57,8 @@ let teachers = {
 
         db.end();
     },
-    kompetens: async function teacherCompetense() {
+    kompetens: async function teacherCompetense()
+    {
         const db = await mysql.createConnection(config);
 
         let sql = `
@@ -75,7 +77,8 @@ let teachers = {
 
         db.end();
     },
-    lon: async function teacherSalary() {
+    lon: async function teacherSalary()
+    {
         const db = await mysql.createConnection(config);
 
         let sql = `
@@ -96,7 +99,8 @@ let teachers = {
 
         db.end();
     },
-    salary: async function newSalary(akronym, nylon) {
+    salary: async function newSalary(akronym, nylon)
+    {
         const db = await mysql.createConnection(config);
 
         let sql = `
@@ -127,7 +131,8 @@ let teachers = {
     // }
 };
 
-function teachersAsTable(res) {
+function teachersAsTable(res)
+{
     return console.table(res);
 }
 

@@ -57,7 +57,7 @@
  *            (or NULL passed as $class_paths) array of registered class paths
  *            (and loaded class files, configuration settings) returned)
  */
-function autoloader($class_paths = NULL, $use_base_dir = true)
+function autoloader($class_paths = null, $use_base_dir = true)
 {
     static $is_init = false;
 
@@ -71,17 +71,13 @@ function autoloader($class_paths = NULL, $use_base_dir = true)
 
     static $paths = [];
 
-    if(\is_null($class_paths)) // autoloader(); returns paths (for debugging)
-    {
+    if (\is_null($class_paths)) {
         return $paths;
     }
 
-    if(\is_array($class_paths) && isset($class_paths[0]) && \is_array($class_paths[0])) // conf settings
-    {
-        foreach($class_paths[0] as $k => $v)
-        {
-            if(isset($conf[$k]) || \array_key_exists($k, $conf))
-            {
+    if (\is_array($class_paths) && isset($class_paths[0]) && \is_array($class_paths[0])) {
+        foreach ($class_paths[0] as $k => $v) {
+            if (isset($conf[$k]) || \array_key_exists($k, $conf)) {
                 $conf[$k] = $v; // set conf setting
             }
         }
@@ -89,37 +85,28 @@ function autoloader($class_paths = NULL, $use_base_dir = true)
         unset($class_paths[0]); // rm conf from class paths
     }
 
-    if(!$is_init) // init autoloader
-    {
+    if (!$is_init) {
         \spl_autoload_extensions(implode(',', $conf['extensions']));
-        \spl_autoload_register(NULL, false); // flush existing autoloads
+        \spl_autoload_register(null, false); // flush existing autoloads
         $is_init = true;
     }
 
-    if($conf['debug'])
-    {
+    if ($conf['debug']) {
         $paths['conf'] = $conf; // add conf for debugging
     }
 
-    if(!\is_array($class_paths)) // autoload class
-    {
+    if (!\is_array($class_paths)) {
         // class with namespaces, ex: 'MyPack\MyClass' => 'MyPack/MyClass' (directories)
         $class_path = \str_replace('\\', \DIRECTORY_SEPARATOR, $class_paths);
 
-        foreach($paths as $path)
-        {
-            if(!\is_array($path)) // do not allow cached 'loaded' paths
-            {
-                foreach($conf['extensions'] as &$ext)
-                {
+        foreach ($paths as $path) {
+            if (!\is_array($path)) {
+                foreach ($conf['extensions'] as &$ext) {
                     $ext = \trim($ext);
 
-                    if(\file_exists($path . $class_path . $ext))
-                    {
-                        if($conf['debug'])
-                        {
-                            if(!isset($paths['loaded']))
-                            {
+                    if (\file_exists($path . $class_path . $ext)) {
+                        if ($conf['debug']) {
+                            if (!isset($paths['loaded'])) {
                                 $paths['loaded'] = [];
                             }
 
@@ -128,8 +115,7 @@ function autoloader($class_paths = NULL, $use_base_dir = true)
 
                         require $path . $class_path . $ext;
 
-                        if($conf['verbose'])
-                        {
+                        if ($conf['verbose']) {
                             echo '<div>' . __METHOD__ . ': autoloaded class "' . $path
                                 . $class_path . $ext . '"</div>';
                         }
@@ -138,8 +124,7 @@ function autoloader($class_paths = NULL, $use_base_dir = true)
                     }
                 }
 
-                if($conf['verbose'])
-                {
+                if ($conf['verbose']) {
                     echo '<div>' . __METHOD__ . ': failed to autoload class "' . $path
                         . $class_path . $ext . '"</div>';
                 }
@@ -147,42 +132,32 @@ function autoloader($class_paths = NULL, $use_base_dir = true)
         }
 
         return false; // failed to autoload class
-    }
-    else // register class path
-    {
+    } else {
         $is_unregistered = true;
 
-        if(count($class_paths) > 0)
-        {
-            foreach($class_paths as $path)
-            {
+        if (count($class_paths) > 0) {
+            foreach ($class_paths as $path) {
                 $tmp_path = ( $use_base_dir ? \rtrim($conf['basepath'], \DIRECTORY_SEPARATOR)
                     . \DIRECTORY_SEPARATOR : '' ) . \trim(\rtrim($path, \DIRECTORY_SEPARATOR))
                     . \DIRECTORY_SEPARATOR;
 
-                if(!\in_array($tmp_path, $paths))
-                {
+                if (!\in_array($tmp_path, $paths)) {
                     $paths[] = $tmp_path;
 
-                    if($conf['verbose'])
-                    {
+                    if ($conf['verbose']) {
                         echo '<div>' . __METHOD__ . ': registered path "' . $tmp_path . '"</div>';
                     }
                 }
             }
 
-            if(\spl_autoload_register(( strlen($conf['namespace']) > 0 // add namespace
-                ? rtrim($conf['namespace'], '\\') . '\\' : '' ) . 'autoloader', (bool)$conf['debug']))
-            {
-                if($conf['verbose'])
-                {
+            if (\spl_autoload_register(( strlen($conf['namespace']) > 0 // add namespace
+                ? rtrim($conf['namespace'], '\\') . '\\' : '' ) . 'autoloader', (bool)$conf['debug'])) {
+                if ($conf['verbose']) {
                     echo '<div>' . __METHOD__ . ': autoload registered</div>';
                 }
 
                 $is_unregistered = false; // flag unable to register
-            }
-            else if($conf['verbose'])
-            {
+            } else if ($conf['verbose']) {
                 echo '<div>' . __METHOD__ . ': autoload register failed</div>';
             }
         }

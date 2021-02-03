@@ -28,7 +28,8 @@ app.listen(port, logStartUpDetailsToConsole);
  *
  * @return {void}
  */
-function logStartUpDetailsToConsole() {
+function logStartUpDetailsToConsole()
+{
     let routes = [];
 
     // Find what routes are supported

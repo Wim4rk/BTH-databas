@@ -12,12 +12,12 @@
 #
 namespace Michelf;
 
-
 #
 # SmartyPants Parser Class
 #
 
-class SmartyPants {
+class SmartyPants
+{
 
     ### Version ###
 
@@ -43,7 +43,8 @@ class SmartyPants {
 
     ### Standard Function Interface ###
 
-    public static function defaultTransform($text, $attr = SmartyPants::ATTR_DEFAULT) {
+    public static function defaultTransform($text, $attr = SmartyPants::ATTR_DEFAULT)
+    {
     #
     # Initialize the parser and return the result of its transform method.
     # This will work fine for derived classes too.
@@ -56,8 +57,9 @@ class SmartyPants {
         $parser =& $parser_list[$parser_class][$attr];
 
         # create the parser if not already set
-        if (!$parser)
+        if (!$parser) {
             $parser = new $parser_class($attr);
+        }
 
         # Transform text using parser.
         return $parser->transform($text);
@@ -98,7 +100,8 @@ class SmartyPants {
 
     ### Parser Implementation ###
 
-    public function __construct($attr = SmartyPants::ATTR_DEFAULT) {
+    public function __construct($attr = SmartyPants::ATTR_DEFAULT)
+    {
     #
     # Initialize a parser with certain attributes.
     #
@@ -119,51 +122,47 @@ class SmartyPants {
     #
         if ($attr == "0") {
             $this->do_nothing   = 1;
-        }
-        else if ($attr == "1") {
+        } else if ($attr == "1") {
             # Do everything, turn all options on.
             $this->do_quotes    = 1;
             $this->do_backticks = 1;
             $this->do_dashes    = 1;
             $this->do_ellipses  = 1;
-        }
-        else if ($attr == "2") {
+        } else if ($attr == "2") {
             # Do everything, turn all options on, use old school dash shorthand.
             $this->do_quotes    = 1;
             $this->do_backticks = 1;
             $this->do_dashes    = 2;
             $this->do_ellipses  = 1;
-        }
-        else if ($attr == "3") {
+        } else if ($attr == "3") {
             # Do everything, turn all options on, use inverted old school dash shorthand.
             $this->do_quotes    = 1;
             $this->do_backticks = 1;
             $this->do_dashes    = 3;
             $this->do_ellipses  = 1;
-        }
-        else if ($attr == "-1") {
+        } else if ($attr == "-1") {
             # Special "stupefy" mode.
             $this->do_stupefy   = 1;
-        }
-        else {
+        } else {
             $chars = preg_split('//', $attr);
-            foreach ($chars as $c){
-                if      ($c == "q") { $this->do_quotes    = 1; }
-                else if ($c == "b") { $this->do_backticks = 1; }
-                else if ($c == "B") { $this->do_backticks = 2; }
-                else if ($c == "d") { $this->do_dashes    = 1; }
-                else if ($c == "D") { $this->do_dashes    = 2; }
-                else if ($c == "i") { $this->do_dashes    = 3; }
-                else if ($c == "e") { $this->do_ellipses  = 1; }
-                else if ($c == "w") { $this->convert_quot = 1; }
-                else {
+            foreach ($chars as $c) {
+                if ($c == "q") { $this->do_quotes    = 1;
+                } else if ($c == "b") { $this->do_backticks = 1;
+                } else if ($c == "B") { $this->do_backticks = 2;
+                } else if ($c == "d") { $this->do_dashes    = 1;
+                } else if ($c == "D") { $this->do_dashes    = 2;
+                } else if ($c == "i") { $this->do_dashes    = 3;
+                } else if ($c == "e") { $this->do_ellipses  = 1;
+                } else if ($c == "w") { $this->convert_quot = 1;
+                } else {
                     # Unknown attribute option, ignore.
                 }
             }
         }
     }
 
-    public function transform($text) {
+    public function transform($text)
+    {
 
         if ($this->do_nothing) {
             return $text;
@@ -202,7 +201,8 @@ class SmartyPants {
     }
 
 
-    function decodeEntitiesInConfiguration() {
+    public function decodeEntitiesInConfiguration()
+    {
     #
     #   Utility function that converts entities in configuration variables to
     #   UTF-8 characters.
@@ -226,7 +226,8 @@ class SmartyPants {
     }
 
 
-    protected function educate($t, $prev_token_last_char) {
+    protected function educate($t, $prev_token_last_char)
+    {
         $t = $this->processEscapes($t);
 
         if ($this->convert_quot) {
@@ -234,17 +235,22 @@ class SmartyPants {
         }
 
         if ($this->do_dashes) {
-            if ($this->do_dashes == 1) $t = $this->educateDashes($t);
-            if ($this->do_dashes == 2) $t = $this->educateDashesOldSchool($t);
-            if ($this->do_dashes == 3) $t = $this->educateDashesOldSchoolInverted($t);
+            if ($this->do_dashes == 1) { $t = $this->educateDashes($t);
+            }
+            if ($this->do_dashes == 2) { $t = $this->educateDashesOldSchool($t);
+            }
+            if ($this->do_dashes == 3) { $t = $this->educateDashesOldSchoolInverted($t);
+            }
         }
 
-        if ($this->do_ellipses) $t = $this->educateEllipses($t);
+        if ($this->do_ellipses) { $t = $this->educateEllipses($t);
+        }
 
         # Note: backticks need to be processed before quotes.
         if ($this->do_backticks) {
             $t = $this->educateBackticks($t);
-            if ($this->do_backticks == 2) $t = $this->educateSingleBackticks($t);
+            if ($this->do_backticks == 2) { $t = $this->educateSingleBackticks($t);
+            }
         }
 
         if ($this->do_quotes) {
@@ -252,33 +258,31 @@ class SmartyPants {
                 # Special case: single-character ' token
                 if (preg_match('/\S/', $prev_token_last_char)) {
                     $t = $this->smart_singlequote_close;
-                }
-                else {
+                } else {
                     $t = $this->smart_singlequote_open;
                 }
-            }
-            else if ($t == '"') {
+            } else if ($t == '"') {
                 # Special case: single-character " token
                 if (preg_match('/\S/', $prev_token_last_char)) {
                     $t = $this->smart_doublequote_close;
-                }
-                else {
+                } else {
                     $t = $this->smart_doublequote_open;
                 }
-            }
-            else {
+            } else {
                 # Normal case:
                 $t = $this->educateQuotes($t);
             }
         }
 
-        if ($this->do_stupefy) $t = $this->stupefyEntities($t);
+        if ($this->do_stupefy) { $t = $this->stupefyEntities($t);
+        }
 
         return $t;
     }
 
 
-    protected function educateQuotes($_) {
+    protected function educateQuotes($_)
+    {
     #
     #   Parameter:  String.
     #
@@ -300,13 +304,17 @@ class SmartyPants {
         # followed by punctuation at a non-word-break. Close the quotes by brute force:
         $_ = preg_replace(
             array("/^'(?=$punct_class\\B)/", "/^\"(?=$punct_class\\B)/"),
-            array($sq_close,                 $dq_close), $_);
+            array($sq_close,                 $dq_close),
+            $_
+        );
 
         # Special case for double sets of quotes, e.g.:
         #   <p>He said, "'Quoted' words in a larger quote."</p>
         $_ = preg_replace(
             array("/\"'(?=\w)/",     "/'\"(?=\w)/"),
-            array($dq_open.$sq_open, $sq_open.$dq_open), $_);
+            array($dq_open.$sq_open, $sq_open.$dq_open),
+            $_
+        );
 
         # Special case for decade abbreviations (the '80s):
         $_ = preg_replace("/'(?=\\d{2}s)/", $sq_close, $_);
@@ -371,7 +379,8 @@ class SmartyPants {
     }
 
 
-    protected function educateBackticks($_) {
+    protected function educateBackticks($_)
+    {
     #
     #   Parameter:  String.
     #   Returns:    The string, with ``backticks'' -style double quotes
@@ -381,14 +390,18 @@ class SmartyPants {
     #   Example output: &#8220;Isn't this fun?&#8221;
     #
 
-        $_ = str_replace(array("``", "''",),
-                         array($this->backtick_doublequote_open,
-                               $this->backtick_doublequote_close), $_);
+        $_ = str_replace(
+            array("``", "''",),
+            array($this->backtick_doublequote_open,
+            $this->backtick_doublequote_close),
+            $_
+        );
         return $_;
     }
 
 
-    protected function educateSingleBackticks($_) {
+    protected function educateSingleBackticks($_)
+    {
     #
     #   Parameter:  String.
     #   Returns:    The string, with `backticks' -style single quotes
@@ -398,14 +411,18 @@ class SmartyPants {
     #   Example output: &#8216;Isn&#8217;t this fun?&#8217;
     #
 
-        $_ = str_replace(array("`",       "'",),
-                         array($this->backtick_singlequote_open,
-                               $this->backtick_singlequote_close), $_);
+        $_ = str_replace(
+            array("`",       "'",),
+            array($this->backtick_singlequote_open,
+            $this->backtick_singlequote_close),
+            $_
+        );
         return $_;
     }
 
 
-    protected function educateDashes($_) {
+    protected function educateDashes($_)
+    {
     #
     #   Parameter:  String.
     #
@@ -418,7 +435,8 @@ class SmartyPants {
     }
 
 
-    protected function educateDashesOldSchool($_) {
+    protected function educateDashesOldSchool($_)
+    {
     #
     #   Parameter:  String.
     #
@@ -428,13 +446,17 @@ class SmartyPants {
     #
 
         #                      em              en
-        $_ = str_replace(array("---",          "--",),
-                         array($this->em_dash, $this->en_dash), $_);
+        $_ = str_replace(
+            array("---",          "--",),
+            array($this->em_dash, $this->en_dash),
+            $_
+        );
         return $_;
     }
 
 
-    protected function educateDashesOldSchoolInverted($_) {
+    protected function educateDashesOldSchoolInverted($_)
+    {
     #
     #   Parameter:  String.
     #
@@ -451,13 +473,17 @@ class SmartyPants {
     #
 
         #                      en              em
-        $_ = str_replace(array("---",          "--",),
-                         array($this->en_dash, $this->em_dash), $_);
+        $_ = str_replace(
+            array("---",          "--",),
+            array($this->en_dash, $this->em_dash),
+            $_
+        );
         return $_;
     }
 
 
-    protected function educateEllipses($_) {
+    protected function educateEllipses($_)
+    {
     #
     #   Parameter:  String.
     #   Returns:    The string, with each instance of "..." translated to
@@ -473,7 +499,8 @@ class SmartyPants {
     }
 
 
-    protected function stupefyEntities($_) {
+    protected function stupefyEntities($_)
+    {
     #
     #   Parameter:  String.
     #   Returns:    The string, with each SmartyPants HTML entity translated to
@@ -484,8 +511,11 @@ class SmartyPants {
     #
 
                             #  en-dash    em-dash
-        $_ = str_replace(array('&#8211;', '&#8212;'),
-                         array('-',       '--'), $_);
+        $_ = str_replace(
+            array('&#8211;', '&#8212;'),
+            array('-',       '--'),
+            $_
+        );
 
         # single quote         open       close
         $_ = str_replace(array('&#8216;', '&#8217;'), "'", $_);
@@ -499,7 +529,8 @@ class SmartyPants {
     }
 
 
-    protected function processEscapes($_) {
+    protected function processEscapes($_)
+    {
     #
     #   Parameter:  String.
     #   Returns:    The string, with after processing the following backslash
@@ -517,13 +548,16 @@ class SmartyPants {
     #
         $_ = str_replace(
             array('\\\\',  '\"',    "\'",    '\.',    '\-',    '\`'),
-            array('&#92;', '&#34;', '&#39;', '&#46;', '&#45;', '&#96;'), $_);
+            array('&#92;', '&#34;', '&#39;', '&#46;', '&#45;', '&#96;'),
+            $_
+        );
 
         return $_;
     }
 
 
-    protected function tokenizeHTML($str) {
+    protected function tokenizeHTML($str)
+    {
     #
     #   Parameter:  String containing HTML markup.
     #   Returns:    An array of the tokens comprising the input
@@ -549,12 +583,11 @@ class SmartyPants {
         $parts = preg_split("{($match)}", $str, -1, PREG_SPLIT_DELIM_CAPTURE);
 
         foreach ($parts as $part) {
-            if (++$index % 2 && $part != '')
+            if (++$index % 2 && $part != '') {
                 $tokens[] = array('text', $part);
-            else
-                $tokens[] = array('tag', $part);
+            } else { $tokens[] = array('tag', $part);
+            }
         }
         return $tokens;
     }
-
 }
