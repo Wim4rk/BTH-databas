@@ -17,7 +17,7 @@ const teachers = require("./teachers.js");
     rl.prompt();
 
     rl.on("close", process.exit);
-    rl.on("line", async(line) => {
+    rl.on("line", async (line) => {
         line = line.trim();
         let lineArray = line.split(" ");
 
@@ -28,6 +28,7 @@ const teachers = require("./teachers.js");
                 break;
             case "exit":
             case "quit":
+            case "q":
                 exitProgram(0);
                 break;
             case "larare":
@@ -43,7 +44,9 @@ const teachers = require("./teachers.js");
                 await teachers.lon();
                 break;
             case "nylon":
+                // Error handling: count input variables...
                 await teachers.salary(lineArray[1], lineArray[2]);
+                await teachers.sok(lineArray[1]);
                 break;
             default:
                 showMenu();
@@ -54,8 +57,7 @@ const teachers = require("./teachers.js");
     });
 })();
 
-function showMenu()
-{
+function showMenu() {
     console.info(
         `
         Menu:
@@ -65,10 +67,8 @@ function showMenu()
         kompetens:                Visa lärarnas kompetensutveckling
         lon:                      Se lärarnas löneutveckling
         nylon <akronym> <lon>:    Ange ny lön för lärare med akronym
-        menu,
-        help:               Visa den här menyn
-        exit,
-        quit:               Avsluta programmet
+        menu, help:               Visa den här menyn
+        exit, quit, q:            Avsluta programmet
         =======================================`
     );
 }
@@ -81,8 +81,7 @@ function showMenu()
  *
  * @returns {void}
  */
-function exitProgram(code)
-{
+function exitProgram(code) {
     code = code || 0;
 
     console.info("Exiting with status code " + code);

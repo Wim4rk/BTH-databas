@@ -21,12 +21,11 @@ let teachers = {
 
         let res = await db.query(sql);
 
-        console.info(teachersAsTable(res));
+        console.table(res);
 
         db.end();
     },
-    sok: async function searchTeachers(search)
-    {
+    sok: async function searchTeachers(search) {
         const db = await mysql.createConnection(config);
         let sql;
         let res;
@@ -53,12 +52,11 @@ let teachers = {
         `;
         res = await db.query(sql, [like, like, like, like, search]);
 
-        console.info(teachersAsTable(res));
+        console.table(res);
 
         db.end();
     },
-    kompetens: async function teacherCompetense()
-    {
+    kompetens: async function teacherCompetense() {
         const db = await mysql.createConnection(config);
 
         let sql = `
@@ -73,12 +71,11 @@ let teachers = {
 
         let res = await db.query(sql);
 
-        console.info(teachersAsTable(res));
+        console.table(res);
 
         db.end();
     },
-    lon: async function teacherSalary()
-    {
+    lon: async function teacherSalary() {
         const db = await mysql.createConnection(config);
 
         let sql = `
@@ -95,12 +92,11 @@ let teachers = {
 
         let res = await db.query(sql);
 
-        console.info(teachersAsTable(res));
+        console.table(res);
 
         db.end();
     },
-    salary: async function newSalary(akronym, nylon)
-    {
+    salary: async function newSalary(akronym, nylon) {
         const db = await mysql.createConnection(config);
 
         let sql = `
@@ -113,27 +109,8 @@ let teachers = {
 
         await db.query(sql);
 
-        console.info(teachersAsTable(this.sok(akronym)));
-
         db.end();
     }
-
-
-    // larare: async function() {
-    //
-    //     let res = await db.query(sql);
-    //     console.info(teachersAsTable(res));
-    //
-    //     db.end();
-    // },
-    // sok: function(search) {
-    //     // console.log(search);
-    // }
 };
-
-function teachersAsTable(res)
-{
-    return console.table(res);
-}
 
 module.exports = teachers;
