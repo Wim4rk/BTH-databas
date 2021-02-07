@@ -23,7 +23,7 @@ const rl = readline.createInterface({
     let str;
 
     // Ask question and handle answer in async arrow funciton
-    rl.question("Search for: ", async(search) => {
+    rl.question("Search for: ", async (search) => {
         str = await searchTeachers(db, search);
         console.info(str);
 
@@ -41,8 +41,7 @@ const rl = readline.createInterface({
  *
  * @returns {string} Formatted table to print out.
  */
-async function searchTeachers(db, search)
-{
+async function searchTeachers(db, search) {
     let sql;
     let res;
     let str;
@@ -78,8 +77,7 @@ async function searchTeachers(db, search)
  *
  * @returns {string} Formatted table to print out.
  */
-function teacherAsTable(res)
-{
+function teacherAsTable(res) {
     let str;
 
     str  = "+-----------+---------------------+-----------+----------+\n";

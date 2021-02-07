@@ -29,8 +29,7 @@ const config = require("./config.json");
  * @returns {string} Formatted table to print out.
  */
 
-async function viewTeachers(db)
-{
+async function viewTeachers(db) {
     let sql;
     let res;
     let str;
@@ -58,8 +57,7 @@ async function viewTeachers(db)
  *
  * @returns {string} Formatted table to print out.
  */
-function teacherAsTable(res)
-{
+function teacherAsTable(res) {
     let str;
 
     str  = "+-----------+---------------------+-----------+----------+\n";

@@ -52,8 +52,7 @@ const question = util.promisify(rl.question);
  *
  * @returns {string} Formatted table to print out.
  */
-async function searchTeachers(db, search)
-{
+async function searchTeachers(db, search) {
     let sql;
     let res;
     let str;
@@ -89,8 +88,7 @@ async function searchTeachers(db, search)
  *
  * @returns {string} Formatted table to print out.
  */
-function teacherAsTable(res)
-{
+function teacherAsTable(res) {
     let str;
 
     str  = "+-----------+---------------------+-----------+----------+\n";

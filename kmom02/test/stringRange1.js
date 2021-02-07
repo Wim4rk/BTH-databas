@@ -11,8 +11,7 @@ module.exports = {
     "stringRange": stringRange
 };
 
-function stringRange(a, b, sep = ", ")
-{
+function stringRange(a, b, sep = ", ") {
     let res = "";
     let i = a;
 

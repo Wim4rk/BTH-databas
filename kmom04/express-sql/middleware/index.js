@@ -13,8 +13,7 @@
  *
  * @returns {void}
  */
-function logIncomingToConsole(req, res, next)
-{
+function logIncomingToConsole(req, res, next) {
     console.info(`Got request on ${req.path} (${req.method}).`);
     next();
 }

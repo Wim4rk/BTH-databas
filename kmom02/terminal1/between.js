@@ -30,8 +30,8 @@ const rl = readline.createInterface({
 
     // Ask question and handle answer in async arrow funciton
     console.info("Search range.");
-    rl.question("Search, min: ", async(min) => {
-        rl.question("Search, max: ", async(max) => {
+    rl.question("Search, min: ", async (min) => {
+        rl.question("Search, max: ", async (max) => {
             // Run query:
             res = await searchBetween(db, min, max);
 
@@ -66,8 +66,7 @@ const rl = readline.createInterface({
  *
  * @returns {array} SQL result.
  */
-async function searchBetween(db, min, max)
-{
+async function searchBetween(db, min, max) {
     let sql;
     let res;
 
