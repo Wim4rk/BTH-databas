@@ -82,8 +82,8 @@ Vill man ha det mer dynamiskt får man koppla SQL samman med ett annat språk.
 
 __Vilken är din TIL för detta moment?__
 
-Det finns mer än `<code>`-elementet för att skriva kod-liknande text i
-HTML. Till exempel `<kbd>` som står för input, `<samp>` som står
-för output och `<var>` som står för variabel.
+Det finns mer än &lt;code&gt;-elementet för att skriva kod-liknande text i
+HTML. Till exempel &lt;kbd&gt; som står för input, &lt;samp&gt; som står för output och
+&lt;var&gt; som står för variabel.
 
 [1]: http://www.student.bth.se/~olai19/dbwebb-kurser/databas/me/redovisa/redovisning.php?page=kmom01

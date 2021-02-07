@@ -20,7 +20,7 @@
   "dependencies": {
     "console.table": "^0.10.0",
     "mysql": "^2.18.1",
-    "promise-mysql": "^4.1.4"
+    "promise-mysql": "^5.0.2"
   },
   "devDependencies": {}
 }
