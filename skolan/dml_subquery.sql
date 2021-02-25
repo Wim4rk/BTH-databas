@@ -31,3 +31,18 @@ WHERE
             avdelning = 'DIDD'
     )
 ;
+
+--
+-- Detaljer om äldste lärare
+--
+SELECT
+    akronym,
+    fornamn,
+    efternamn,
+    Ålder
+FROM v_larare
+WHERE
+    Ålder = (
+        SELECT max(Ålder) FROM v_larare
+    )
+;

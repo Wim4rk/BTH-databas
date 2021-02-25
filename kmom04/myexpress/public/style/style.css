@@ -47,7 +47,8 @@ var {
     color: #000;
     background: #efefef;
     border: 1px solid #777;
-    padding: 0 0.2em;
+    border-radius: 0.3em;
+    padding: 0.2em;
 }
 
 code {

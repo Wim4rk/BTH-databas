@@ -16,6 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `course`
+--
+
+DROP TABLE IF EXISTS `course`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `course` (
+  `code` char(6) NOT NULL,
+  `name` varchar(40) NOT NULL,
+  `nick` char(10) NOT NULL,
+  `points` decimal(2,1) DEFAULT NULL,
+  PRIMARY KEY (`code`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `course`
+--
+
+LOCK TABLES `course` WRITE;
+/*!40000 ALTER TABLE `course` DISABLE KEYS */;
+/*!40000 ALTER TABLE `course` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `kurs`
 --
 
@@ -58,7 +83,7 @@ CREATE TABLE `kurstillfalle` (
   KEY `kursansvarig` (`kursansvarig`),
   CONSTRAINT `kurstillfalle_ibfk_1` FOREIGN KEY (`kurskod`) REFERENCES `kurs` (`kod`),
   CONSTRAINT `kurstillfalle_ibfk_2` FOREIGN KEY (`kursansvarig`) REFERENCES `larare` (`akronym`)
-) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +92,7 @@ CREATE TABLE `kurstillfalle` (
 
 LOCK TABLES `kurstillfalle` WRITE;
 /*!40000 ALTER TABLE `kurstillfalle` DISABLE KEYS */;
-INSERT INTO `kurstillfalle` VALUES (50,'SVT101','gyl',1),(51,'SVT101','gyl',3),(52,'SVT201','ala',1),(53,'SVT202','ala',2),(54,'SVT401','sna',1),(55,'KVA101','hoc',1),(56,'DJU101','hag',3),(57,'DRY101','sna',2),(58,'DRY102','sna',3),(59,'MUG101','min',4);
+INSERT INTO `kurstillfalle` VALUES (1,'SVT101','gyl',1),(2,'SVT101','gyl',3),(3,'SVT201','ala',1),(4,'SVT202','ala',2),(5,'SVT401','sna',1),(6,'KVA101','hoc',1),(7,'DJU101','hag',3),(8,'DRY101','sna',2),(9,'DRY102','sna',3),(10,'MUG101','min',4);
 /*!40000 ALTER TABLE `kurstillfalle` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,6 +112,7 @@ CREATE TABLE `larare` (
   `lon` int(11) DEFAULT NULL,
   `fodd` date DEFAULT NULL,
   `kompetens` int(11) DEFAULT 1,
+  `ny_lon` int(11) DEFAULT NULL,
   PRIMARY KEY (`akronym`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -97,7 +123,7 @@ CREATE TABLE `larare` (
 
 LOCK TABLES `larare` WRITE;
 /*!40000 ALTER TABLE `larare` DISABLE KEYS */;
-INSERT INTO `larare` VALUES ('ala','DIPT','Alastor','Moody','M',27594,'1943-04-03',1),('dum','ADM','Albus','Dumbledore','M',85000,'1941-04-01',7),('fil','ADM','Argus','Filch','M',27594,'1946-04-06',3),('gyl','DIPT','Gyllenroy','Lockman','M',27594,'1952-05-02',1),('hag','ADM','Hagrid','Rubeus','M',30000,'1956-05-06',2),('hoc','DIDD','Madam','Hooch','K',37580,'1948-04-08',1),('min','DIDD','Minerva','McGonagall','K',49880,'1955-05-05',2),('sna','DIPT','Severus','Snape','M',41000,'1951-05-01',2);
+INSERT INTO `larare` VALUES ('ala','DIPT','Alastor','Moody','M',30000,'1943-04-03',1,27594),('dum','ADM','Albus','Dumbledore','M',80000,'1941-04-01',7,85000),('fil','ADM','Argus','Filch','M',25000,'1946-04-06',3,27594),('gyl','DIPT','Gyllenroy','Lockman','M',30000,'1952-05-02',1,27594),('hag','ADM','Hagrid','Rubeus','M',25000,'1956-05-06',2,30000),('hoc','DIDD','Madam','Hooch','K',35000,'1948-04-08',1,37580),('min','DIDD','Minerva','McGonagall','K',40000,'1955-05-05',2,49880),('sna','DIPT','Severus','Snape','M',40000,'1951-05-01',2,45000);
 /*!40000 ALTER TABLE `larare` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -151,6 +177,56 @@ LOCK TABLES `person` WRITE;
 /*!40000 ALTER TABLE `person` DISABLE KEYS */;
 INSERT INTO `person` VALUES ('Örjan'),('Börje'),('Bo'),('Øjvind'),('Åke'),('Åkesson'),('Arne'),('Ängla'),('Ægir');
 /*!40000 ALTER TABLE `person` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `student`
+--
+
+DROP TABLE IF EXISTS `student`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `student` (
+  `acronym` char(6) NOT NULL,
+  `name` varchar(40) NOT NULL,
+  PRIMARY KEY (`acronym`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `student`
+--
+
+LOCK TABLES `student` WRITE;
+/*!40000 ALTER TABLE `student` DISABLE KEYS */;
+/*!40000 ALTER TABLE `student` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `student2course`
+--
+
+DROP TABLE IF EXISTS `student2course`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `student2course` (
+  `acronym` char(6) NOT NULL,
+  `code` char(6) NOT NULL,
+  `grade` char(1) DEFAULT NULL,
+  PRIMARY KEY (`acronym`,`code`),
+  KEY `code` (`code`),
+  CONSTRAINT `student2course_ibfk_1` FOREIGN KEY (`acronym`) REFERENCES `student` (`acronym`),
+  CONSTRAINT `student2course_ibfk_2` FOREIGN KEY (`code`) REFERENCES `course` (`code`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `student2course`
+--
+
+LOCK TABLES `student2course` WRITE;
+/*!40000 ALTER TABLE `student2course` DISABLE KEYS */;
+/*!40000 ALTER TABLE `student2course` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -277,7 +353,8 @@ SET character_set_client = utf8;
   `kon` tinyint NOT NULL,
   `lon` tinyint NOT NULL,
   `fodd` tinyint NOT NULL,
-  `kompetens` tinyint NOT NULL
+  `kompetens` tinyint NOT NULL,
+  `ny_lon` tinyint NOT NULL
 ) ENGINE=MyISAM */;
 SET character_set_client = @saved_cs_client;
 
@@ -332,7 +409,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8 */;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`user`@`%` SQL SECURITY DEFINER */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `v_name_alder` AS select `larare`.`akronym` AS `Akronym`,concat(`larare`.`fornamn`,' ',`larare`.`efternamn`,' (',lcase(`larare`.`avdelning`),')') AS `Namn`,timestampdiff(YEAR,`larare`.`fodd`,curdate()) AS `Ålder` from `larare` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
@@ -351,8 +428,8 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8 */;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`user`@`%` SQL SECURITY DEFINER */
-/*!50001 VIEW `v_planering` AS select `k`.`kod` AS `kod`,`k`.`namn` AS `namn`,`k`.`poang` AS `poang`,`k`.`niva` AS `niva`,`kt`.`id` AS `id`,`kt`.`kurskod` AS `kurskod`,`kt`.`kursansvarig` AS `kursansvarig`,`kt`.`lasperiod` AS `lasperiod`,`l`.`akronym` AS `akronym`,`l`.`avdelning` AS `avdelning`,`l`.`fornamn` AS `fornamn`,`l`.`efternamn` AS `efternamn`,`l`.`kon` AS `kon`,`l`.`lon` AS `lon`,`l`.`fodd` AS `fodd`,`l`.`kompetens` AS `kompetens` from ((`kurs` `k` join `kurstillfalle` `kt` on(`k`.`kod` = `kt`.`kurskod`)) join `larare` `l` on(`l`.`akronym` = `kt`.`kursansvarig`)) */;
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_planering` AS select `k`.`kod` AS `kod`,`k`.`namn` AS `namn`,`k`.`poang` AS `poang`,`k`.`niva` AS `niva`,`kt`.`id` AS `id`,`kt`.`kurskod` AS `kurskod`,`kt`.`kursansvarig` AS `kursansvarig`,`kt`.`lasperiod` AS `lasperiod`,`l`.`akronym` AS `akronym`,`l`.`avdelning` AS `avdelning`,`l`.`fornamn` AS `fornamn`,`l`.`efternamn` AS `efternamn`,`l`.`kon` AS `kon`,`l`.`lon` AS `lon`,`l`.`fodd` AS `fodd`,`l`.`kompetens` AS `kompetens`,`l`.`ny_lon` AS `ny_lon` from ((`kurs` `k` join `kurstillfalle` `kt` on(`k`.`kod` = `kt`.`kurskod`)) join `larare` `l` on(`l`.`akronym` = `kt`.`kursansvarig`)) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -366,4 +443,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-03-16 11:17:57
+-- Dump completed on 2021-02-23 21:06:46

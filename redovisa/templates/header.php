@@ -6,6 +6,7 @@
 <head>
 <meta charset="utf-8">
 <title><?php echo $title; ?> | databas</title>
+<link rel="icon" type="image/png" href="../favicon.ico">
 <link rel="stylesheet" href="style/style.css">
 </head>
 
