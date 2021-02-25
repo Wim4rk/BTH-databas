@@ -25,7 +25,7 @@ router.get("/index", (req, res) => {
 
 router.get("/balance", async (req, res) => {
     let data = {
-        title: "Account balance | The Bank"
+        title: "Balance | The Bank"
     };
 
     data.res = await bank.showBalance();
@@ -35,7 +35,7 @@ router.get("/balance", async (req, res) => {
 
 router.get("/move-to-adam", async (req, res) => {
     let data = {
-        title: "Adam says | The Bank",
+        title: "Transactions | The Bank",
         amount: 1.5,
         from: "Eva",
         to: "Adam",

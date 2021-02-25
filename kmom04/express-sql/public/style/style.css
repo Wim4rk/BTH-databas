@@ -7,44 +7,8 @@ body {
     line-height: 1.6em;
 }
 
-header {
-    background-color: #ddd;
-    padding: 1em;
-}
-
-footer {
-    background-color: #666;
-    color: #fff;
-    padding: 1em;
-}
-
 article {
     max-width: 60em;
-}
-
-table {
-    border: 1px solid #ccc;
-    background-color: #fff;
-    border-collapse: collapse;
-    margin-bottom: 1em;
-}
-
-th {
-    border: 1px solid #999;
-    padding: 0.3em 1em;
-}
-
-td {
-    padding: 0.3em 1em;
-    border: 1px solid #999;
-}
-
-td.right {
-    text-align: right;
-}
-
-tr:hover {
-    background-color: #eee;
 }
 
 ul {
@@ -83,7 +47,8 @@ var {
     color: #000;
     background: #efefef;
     border: 1px solid #777;
-    padding: 0 0.2em;
+    border-radius: 0.3em;
+    padding: 0.2em;
 }
 
 code {
