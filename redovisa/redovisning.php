@@ -23,8 +23,8 @@ include(__DIR__ . "/templates/header.php");
     </header>
 
 <?php
-if (file_exists(__DIR__ . "/texter/{$kmom}.md")) {
-    $filename   = __DIR__ . "/texter/{$kmom}.md";
+if (file_exists(__DIR__ . "/texter/$kmom.md")) {
+    $filename   = __DIR__ . "/texter/$kmom.md";
     $text       = file_get_contents($filename);
     $Pants      = new SmartyPants();
     $Pars       = new Parsedown();
@@ -32,9 +32,8 @@ if (file_exists(__DIR__ . "/texter/{$kmom}.md")) {
 } else { ?>
     <h2>Texten finns inte</h2>
     <p>Antagligen så har jag inte hunnit redovisa det här kurs-momentet...</p>
-<?php } 
+<?php }
 
 include(__DIR__ . "/templates/footer.php");
 
 ?>
-

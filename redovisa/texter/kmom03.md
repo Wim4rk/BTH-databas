@@ -1,4 +1,4 @@
-## <a id="kmom03">Kmom03</a>
+## Kmom03
 
 Det här är ännu ett kursmoment som jag gör om. Jag har läst igenom uppgifterna och granskat min kod. Något har jag fått ändra, men det mesta har fungerat. I koden står årtalet 2020. Jag låter det stå kvar, för det var då jag skrev det
 mesta av den.

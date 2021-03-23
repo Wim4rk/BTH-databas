@@ -1,4 +1,6 @@
-##<a id="kmom04">Kmom04</a>
+## Kmom04
+
+Välkommen att läsa min redovisning [online][1].
 
 Äntligen kan jag lämna in det här kursmomentet. Jag jobbade igenom det här
 under sommaren 2020. Det är således den sista kod jag haft färdig på förhand,
@@ -17,7 +19,7 @@ eller Flask. Jag förmodar att man måste ha full kontroll över själva maskine
 för att kunna köra sådant och liknande.
 
 
-### CLI och EJS
+### Banken &ndash; CLI och EJS
 
 Jag skapade först ett program för cli. Det känns lättare att testa sig fram
 där. När jag var övertygad om att alla bakomliggande funktioner fungerade
@@ -26,8 +28,8 @@ för CLI-programmet och en kvart för EJS.
 
 Den här gången har jag inte lagt så mycket tid på layout, varken på sidorna
 eller i terminalen. Jag har också använt mycket av exempelkoden rakt av. När
-jag växlat mellan delmomenten så har allt följt med. Man kan begära today, och
-man kan hitta redovisnings&shy;exemplet. Enklast möjliga den här gången.
+jag växlat mellan delmomenten så har allt följt med. Enklast möjliga den här
+gången.
 
 ### ER-modellering
 
@@ -42,7 +44,7 @@ eller annat steg om man inte gör projekt med alltför många människor
 involverade. Fast det finns ju fördelar med att jobba såhär noggrant.
 
 Det jag fann var att jag skapade själva databasen väldigt snabbt och
-smidigt.
+smidigt när jag väl satte mig för att koda.
 
 Förresten tror jag aldrig att jag har skapat en <em>tom</em> databas förut. Jag
 har skapat en tabell i taget som jag genast börjat fylla på. Ibland med fake-
@@ -53,13 +55,20 @@ tid än konstruktionen.
 
 __Hur gick det att förstå konceptet transaktioner i databas?__
 
-Det känns enkelt, än så länge.
+Själva databasen känns enkel, än så länge. Jag kände inte till transaktioner
+tidigare, men jag har funderat över problemet som de löser. Vad händer med min
+data i det korta intervallet mellan två requests? I mina applikationer så har
+risken varit försumbar, men hur löser man det här på lite större skala?
 
 __Gick det bra att komma igång med Express.js, Node, EJS och MySQL?__
 
 Jovars, inget som direkt strulade den här gången. Tvärtom fungerade allt som
 jag hade tänkt mig. Servern hoppade igång och tickade på fastän jag flyttade
 sökvägar och ställde till med krångel för den.
+
+Alldeles i sista stund fick jag problem med att localhost vägrade rendera
+sidorna. Enligt uppgift så fungerar allt på studentservern, och jag får rätt
+data bakom kulisserna. Undersökning pågår, kanske är det något tillfälligt.
 
 __Lyckas du med god kodstruktur för terminal och webbklient?__ du såg att man
 kunde göra en enda funktion som löste flytten av pengar åt båda hållen?
@@ -76,15 +85,17 @@ nästan så att jag funderar på att byta ut den.
 
 Jag gillar verkligen att skriva, men de många illustrationerna blev tunga för
 mig. Egentligen var det ett bra verktyg ni tipsade om &ndash; diagrams.net
-&ndash: men ibland undrade jag om det inte hade varit enklare att rita för
-hand och scanna in diagrammet? Antagligen inte, för jag ändrade en hel del i
-diagrammet allt eftersom.
+&ndash; men ibland undrade jag om det inte hade varit enklare att rita för
+hand och scanna in diagrammet? (Antagligen inte, för jag ändrade en hel del i
+diagrammet allt eftersom.)
 
 __Hur känner du allmänt inför kursen så här långt?__
 
-Jag har roligt, och jag lär mig mycket. Uppgifterna är lagom svåra, det faller
+Jag har roligt, och jag lär mig mycket. Uppgifterna är lagom svåra. Det faller
 inte på databaskunskaperna, utan snarare på JavaScript, precis som tidigare.
 
 __Vilken är din TIL för detta kmom?__
 
-Att det går att ge upp, men att jag inte måste.
+Express.
+
+[1]: http://www.student.bth.se/~olai19/dbwebb-kurser/databas/me/redovisa/redovisning.php?page=kmom04
