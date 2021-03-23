@@ -2,6 +2,9 @@
 
 Välkommen att läsa min redovisning [online][1].
 
+### Bootstrap
+
+Något mystiskt pågår i min ände. Inlämningarna har fungerat, men nu kör jag botstrap för att kunna testa i min ände också. Därför ser inte mitt program riktigt ut som det skall.
 
 
 ### Kort och koncist

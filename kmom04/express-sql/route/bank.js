@@ -46,4 +46,12 @@ router.get("/move-to-adam", async (req, res) => {
     res.render("bank/move", data);
 });
 
+router.get("/test", (req, res) => {
+    let data = {
+        title: "Welcome | The Bank"
+    };
+
+    res.render("index", data);
+});
+
 module.exports = router;
