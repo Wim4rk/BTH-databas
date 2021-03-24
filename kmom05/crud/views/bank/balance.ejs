@@ -4,23 +4,24 @@
 
 <p>Here is the balance for the accounts.</p>
 
-<ul>
-<% for (const row of res) { %>
-    <li><%= JSON.stringify(row) %></li>
-<% }; %>
-</ul>
+<pre><%#= JSON.stringify(res, null, 4) %></pre>
 
 <table>
     <tr>
         <th>Id</th>
         <th>Name</th>
         <th>Balance</th>
+        <th>Action</th>
     </tr>
 <% for (const row of res) { %>
     <tr>
-        <td><%= row.id %></td>
+        <td><a href="/bank/account/<%= row.id %>"><%= row.id %></a></td>
         <td><%= row.name %></td>
         <td class="right"><%= row.balance %></td>
+        <td>
+            <a href="/bank/edit/<%= row.id %>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+            <a href="/bank/delete/<%= row.id %>"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </td>
     </tr>
 <% }; %>
 </table>

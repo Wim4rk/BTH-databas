@@ -3,21 +3,18 @@
  */
 "use strict";
 
-const express = require("express");
-const router  = express.Router();
-const bank    = require("../src/bank.js");
+const express    = require("express");
+const router     = express.Router();
+const bodyParser = require("body-parser");
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
+const bank       = require("../src/bank.js");
+const sitename   = "| The Bank";
 
-router.get("/", (req, res) => {
-    let data = {
-        title: "Welcome | The Bank"
-    };
-
-    res.render("bank/index", data);
-});
+module.exports = router;
 
 router.get("/index", (req, res) => {
     let data = {
-        title: "Welcome | The Bank"
+        title: `Welcome ${sitename}`
     };
 
     res.render("bank/index", data);
@@ -25,7 +22,7 @@ router.get("/index", (req, res) => {
 
 router.get("/balance", async (req, res) => {
     let data = {
-        title: "Balance | The Bank"
+        title: `Account balance ${sitename}`
     };
 
     data.res = await bank.showBalance();
@@ -33,25 +30,64 @@ router.get("/balance", async (req, res) => {
     res.render("bank/balance", data);
 });
 
-router.get("/move-to-adam", async (req, res) => {
+router.get("/create", (req, res) => {
     let data = {
-        title: "Transactions | The Bank",
-        amount: 1.5,
-        from: "Eva",
-        to: "Adam",
+        title: `Create new account ${sitename}`
     };
 
-    data.res = await bank.makeTransaction(1.5, "2222", "1111");
-
-    res.render("bank/move", data);
+    res.render("bank/create", data);
 });
 
-router.get("/test", (req, res) => {
+router.post("/create", urlencodedParser, async (req, res) => {
+    // console.log(JSON.stringify(req.body, null, 4));
+    await bank.createAccount(req.body.id, req.body.name, req.body.balance);
+    res.redirect("/bank/balance");
+});
+
+router.get("/account/:id", async (req, res) => {
+    let id = req.params.id;
     let data = {
-        title: "Welcome | The Bank"
+        title: `Account ${id} ${sitename}`,
+        account: id
     };
 
-    res.render("index", data);
+    data.res = await bank.showAccount(id);
+
+    res.render("bank/account-view", data);
 });
 
-module.exports = router;
+router.get("/edit/:id", async (req, res) => {
+    let id = req.params.id;
+    let data = {
+        title: `Edit account ${id} ${sitename}`,
+        account: id
+    };
+
+    data.res = await bank.showAccount(id);
+
+    res.render("bank/account-edit", data);
+});
+
+router.post("/edit", urlencodedParser, async (req, res) => {
+    //console.log(JSON.stringify(req.body, null, 4));
+    await bank.editAccount(req.body.id, req.body.name, req.body.balance);
+    res.redirect(`/bank/edit/${req.body.id}`);
+});
+
+router.get("/delete/:id", async (req, res) => {
+    let id = req.params.id;
+    let data = {
+        title: `Delete account ${id} ${sitename}`,
+        account: id
+    };
+
+    data.res = await bank.showAccount(id);
+
+    res.render("bank/account-delete", data);
+});
+
+router.post("/delete", urlencodedParser, async (req, res) => {
+    //console.log(JSON.stringify(req.body, null, 4));
+    await bank.deleteAccount(req.body.id);
+    res.redirect(`/bank/balance`);
+});

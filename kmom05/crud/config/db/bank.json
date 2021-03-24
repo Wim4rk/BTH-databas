@@ -2,6 +2,5 @@
     "host":     "localhost",
     "user":     "user",
     "password": "pass",
-    "database": "banken",
-    "multipleStatements": true
+    "database": "banken"
 }
