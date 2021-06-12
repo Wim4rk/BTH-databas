@@ -2,14 +2,14 @@
 -- Delete tables, in order, depending on
 -- foreign key constraints.
 --
-DELETE FROM kurstillfalle;
-DELETE FROM kurs;
+DELETE FROM hund;
+DELETE FROM medlem;
 
 --
 -- Insert into kurs
 --
-LOAD DATA LOCAL INFILE 'kurs.csv'
-INTO TABLE kurs
+LOAD DATA LOCAL INFILE '../csv/hund.csv'
+INTO TABLE hund
 CHARSET utf8
 FIELDS
     TERMINATED BY ','
@@ -19,13 +19,13 @@ LINES
 IGNORE 1 LINES
 ;
 
-SELECT * FROM kurs;
+SELECT * FROM hund;
 
 --
 -- Insert into kurstillfalle.
 --
-LOAD DATA LOCAL INFILE 'kurstillfalle.csv'
-INTO TABLE kurstillfalle
+LOAD DATA LOCAL INFILE '../medlem.csv'
+INTO TABLE medlem
 CHARSET utf8
 FIELDS
     TERMINATED BY ','
@@ -33,7 +33,6 @@ FIELDS
 LINES
     TERMINATED BY '\n'
 IGNORE 1 LINES
-(kurskod, kursansvarig, lasperiod)
 ;
 
-SELECT * FROM kurstillfalle;
+SELECT * FROM medlem;
