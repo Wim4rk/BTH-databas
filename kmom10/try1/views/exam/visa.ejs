@@ -1,0 +1,24 @@
+<%- include("header", {title: title}); %>
+
+<h1>Våra hundar</h1>
+
+<table>
+    <tr>
+        <th>Medlem</th>
+        <th>Ort</th>
+        <th>Hund</th>
+        <th>Ras</th>
+        <th>Godkänd?</th>
+    </tr>
+<% for (const row of dogs[0]) { %>
+    <tr>
+        <td><%= row.husse %></td>
+        <td><%= row.ort %></td>
+        <td><a href="<%= row.url %>"><%= row.hund %></a></td>
+        <td><%= row.ras %></td>
+        <td><%= row.godkand %></td>
+    </tr>
+<% }; %>
+</table>
+
+<%- include("footer"); %>

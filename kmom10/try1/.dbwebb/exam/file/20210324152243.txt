@@ -1,0 +1,1003 @@
+20210324152243
+.
+totalt 92
+-rw-r--r--  1 olov olov  1852 mar 24 15:21 cli.js
+drwxr-xr-x  3 olov olov  4096 mar 24 11:39 config
+drwxrwxr-x  2 olov olov  4096 mar 24 10:27 csv
+drwxr-xr-x  3 olov olov  4096 mar 24 09:23 .dbwebb
+drwxr-xr-x  2 olov olov  4096 mar 24 09:38 doc
+-rw-r--r--  1 olov olov  1366 mar 24 12:13 index.js
+-rw-r--r--  1 olov olov 10871 mar 24 09:23 INSTRUKTION.md
+drwxr-xr-x  2 olov olov  4096 mar 24 11:39 middleware
+drwxr-xr-x 67 olov olov  4096 mar 24 14:56 node_modules
+-rw-r--r--  1 olov olov   442 mar 24 14:56 package.json
+-rw-r--r--  1 olov olov 19055 mar 24 14:56 package-lock.json
+drwxr-xr-x  5 olov olov  4096 mar 24 12:09 public
+-rw-r--r--  1 olov olov  3926 mar 24 09:23 README_FIRST.md
+drwxr-xr-x  2 olov olov  4096 mar 24 14:34 route
+drwxr-xr-x  3 olov olov  4096 mar 24 12:39 sql
+drwxr-xr-x  2 olov olov  4096 mar 24 14:34 src
+drwxr-xr-x  3 olov olov  4096 mar 24 14:34 views
+./csv
+totalt 0
+./.dbwebb
+totalt 4
+drwxr-xr-x 4 olov olov 4096 mar 24 09:23 exam
+./.dbwebb/exam
+totalt 12
+drwxr-xr-x 2 olov olov 4096 mar 24 15:22 file
+-rw-r--r-- 1 olov olov   36 mar 24 09:23 id.md
+drwxr-xr-x 2 olov olov 4096 mar 24 15:22 receipt
+./.dbwebb/exam/file
+totalt 144
+-rw-r--r-- 1 olov olov   602 mar 24 09:23 20210324092306.txt
+-rw-r--r-- 1 olov olov   719 mar 24 09:28 20210324092819.txt
+-rw-r--r-- 1 olov olov 42757 mar 24 15:13 20210324151352.txt
+-rw-r--r-- 1 olov olov 42879 mar 24 15:17 20210324151745.txt
+-rw-r--r-- 1 olov olov 42999 mar 24 15:22 20210324152221.txt
+-rw-r--r-- 1 olov olov  1177 mar 24 15:22 20210324152243.txt
+./.dbwebb/exam/receipt
+totalt 24
+-rw-r--r-- 1 olov olov 579 mar 24 09:23 20210324082306.md
+-rw-r--r-- 1 olov olov 579 mar 24 09:28 20210324092819.md
+-rw-r--r-- 1 olov olov 660 mar 24 15:13 20210324141352.md
+-rw-r--r-- 1 olov olov 741 mar 24 15:22 20210324142221.md
+-rw-r--r-- 1 olov olov 660 mar 24 15:17 20210324151745.md
+-rw-r--r-- 1 olov olov 741 mar 24 15:22 20210324152243.md
+./public
+totalt 40
+-rw-r--r-- 1 olov olov 15406 feb 25 11:05 favicon.ico
+drwxr-xr-x 2 olov olov  4096 mar 24 11:39 img
+drwxr-xr-x 2 olov olov  4096 mar 24 11:39 js
+-rw-r--r-- 1 olov olov  1905 mar 24 11:39 me.html
+-rw-r--r-- 1 olov olov   805 mar 24 11:39 om.html
+-rw-r--r-- 1 olov olov  1134 mar 24 11:39 redovisning.html
+drwxr-xr-x 2 olov olov  4096 mar 24 11:39 style
+./public/img
+totalt 0
+./public/style
+totalt 4
+-rw-r--r-- 1 olov olov 954 mar 24 11:39 style.css
+./public/js
+totalt 4
+-rw-r--r-- 1 olov olov 114 mar 24 11:39 main.js
+./route
+totalt 4
+-rw-r--r-- 1 olov olov 562 mar 24 14:42 exam.js
+./sql
+totalt 8
+drwxr-xr-x 2 olov olov 4096 mar 24 15:11 exam
+-rw-r--r-- 1 olov olov  766 mar 24 13:35 test.sql
+./sql/exam
+totalt 52
+-rw-r--r-- 1 olov olov 8688 mar 24 15:11 backup.sql
+-rw-r--r-- 1 olov olov 1150 mar 24 13:26 ddl.sql
+-rw-r--r-- 1 olov olov  957 mar 24 13:12 dml_insert.sql
+-rw-r--r-- 1 olov olov  286 mar 24 14:32 dml_procedure.sql
+-rw-r--r-- 1 olov olov  453 mar 24 14:32 dml_view.sql
+-rw-rw-r-- 1 olov olov  488 mar 24 09:47 hund.csv
+-rw-rw-r-- 1 olov olov  116 mar 24 09:47 medlem2hund.csv
+-rw-rw-r-- 1 olov olov  274 mar 24 09:46 medlem.csv
+-rw-rw-r-- 1 olov olov  107 mar 24 11:10 ras.csv
+-rw-r--r-- 1 olov olov  738 mar 24 13:51 reset.bash
+-rw-r--r-- 1 olov olov  275 mar 24 13:01 setup.sql
+./doc
+totalt 0
+./views
+totalt 4
+drwxr-xr-x 2 olov olov 4096 mar 24 12:17 exam
+./views/exam
+totalt 16
+-rw-r--r-- 1 olov olov 133 mar 24 12:09 footer.ejs
+-rw-r--r-- 1 olov olov 306 mar 24 14:34 header.ejs
+-rw-r--r-- 1 olov olov  98 mar 24 14:35 index.ejs
+-rw-r--r-- 1 olov olov 503 mar 24 14:33 visa.ejs
+./middleware
+totalt 4
+-rw-r--r-- 1 olov olov 523 mar 24 11:39 index.js
+./node_modules/@types
+totalt 12
+drwxr-xr-x 2 olov olov 4096 mar 24 11:39 bluebird
+drwxr-xr-x 2 olov olov 4096 mar 24 11:39 mysql
+drwxr-xr-x 4 olov olov 4096 mar 24 11:39 node
+./node_modules/@types/node
+totalt 800
+-rw-r--r-- 1 olov olov   5689 mar 24 11:39 assert.d.ts
+-rw-r--r-- 1 olov olov   9836 mar 24 11:39 async_hooks.d.ts
+-rw-r--r-- 1 olov olov    905 mar 24 11:39 base.d.ts
+-rw-r--r-- 1 olov olov    770 mar 24 11:39 buffer.d.ts
+-rw-r--r-- 1 olov olov  25296 mar 24 11:39 child_process.d.ts
+-rw-r--r-- 1 olov olov  16197 mar 24 11:39 cluster.d.ts
+-rw-r--r-- 1 olov olov   5985 mar 24 11:39 console.d.ts
+-rw-r--r-- 1 olov olov    698 mar 24 11:39 constants.d.ts
+-rw-r--r-- 1 olov olov  46401 mar 24 11:39 crypto.d.ts
+-rw-r--r-- 1 olov olov   7270 mar 24 11:39 dgram.d.ts
+-rw-r--r-- 1 olov olov  16536 mar 24 11:39 dns.d.ts
+-rw-r--r-- 1 olov olov    784 mar 24 11:39 domain.d.ts
+-rw-r--r-- 1 olov olov   3478 mar 24 11:39 events.d.ts
+drwxr-xr-x 2 olov olov   4096 mar 24 11:39 fs
+-rw-r--r-- 1 olov olov 120301 mar 24 11:39 fs.d.ts
+-rw-r--r-- 1 olov olov  23691 mar 24 11:39 globals.d.ts
+-rw-r--r-- 1 olov olov     55 mar 24 11:39 globals.global.d.ts
+-rw-r--r-- 1 olov olov  56734 mar 24 11:39 http2.d.ts
+-rw-r--r-- 1 olov olov  18944 mar 24 11:39 http.d.ts
+-rw-r--r-- 1 olov olov   1721 mar 24 11:39 https.d.ts
+-rw-r--r-- 1 olov olov   3634 mar 24 11:39 index.d.ts
+-rw-r--r-- 1 olov olov 122095 mar 24 11:39 inspector.d.ts
+-rw-r--r-- 1 olov olov   1141 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov   1742 mar 24 11:39 module.d.ts
+-rw-r--r-- 1 olov olov  13259 mar 24 11:39 net.d.ts
+-rw-r--r-- 1 olov olov   8232 mar 24 11:39 os.d.ts
+-rw-r--r-- 1 olov olov   5317 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov   6395 mar 24 11:39 path.d.ts
+-rw-r--r-- 1 olov olov  10691 mar 24 11:39 perf_hooks.d.ts
+-rw-r--r-- 1 olov olov  20394 mar 24 11:39 process.d.ts
+-rw-r--r-- 1 olov olov   3847 mar 24 11:39 punycode.d.ts
+-rw-r--r-- 1 olov olov   1118 mar 24 11:39 querystring.d.ts
+-rw-r--r-- 1 olov olov   7364 mar 24 11:39 readline.d.ts
+-rw-r--r-- 1 olov olov   2627 mar 24 11:39 README.md
+-rw-r--r-- 1 olov olov  18191 mar 24 11:39 repl.d.ts
+-rw-r--r-- 1 olov olov  19473 mar 24 11:39 stream.d.ts
+-rw-r--r-- 1 olov olov    271 mar 24 11:39 string_decoder.d.ts
+-rw-r--r-- 1 olov olov    890 mar 24 11:39 timers.d.ts
+-rw-r--r-- 1 olov olov  37905 mar 24 11:39 tls.d.ts
+-rw-r--r-- 1 olov olov   2187 mar 24 11:39 trace_events.d.ts
+drwxr-xr-x 2 olov olov   4096 mar 24 11:39 ts3.6
+-rw-r--r-- 1 olov olov   2503 mar 24 11:39 tty.d.ts
+-rw-r--r-- 1 olov olov   4270 mar 24 11:39 url.d.ts
+-rw-r--r-- 1 olov olov  12811 mar 24 11:39 util.d.ts
+-rw-r--r-- 1 olov olov   6828 mar 24 11:39 v8.d.ts
+-rw-r--r-- 1 olov olov   3437 mar 24 11:39 wasi.d.ts
+-rw-r--r-- 1 olov olov   6059 mar 24 11:39 vm.d.ts
+-rw-r--r-- 1 olov olov  11551 mar 24 11:39 worker_threads.d.ts
+-rw-r--r-- 1 olov olov  14390 mar 24 11:39 zlib.d.ts
+./node_modules/@types/node/ts3.6
+totalt 16
+-rw-r--r-- 1 olov olov 4684 mar 24 11:39 assert.d.ts
+-rw-r--r-- 1 olov olov 2620 mar 24 11:39 base.d.ts
+-rw-r--r-- 1 olov olov  294 mar 24 11:39 index.d.ts
+./node_modules/@types/node/fs
+totalt 32
+-rw-r--r-- 1 olov olov 30700 mar 24 11:39 promises.d.ts
+./node_modules/@types/mysql
+totalt 36
+-rw-r--r-- 1 olov olov 22312 mar 24 11:39 index.d.ts
+-rw-r--r-- 1 olov olov  1141 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov  2021 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov   724 mar 24 11:39 README.md
+./node_modules/@types/bluebird
+totalt 68
+-rw-r--r-- 1 olov olov 54433 mar 24 11:39 index.d.ts
+-rw-r--r-- 1 olov olov  1141 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov  1675 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov   499 mar 24 11:39 README.md
+./node_modules/content-type
+totalt 24
+-rw-r--r-- 1 olov olov  436 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 4809 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1089 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2178 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 2796 mar 24 11:39 README.md
+./node_modules/ms
+totalt 16
+-rw-r--r-- 1 olov olov 2764 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1077 mar 24 11:39 license.md
+-rw-r--r-- 1 olov olov 1573 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 1721 mar 24 11:39 readme.md
+./node_modules/string_decoder
+totalt 20
+drwxr-xr-x 2 olov olov 4096 mar 24 11:39 lib
+-rw-r--r-- 1 olov olov 2338 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 1757 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 1801 mar 24 11:39 README.md
+-rw-r--r-- 1 olov olov  899 mar 24 11:39 .travis.yml
+./node_modules/string_decoder/lib
+totalt 12
+-rw-r--r-- 1 olov olov 9465 mar 24 11:39 string_decoder.js
+./node_modules/util-deprecate
+totalt 24
+-rw-r--r-- 1 olov olov 1614 mar 24 11:39 browser.js
+-rw-r--r-- 1 olov olov  282 mar 24 11:39 History.md
+-rw-r--r-- 1 olov olov 1102 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov  123 mar 24 11:39 node.js
+-rw-r--r-- 1 olov olov 1560 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 1666 mar 24 11:39 README.md
+./node_modules/send
+totalt 64
+-rw-r--r-- 1 olov olov 12643 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 23287 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov  1128 mar 24 11:39 LICENSE
+drwxr-xr-x 3 olov olov  4096 mar 24 11:39 node_modules
+-rw-r--r-- 1 olov olov  2812 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov  9442 mar 24 11:39 README.md
+./node_modules/send/node_modules
+totalt 4
+drwxr-xr-x 2 olov olov 4096 mar 24 11:39 ms
+./node_modules/send/node_modules/ms
+totalt 16
+-rw-r--r-- 1 olov olov 3034 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1077 mar 24 11:39 license.md
+-rw-r--r-- 1 olov olov 1639 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 2002 mar 24 11:39 readme.md
+./node_modules/cookie
+totalt 28
+-rw-r--r-- 1 olov olov 2698 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 4037 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1175 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2192 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 8809 mar 24 11:39 README.md
+./node_modules/unpipe
+totalt 20
+-rw-r--r-- 1 olov olov   59 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 1118 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1114 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 1758 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 1250 mar 24 11:39 README.md
+./node_modules/raw-body
+totalt 36
+-rw-r--r-- 1 olov olov 5354 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 2286 mar 24 11:39 index.d.ts
+-rw-r--r-- 1 olov olov 6059 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1181 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2618 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 6339 mar 24 11:39 README.md
+./node_modules/statuses
+totalt 24
+-rw-r--r-- 1 olov olov 1821 mar 24 11:39 codes.json
+-rw-r--r-- 1 olov olov 1023 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 2088 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1172 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2596 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 3458 mar 24 11:39 README.md
+./node_modules/toidentifier
+totalt 16
+-rw-r--r-- 1 olov olov  490 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1108 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2196 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 1718 mar 24 11:39 README.md
+./node_modules/path-to-regexp
+totalt 20
+-rw-r--r-- 1 olov olov  694 mar 24 11:39 History.md
+-rw-r--r-- 1 olov olov 3328 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1103 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 1510 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 1102 mar 24 11:39 Readme.md
+./node_modules/encodeurl
+totalt 20
+-rw-r--r-- 1 olov olov  238 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 1586 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1089 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2145 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 3855 mar 24 11:39 README.md
+./node_modules/range-parser
+totalt 20
+-rw-r--r-- 1 olov olov  917 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 2900 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1178 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2421 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 2278 mar 24 11:39 README.md
+./node_modules/sqlstring
+totalt 28
+-rw-r--r-- 1 olov olov  859 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov   45 mar 24 11:39 index.js
+drwxr-xr-x 2 olov olov 4096 mar 24 11:39 lib
+-rw-r--r-- 1 olov olov 1118 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2382 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 7969 mar 24 11:39 README.md
+./node_modules/sqlstring/lib
+totalt 8
+-rw-r--r-- 1 olov olov 5858 mar 24 11:39 SqlString.js
+./node_modules/vary
+totalt 20
+-rw-r--r-- 1 olov olov  792 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 2930 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1094 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2149 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 2716 mar 24 11:39 README.md
+./node_modules/core-util-is
+totalt 36
+-rw-r--r-- 1 olov olov 16278 mar 24 11:39 float.patch
+drwxr-xr-x 2 olov olov  4096 mar 24 11:39 lib
+-rw-r--r-- 1 olov olov  1077 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov  1566 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov    67 mar 24 11:39 README.md
+-rw-r--r-- 1 olov olov  2101 mar 24 11:39 test.js
+./node_modules/core-util-is/lib
+totalt 4
+-rw-r--r-- 1 olov olov 3021 mar 24 11:39 util.js
+./node_modules/forwarded
+totalt 20
+-rw-r--r-- 1 olov olov  306 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 1360 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1094 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2154 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 1637 mar 24 11:39 README.md
+./node_modules/mime-db
+totalt 212
+-rw-r--r-- 1 olov olov 181417 mar 24 11:39 db.json
+-rw-r--r-- 1 olov olov  11555 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov    136 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov   1099 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov   2775 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov   4102 mar 24 11:39 README.md
+./node_modules/proxy-addr
+totalt 28
+-rw-r--r-- 1 olov olov 2869 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 6000 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1094 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2263 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 4400 mar 24 11:39 README.md
+./node_modules/safe-buffer
+totalt 44
+-rw-r--r-- 1 olov olov  8738 mar 24 11:39 index.d.ts
+-rw-r--r-- 1 olov olov  1529 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov  1081 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov  1710 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 19555 mar 24 11:39 README.md
+./node_modules/.bin
+totalt 4
+-rw-r--r-- 1 olov olov 149 mar 24 11:39 mime
+./node_modules/promise-mysql
+totalt 28
+-rw-r--r-- 1 olov olov 2221 mar 24 11:39 index.d.ts
+-rw-r--r-- 1 olov olov  397 mar 24 11:39 index.js
+drwxr-xr-x 2 olov olov 4096 mar 24 11:39 lib
+-rw-r--r-- 1 olov olov 1083 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 1864 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 6457 mar 24 11:39 README.md
+./node_modules/promise-mysql/lib
+totalt 16
+-rw-r--r-- 1 olov olov 3804 mar 24 11:39 connection.js
+-rw-r--r-- 1 olov olov  515 mar 24 11:39 helper.js
+-rw-r--r-- 1 olov olov  513 mar 24 11:39 poolConnection.js
+-rw-r--r-- 1 olov olov 1242 mar 24 11:39 pool.js
+./node_modules/mysql
+totalt 104
+-rw-r--r-- 1 olov olov 21090 mar 24 11:39 Changes.md
+-rw-r--r-- 1 olov olov  4533 mar 24 11:39 index.js
+drwxr-xr-x 3 olov olov  4096 mar 24 11:39 lib
+-rw-r--r-- 1 olov olov  1118 mar 24 11:39 License
+-rw-r--r-- 1 olov olov  2584 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 57600 mar 24 11:39 Readme.md
+./node_modules/mysql/lib
+totalt 60
+-rw-r--r-- 1 olov olov  6614 mar 24 11:39 ConnectionConfig.js
+-rw-r--r-- 1 olov olov 13831 mar 24 11:39 Connection.js
+-rw-r--r-- 1 olov olov  6470 mar 24 11:39 PoolCluster.js
+-rw-r--r-- 1 olov olov  1057 mar 24 11:39 PoolConfig.js
+-rw-r--r-- 1 olov olov  1697 mar 24 11:39 PoolConnection.js
+-rw-r--r-- 1 olov olov  7586 mar 24 11:39 Pool.js
+-rw-r--r-- 1 olov olov  3220 mar 24 11:39 PoolNamespace.js
+-rw-r--r-- 1 olov olov   588 mar 24 11:39 PoolSelector.js
+drwxr-xr-x 5 olov olov  4096 mar 24 11:39 protocol
+./node_modules/mysql/lib/protocol
+totalt 76
+-rw-r--r-- 1 olov olov  4292 mar 24 11:39 Auth.js
+-rw-r--r-- 1 olov olov   385 mar 24 11:39 BufferList.js
+drwxr-xr-x 2 olov olov  4096 mar 24 11:39 constants
+-rw-r--r-- 1 olov olov   121 mar 24 11:39 PacketHeader.js
+drwxr-xr-x 2 olov olov  4096 mar 24 11:39 packets
+-rw-r--r-- 1 olov olov  5372 mar 24 11:39 PacketWriter.js
+-rw-r--r-- 1 olov olov 13406 mar 24 11:39 Parser.js
+-rw-r--r-- 1 olov olov 11657 mar 24 11:39 Protocol.js
+-rw-r--r-- 1 olov olov   233 mar 24 11:39 ResultSet.js
+drwxr-xr-x 2 olov olov  4096 mar 24 11:39 sequences
+-rw-r--r-- 1 olov olov    39 mar 24 11:39 SqlString.js
+-rw-r--r-- 1 olov olov   699 mar 24 11:39 Timer.js
+./node_modules/mysql/lib/protocol/sequences
+totalt 36
+-rw-r--r-- 1 olov olov 2071 mar 24 11:39 ChangeUser.js
+-rw-r--r-- 1 olov olov 3723 mar 24 11:39 Handshake.js
+-rw-r--r-- 1 olov olov  282 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov  434 mar 24 11:39 Ping.js
+-rw-r--r-- 1 olov olov 5705 mar 24 11:39 Query.js
+-rw-r--r-- 1 olov olov  861 mar 24 11:39 Quit.js
+-rw-r--r-- 1 olov olov 3231 mar 24 11:39 Sequence.js
+-rw-r--r-- 1 olov olov  727 mar 24 11:39 Statistics.js
+./node_modules/mysql/lib/protocol/constants
+totalt 284
+-rw-r--r-- 1 olov olov  11398 mar 24 11:39 charsets.js
+-rw-r--r-- 1 olov olov   1629 mar 24 11:39 client.js
+-rw-r--r-- 1 olov olov 176038 mar 24 11:39 errors.js
+-rw-r--r-- 1 olov olov   1066 mar 24 11:39 field_flags.js
+-rw-r--r-- 1 olov olov   1449 mar 24 11:39 server_status.js
+-rw-r--r-- 1 olov olov  82511 mar 24 11:39 ssl_profiles.js
+-rw-r--r-- 1 olov olov   1763 mar 24 11:39 types.js
+./node_modules/mysql/lib/protocol/packets
+totalt 96
+-rw-r--r-- 1 olov olov  707 mar 24 11:39 AuthSwitchRequestPacket.js
+-rw-r--r-- 1 olov olov  375 mar 24 11:39 AuthSwitchResponsePacket.js
+-rw-r--r-- 1 olov olov 2080 mar 24 11:39 ClientAuthenticationPacket.js
+-rw-r--r-- 1 olov olov  960 mar 24 11:39 ComChangeUserPacket.js
+-rw-r--r-- 1 olov olov  289 mar 24 11:39 ComPingPacket.js
+-rw-r--r-- 1 olov olov  405 mar 24 11:39 ComQueryPacket.js
+-rw-r--r-- 1 olov olov  301 mar 24 11:39 ComQuitPacket.js
+-rw-r--r-- 1 olov olov  313 mar 24 11:39 ComStatisticsPacket.js
+-rw-r--r-- 1 olov olov  163 mar 24 11:39 EmptyPacket.js
+-rw-r--r-- 1 olov olov  721 mar 24 11:39 EofPacket.js
+-rw-r--r-- 1 olov olov 1007 mar 24 11:39 ErrorPacket.js
+-rw-r--r-- 1 olov olov  649 mar 24 11:39 Field.js
+-rw-r--r-- 1 olov olov 3264 mar 24 11:39 FieldPacket.js
+-rw-r--r-- 1 olov olov 3958 mar 24 11:39 HandshakeInitializationPacket.js
+-rw-r--r-- 1 olov olov 1360 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov  319 mar 24 11:39 LocalDataFilePacket.js
+-rw-r--r-- 1 olov olov  609 mar 24 11:39 LocalInfileRequestPacket.js
+-rw-r--r-- 1 olov olov 1414 mar 24 11:39 OkPacket.js
+-rw-r--r-- 1 olov olov  367 mar 24 11:39 OldPasswordPacket.js
+-rw-r--r-- 1 olov olov  381 mar 24 11:39 ResultSetHeaderPacket.js
+-rw-r--r-- 1 olov olov 4088 mar 24 11:39 RowDataPacket.js
+-rw-r--r-- 1 olov olov  983 mar 24 11:39 SSLRequestPacket.js
+-rw-r--r-- 1 olov olov  544 mar 24 11:39 StatisticsPacket.js
+-rw-r--r-- 1 olov olov  379 mar 24 11:39 UseOldPasswordPacket.js
+./node_modules/iconv-lite
+totalt 32
+-rw-r--r-- 1 olov olov 4342 mar 24 11:39 Changelog.md
+drwxr-xr-x 3 olov olov 4096 mar 24 11:39 encodings
+drwxr-xr-x 2 olov olov 4096 mar 24 11:39 lib
+-rw-r--r-- 1 olov olov 1064 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2007 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 6534 mar 24 11:39 README.md
+./node_modules/iconv-lite/encodings
+totalt 116
+-rw-r--r-- 1 olov olov 21415 mar 24 11:39 dbcs-codec.js
+-rw-r--r-- 1 olov olov  8291 mar 24 11:39 dbcs-data.js
+-rw-r--r-- 1 olov olov   710 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov  6115 mar 24 11:39 internal.js
+-rw-r--r-- 1 olov olov  2191 mar 24 11:39 sbcs-codec.js
+-rw-r--r-- 1 olov olov 32034 mar 24 11:39 sbcs-data-generated.js
+-rw-r--r-- 1 olov olov  4686 mar 24 11:39 sbcs-data.js
+drwxr-xr-x 2 olov olov  4096 mar 24 11:39 tables
+-rw-r--r-- 1 olov olov  5011 mar 24 11:39 utf16.js
+-rw-r--r-- 1 olov olov  9215 mar 24 11:39 utf7.js
+./node_modules/iconv-lite/encodings/tables
+totalt 228
+-rw-r--r-- 1 olov olov 17717 mar 24 11:39 big5-added.json
+-rw-r--r-- 1 olov olov 47320 mar 24 11:39 cp936.json
+-rw-r--r-- 1 olov olov 38122 mar 24 11:39 cp949.json
+-rw-r--r-- 1 olov olov 42356 mar 24 11:39 cp950.json
+-rw-r--r-- 1 olov olov 41064 mar 24 11:39 eucjp.json
+-rw-r--r-- 1 olov olov  2216 mar 24 11:39 gb18030-ranges.json
+-rw-r--r-- 1 olov olov  1227 mar 24 11:39 gbk-added.json
+-rw-r--r-- 1 olov olov 23782 mar 24 11:39 shiftjis.json
+./node_modules/iconv-lite/lib
+totalt 32
+-rw-r--r-- 1 olov olov 1109 mar 24 11:39 bom-handling.js
+-rw-r--r-- 1 olov olov 8701 mar 24 11:39 extend-node.js
+-rw-r--r-- 1 olov olov  982 mar 24 11:39 index.d.ts
+-rw-r--r-- 1 olov olov 5123 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 3387 mar 24 11:39 streams.js
+./node_modules/mime
+totalt 68
+-rw-r--r-- 1 olov olov  9473 mar 24 11:39 CHANGELOG.md
+-rw-r--r-- 1 olov olov   149 mar 24 11:39 cli.js
+-rw-r--r-- 1 olov olov  1098 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov  2726 mar 24 11:39 mime.js
+-rw-r--r-- 1 olov olov     0 mar 24 11:39 .npmignore
+-rw-r--r-- 1 olov olov  1843 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov  2119 mar 24 11:39 README.md
+drwxr-xr-x 2 olov olov  4096 mar 24 11:39 src
+-rw-r--r-- 1 olov olov 31555 mar 24 11:39 types.json
+./node_modules/mime/src
+totalt 8
+-rw-r--r-- 1 olov olov 1351 mar 24 11:39 build.js
+-rw-r--r-- 1 olov olov 2334 mar 24 11:39 test.js
+./node_modules/debug
+totalt 76
+-rw-r--r-- 1 olov olov 11707 mar 24 11:39 CHANGELOG.md
+-rw-r--r-- 1 olov olov   321 mar 24 11:39 component.json
+-rw-r--r-- 1 olov olov    46 mar 24 11:39 .coveralls.yml
+-rw-r--r-- 1 olov olov   180 mar 24 11:39 .eslintrc
+-rw-r--r-- 1 olov olov  1736 mar 24 11:39 karma.conf.js
+-rw-r--r-- 1 olov olov  1107 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov  1059 mar 24 11:39 Makefile
+-rw-r--r-- 1 olov olov    40 mar 24 11:39 node.js
+-rw-r--r-- 1 olov olov    72 mar 24 11:39 .npmignore
+-rw-r--r-- 1 olov olov  2237 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 17918 mar 24 11:39 README.md
+drwxr-xr-x 2 olov olov  4096 mar 24 11:39 src
+-rw-r--r-- 1 olov olov   140 mar 24 11:39 .travis.yml
+./node_modules/debug/src
+totalt 32
+-rw-r--r-- 1 olov olov 4734 mar 24 11:39 browser.js
+-rw-r--r-- 1 olov olov 4394 mar 24 11:39 debug.js
+-rw-r--r-- 1 olov olov  263 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov  373 mar 24 11:39 inspector-log.js
+-rw-r--r-- 1 olov olov 6015 mar 24 11:39 node.js
+./node_modules/methods
+totalt 20
+-rw-r--r-- 1 olov olov  427 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 1040 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1180 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2024 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 1694 mar 24 11:39 README.md
+./node_modules/media-typer
+totalt 24
+-rw-r--r-- 1 olov olov  461 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 6375 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1089 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 1767 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 2371 mar 24 11:39 README.md
+./node_modules/fresh
+totalt 20
+-rw-r--r-- 1 olov olov 1500 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 2711 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1174 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2414 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 3374 mar 24 11:39 README.md
+./node_modules/inherits
+totalt 20
+-rw-r--r-- 1 olov olov  672 mar 24 11:39 inherits_browser.js
+-rw-r--r-- 1 olov olov  192 mar 24 11:39 inherits.js
+-rw-r--r-- 1 olov olov  749 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 1538 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 1625 mar 24 11:39 README.md
+./node_modules/on-finished
+totalt 24
+-rw-r--r-- 1 olov olov 1694 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 3686 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1167 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2005 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 4886 mar 24 11:39 README.md
+./node_modules/array-flatten
+totalt 16
+-rw-r--r-- 1 olov olov 1195 mar 24 11:39 array-flatten.js
+-rw-r--r-- 1 olov olov 1103 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 1673 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 1245 mar 24 11:39 README.md
+./node_modules/accepts
+totalt 28
+-rw-r--r-- 1 olov olov 4972 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 5252 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1167 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2261 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 4081 mar 24 11:39 README.md
+./node_modules/content-disposition
+totalt 32
+-rw-r--r-- 1 olov olov   952 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 10594 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov  1094 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov  2396 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov  5237 mar 24 11:39 README.md
+./node_modules/body-parser
+totalt 52
+-rw-r--r-- 1 olov olov 15113 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov  2656 mar 24 11:39 index.js
+drwxr-xr-x 3 olov olov  4096 mar 24 11:39 lib
+-rw-r--r-- 1 olov olov  1172 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov  2688 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 17100 mar 24 11:39 README.md
+./node_modules/body-parser/lib
+totalt 8
+-rw-r--r-- 1 olov olov 3894 mar 24 11:39 read.js
+drwxr-xr-x 2 olov olov 4096 mar 24 11:39 types
+./node_modules/body-parser/lib/types
+totalt 24
+-rw-r--r-- 1 olov olov 4918 mar 24 11:39 json.js
+-rw-r--r-- 1 olov olov 1884 mar 24 11:39 raw.js
+-rw-r--r-- 1 olov olov 2285 mar 24 11:39 text.js
+-rw-r--r-- 1 olov olov 5797 mar 24 11:39 urlencoded.js
+./node_modules/merge-descriptors
+totalt 20
+-rw-r--r-- 1 olov olov  363 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 1215 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1167 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2005 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 1213 mar 24 11:39 README.md
+./node_modules/safer-buffer
+totalt 60
+-rw-r--r-- 1 olov olov  1483 mar 24 11:39 dangerous.js
+-rw-r--r-- 1 olov olov  1094 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov  1772 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 12794 mar 24 11:39 Porting-Buffer.md
+-rw-r--r-- 1 olov olov  8261 mar 24 11:39 Readme.md
+-rw-r--r-- 1 olov olov  2110 mar 24 11:39 safer.js
+-rw-r--r-- 1 olov olov 15735 mar 24 11:39 tests.js
+./node_modules/finalhandler
+totalt 24
+-rw-r--r-- 1 olov olov 4080 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 6518 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1119 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2402 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 4012 mar 24 11:39 README.md
+./node_modules/ee-first
+totalt 16
+-rw-r--r-- 1 olov olov 1684 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1099 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 1808 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 2617 mar 24 11:39 README.md
+./node_modules/process-nextick-args
+totalt 16
+-rw-r--r-- 1 olov olov 1083 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1064 mar 24 11:39 license.md
+-rw-r--r-- 1 olov olov 1520 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov  450 mar 24 11:39 readme.md
+./node_modules/http-errors
+totalt 28
+-rw-r--r-- 1 olov olov 3145 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 5878 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1168 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2537 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 5554 mar 24 11:39 README.md
+./node_modules/parseurl
+totalt 20
+-rw-r--r-- 1 olov olov 1043 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 2809 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1173 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2324 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 4094 mar 24 11:39 README.md
+./node_modules/ejs
+totalt 112
+-rw-r--r-- 1 olov olov 48484 mar 24 11:39 ejs.js
+-rw-r--r-- 1 olov olov 23620 mar 24 11:39 ejs.min.js
+-rw-r--r-- 1 olov olov  2033 mar 24 11:39 jakefile.js
+drwxr-xr-x 2 olov olov  4096 mar 24 11:39 lib
+-rw-r--r-- 1 olov olov 11358 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov  1646 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov   544 mar 24 11:39 postinstall.js
+-rw-r--r-- 1 olov olov  9683 mar 24 11:39 README.md
+./node_modules/ejs/lib
+totalt 32
+-rw-r--r-- 1 olov olov 28384 mar 24 11:39 ejs.js
+-rw-r--r-- 1 olov olov  3863 mar 24 11:39 utils.js
+./node_modules/readable-stream
+totalt 68
+-rw-r--r-- 1 olov olov 1443 mar 24 11:39 CONTRIBUTING.md
+drwxr-xr-x 3 olov olov 4096 mar 24 11:39 doc
+-rw-r--r-- 1 olov olov   53 mar 24 11:39 duplex-browser.js
+-rw-r--r-- 1 olov olov   46 mar 24 11:39 duplex.js
+-rw-r--r-- 1 olov olov 5550 mar 24 11:39 GOVERNANCE.md
+drwxr-xr-x 3 olov olov 4096 mar 24 11:39 lib
+-rw-r--r-- 1 olov olov 2337 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2389 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov   51 mar 24 11:39 passthrough.js
+-rw-r--r-- 1 olov olov  351 mar 24 11:39 readable-browser.js
+-rw-r--r-- 1 olov olov  771 mar 24 11:39 readable.js
+-rw-r--r-- 1 olov olov 2999 mar 24 11:39 README.md
+-rw-r--r-- 1 olov olov   49 mar 24 11:39 transform.js
+-rw-r--r-- 1 olov olov  991 mar 24 11:39 .travis.yml
+-rw-r--r-- 1 olov olov   55 mar 24 11:39 writable-browser.js
+-rw-r--r-- 1 olov olov  229 mar 24 11:39 writable.js
+./node_modules/readable-stream/doc
+totalt 4
+drwxr-xr-x 2 olov olov 4096 mar 24 11:39 wg-meetings
+./node_modules/readable-stream/doc/wg-meetings
+totalt 4
+-rw-r--r-- 1 olov olov 2280 mar 24 11:39 2015-01-30.md
+./node_modules/readable-stream/lib
+totalt 72
+drwxr-xr-x 3 olov olov  4096 mar 24 11:39 internal
+-rw-r--r-- 1 olov olov  4015 mar 24 11:39 _stream_duplex.js
+-rw-r--r-- 1 olov olov  1753 mar 24 11:39 _stream_passthrough.js
+-rw-r--r-- 1 olov olov 31324 mar 24 11:39 _stream_readable.js
+-rw-r--r-- 1 olov olov  7742 mar 24 11:39 _stream_transform.js
+-rw-r--r-- 1 olov olov 20317 mar 24 11:39 _stream_writable.js
+./node_modules/readable-stream/lib/internal
+totalt 4
+drwxr-xr-x 2 olov olov 4096 mar 24 11:39 streams
+./node_modules/readable-stream/lib/internal/streams
+totalt 16
+-rw-r--r-- 1 olov olov 2059 mar 24 11:39 BufferList.js
+-rw-r--r-- 1 olov olov 1849 mar 24 11:39 destroy.js
+-rw-r--r-- 1 olov olov   49 mar 24 11:39 stream-browser.js
+-rw-r--r-- 1 olov olov   36 mar 24 11:39 stream.js
+./node_modules/bignumber.js
+totalt 328
+-rw-r--r-- 1 olov olov 67076 mar 24 11:39 bignumber.d.ts
+-rw-r--r-- 1 olov olov 89253 mar 24 11:39 bignumber.js
+-rw-r--r-- 1 olov olov 18598 mar 24 11:39 bignumber.min.js
+-rw-r--r-- 1 olov olov 35516 mar 24 11:39 bignumber.min.js.map
+-rw-r--r-- 1 olov olov 84325 mar 24 11:39 bignumber.mjs
+-rw-r--r-- 1 olov olov  7851 mar 24 11:39 CHANGELOG.md
+drwxr-xr-x 2 olov olov  4096 mar 24 11:39 doc
+-rw-r--r-- 1 olov olov  1104 mar 24 11:39 LICENCE
+-rw-r--r-- 1 olov olov  1833 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 10289 mar 24 11:39 README.md
+./node_modules/bignumber.js/doc
+totalt 88
+-rw-r--r-- 1 olov olov 86676 mar 24 11:39 API.html
+./node_modules/colors
+totalt 40
+drwxr-xr-x 2 olov olov 4096 mar 24 14:56 examples
+drwxr-xr-x 5 olov olov 4096 mar 24 14:56 lib
+-rw-r--r-- 1 olov olov 1173 sep 30  2014 MIT-LICENSE.txt
+-rw-r--r-- 1 olov olov 1336 mar 24 14:56 package.json
+-rw-r--r-- 1 olov olov 3190 okt  2  2014 ReadMe.md
+-rw-r--r-- 1 olov olov  241 sep 30  2014 safe.js
+drwxr-xr-x 2 olov olov 4096 mar 24 14:56 screenshots
+drwxr-xr-x 2 olov olov 4096 mar 24 14:56 tests
+drwxr-xr-x 2 olov olov 4096 mar 24 14:56 themes
+-rw-r--r-- 1 olov olov   68 sep 30  2014 .travis.yml
+./node_modules/colors/tests
+totalt 8
+-rw-r--r-- 1 olov olov 1347 sep 30  2014 basic-test.js
+-rw-r--r-- 1 olov olov 1272 sep 30  2014 safe-test.js
+./node_modules/colors/screenshots
+totalt 80
+-rw-r--r-- 1 olov olov 79787 okt  1  2014 colors.png
+./node_modules/colors/themes
+totalt 4
+-rw-r--r-- 1 olov olov 197 sep 30  2014 generic-logging.js
+./node_modules/colors/examples
+totalt 8
+-rw-r--r-- 1 olov olov 1795 okt  9  2014 normal-usage.js
+-rw-r--r-- 1 olov olov 1929 okt  9  2014 safe-string.js
+./node_modules/colors/lib
+totalt 32
+-rw-r--r-- 1 olov olov 4573 okt  9  2014 colors.js
+drwxr-xr-x 2 olov olov 4096 mar 24 14:56 custom
+-rw-r--r-- 1 olov olov 3188 okt  9  2014 extendStringPrototype.js
+-rw-r--r-- 1 olov olov  390 sep 30  2014 index.js
+drwxr-xr-x 2 olov olov 4096 mar 24 14:56 maps
+-rw-r--r-- 1 olov olov 2099 okt  1  2014 styles.js
+drwxr-xr-x 2 olov olov 4096 mar 24 14:56 system
+./node_modules/colors/lib/system
+totalt 4
+-rw-r--r-- 1 olov olov 1819 sep 30  2014 supports-colors.js
+./node_modules/colors/lib/custom
+totalt 8
+-rw-r--r-- 1 olov olov 1664 okt  1  2014 trap.js
+-rw-r--r-- 1 olov olov 2670 okt  1  2014 zalgo.js
+./node_modules/colors/lib/maps
+totalt 16
+-rw-r--r-- 1 olov olov 307 sep 30  2014 america.js
+-rw-r--r-- 1 olov olov 344 sep 30  2014 rainbow.js
+-rw-r--r-- 1 olov olov 352 okt  1  2014 random.js
+-rw-r--r-- 1 olov olov 147 sep 30  2014 zebra.js
+./node_modules/destroy
+totalt 16
+-rw-r--r-- 1 olov olov 1043 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1099 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 1799 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 2185 mar 24 11:39 README.md
+./node_modules/depd
+totalt 40
+-rw-r--r-- 1 olov olov  2060 mar 24 11:39 History.md
+-rw-r--r-- 1 olov olov 10669 mar 24 11:39 index.js
+drwxr-xr-x 4 olov olov  4096 mar 24 11:39 lib
+-rw-r--r-- 1 olov olov  1094 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov  2148 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 10025 mar 24 11:39 Readme.md
+./node_modules/depd/lib
+totalt 8
+drwxr-xr-x 2 olov olov 4096 mar 24 11:39 browser
+drwxr-xr-x 2 olov olov 4096 mar 24 11:39 compat
+./node_modules/depd/lib/compat
+totalt 12
+-rw-r--r-- 1 olov olov 2229 mar 24 11:39 callsite-tostring.js
+-rw-r--r-- 1 olov olov  338 mar 24 11:39 event-listener-count.js
+-rw-r--r-- 1 olov olov 1421 mar 24 11:39 index.js
+./node_modules/depd/lib/browser
+totalt 4
+-rw-r--r-- 1 olov olov 1512 mar 24 11:39 index.js
+./node_modules/escape-html
+totalt 16
+-rw-r--r-- 1 olov olov 1362 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1157 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 1474 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov  707 mar 24 11:39 Readme.md
+./node_modules/bytes
+totalt 20
+-rw-r--r-- 1 olov olov 1581 mar 24 11:39 History.md
+-rw-r--r-- 1 olov olov 3469 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1153 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2037 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 3890 mar 24 11:39 Readme.md
+./node_modules/qs
+totalt 68
+-rw-r--r-- 1 olov olov 14655 mar 24 11:39 CHANGELOG.md
+drwxr-xr-x 2 olov olov  4096 mar 24 11:39 dist
+-rw-r--r-- 1 olov olov   399 mar 24 11:39 .editorconfig
+-rw-r--r-- 1 olov olov     5 mar 24 11:39 .eslintignore
+-rw-r--r-- 1 olov olov   647 mar 24 11:39 .eslintrc
+drwxr-xr-x 2 olov olov  4096 mar 24 11:39 lib
+-rw-r--r-- 1 olov olov  1654 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov  2375 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 18228 mar 24 11:39 README.md
+drwxr-xr-x 2 olov olov  4096 mar 24 11:39 test
+./node_modules/qs/test
+totalt 68
+-rw-r--r-- 1 olov olov   422 mar 24 11:39 .eslintrc
+-rw-r--r-- 1 olov olov    81 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 27758 mar 24 11:39 parse.js
+-rw-r--r-- 1 olov olov 24073 mar 24 11:39 stringify.js
+-rw-r--r-- 1 olov olov  5096 mar 24 11:39 utils.js
+./node_modules/qs/dist
+totalt 28
+-rw-r--r-- 1 olov olov 24660 mar 24 11:39 qs.js
+./node_modules/qs/lib
+totalt 40
+-rw-r--r-- 1 olov olov  387 mar 24 11:39 formats.js
+-rw-r--r-- 1 olov olov  211 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 8492 mar 24 11:39 parse.js
+-rw-r--r-- 1 olov olov 8230 mar 24 11:39 stringify.js
+-rw-r--r-- 1 olov olov 6204 mar 24 11:39 utils.js
+./node_modules/serve-static
+totalt 36
+-rw-r--r-- 1 olov olov 10083 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov  4570 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov  1189 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov  2363 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov  7783 mar 24 11:39 README.md
+./node_modules/utils-merge
+totalt 20
+-rw-r--r-- 1 olov olov  381 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1084 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov   79 mar 24 11:39 .npmignore
+-rw-r--r-- 1 olov olov 1682 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 1319 mar 24 11:39 README.md
+./node_modules/setprototypeof
+totalt 24
+-rw-r--r-- 1 olov olov   93 mar 24 11:39 index.d.ts
+-rw-r--r-- 1 olov olov  384 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov  727 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2080 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov  850 mar 24 11:39 README.md
+drwxr-xr-x 2 olov olov 4096 mar 24 11:39 test
+./node_modules/setprototypeof/test
+totalt 4
+-rw-r--r-- 1 olov olov 690 mar 24 11:39 index.js
+./node_modules/cookie-signature
+totalt 20
+-rw-r--r-- 1 olov olov  695 mar 24 11:39 History.md
+-rw-r--r-- 1 olov olov 1230 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov   29 mar 24 11:39 .npmignore
+-rw-r--r-- 1 olov olov 1543 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 1490 mar 24 11:39 Readme.md
+./node_modules/isarray
+totalt 32
+-rw-r--r-- 1 olov olov  470 mar 24 11:39 component.json
+-rw-r--r-- 1 olov olov  132 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov   55 mar 24 11:39 Makefile
+-rw-r--r-- 1 olov olov   13 mar 24 11:39 .npmignore
+-rw-r--r-- 1 olov olov 1794 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 1890 mar 24 11:39 README.md
+-rw-r--r-- 1 olov olov  320 mar 24 11:39 test.js
+-rw-r--r-- 1 olov olov   48 mar 24 11:39 .travis.yml
+./node_modules/etag
+totalt 24
+-rw-r--r-- 1 olov olov 1732 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 2479 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1094 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2297 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 4198 mar 24 11:39 README.md
+./node_modules/express
+totalt 132
+-rw-r--r-- 1 olov olov 109589 mar 24 11:39 History.md
+-rw-r--r-- 1 olov olov    224 mar 24 11:39 index.js
+drwxr-xr-x 4 olov olov   4096 mar 24 11:39 lib
+-rw-r--r-- 1 olov olov   1249 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov   4012 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov   4607 mar 24 11:39 Readme.md
+./node_modules/express/lib
+totalt 84
+-rw-r--r-- 1 olov olov 14270 mar 24 11:39 application.js
+-rw-r--r-- 1 olov olov  2409 mar 24 11:39 express.js
+drwxr-xr-x 2 olov olov  4096 mar 24 11:39 middleware
+-rw-r--r-- 1 olov olov 12504 mar 24 11:39 request.js
+-rw-r--r-- 1 olov olov 27124 mar 24 11:39 response.js
+drwxr-xr-x 2 olov olov  4096 mar 24 11:39 router
+-rw-r--r-- 1 olov olov  5972 mar 24 11:39 utils.js
+-rw-r--r-- 1 olov olov  3326 mar 24 11:39 view.js
+./node_modules/express/lib/router
+totalt 28
+-rw-r--r-- 1 olov olov 14883 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov  3296 mar 24 11:39 layer.js
+-rw-r--r-- 1 olov olov  4149 mar 24 11:39 route.js
+./node_modules/express/lib/middleware
+totalt 8
+-rw-r--r-- 1 olov olov 853 mar 24 11:39 init.js
+-rw-r--r-- 1 olov olov 885 mar 24 11:39 query.js
+./node_modules/bluebird
+totalt 20
+-rw-r--r-- 1 olov olov   87 mar 24 11:39 changelog.md
+drwxr-xr-x 4 olov olov 4096 mar 24 11:39 js
+-rw-r--r-- 1 olov olov 1086 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 3009 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 3058 mar 24 11:39 README.md
+./node_modules/bluebird/js
+totalt 8
+drwxr-xr-x 2 olov olov 4096 mar 24 11:39 browser
+drwxr-xr-x 2 olov olov 4096 mar 24 11:39 release
+./node_modules/bluebird/js/release
+totalt 248
+-rw-r--r-- 1 olov olov   421 mar 24 11:39 any.js
+-rw-r--r-- 1 olov olov  1653 mar 24 11:39 assert.js
+-rw-r--r-- 1 olov olov  2876 mar 24 11:39 async.js
+-rw-r--r-- 1 olov olov  1970 mar 24 11:39 bind.js
+-rw-r--r-- 1 olov olov   291 mar 24 11:39 bluebird.js
+-rw-r--r-- 1 olov olov  4355 mar 24 11:39 call_get.js
+-rw-r--r-- 1 olov olov  3707 mar 24 11:39 cancel.js
+-rw-r--r-- 1 olov olov  1426 mar 24 11:39 catch_filter.js
+-rw-r--r-- 1 olov olov  2382 mar 24 11:39 context.js
+-rw-r--r-- 1 olov olov 32170 mar 24 11:39 debuggability.js
+-rw-r--r-- 1 olov olov  1395 mar 24 11:39 direct_resolve.js
+-rw-r--r-- 1 olov olov   789 mar 24 11:39 each.js
+-rw-r--r-- 1 olov olov  3717 mar 24 11:39 errors.js
+-rw-r--r-- 1 olov olov  1978 mar 24 11:39 es5.js
+-rw-r--r-- 1 olov olov   314 mar 24 11:39 filter.js
+-rw-r--r-- 1 olov olov  4613 mar 24 11:39 finally.js
+-rw-r--r-- 1 olov olov  7761 mar 24 11:39 generators.js
+-rw-r--r-- 1 olov olov  8136 mar 24 11:39 join.js
+-rw-r--r-- 1 olov olov  5602 mar 24 11:39 map.js
+-rw-r--r-- 1 olov olov  1768 mar 24 11:39 method.js
+-rw-r--r-- 1 olov olov  1560 mar 24 11:39 nodeback.js
+-rw-r--r-- 1 olov olov  1647 mar 24 11:39 nodeify.js
+-rw-r--r-- 1 olov olov  5252 mar 24 11:39 promise_array.js
+-rw-r--r-- 1 olov olov 26986 mar 24 11:39 promise.js
+-rw-r--r-- 1 olov olov 12182 mar 24 11:39 promisify.js
+-rw-r--r-- 1 olov olov  3117 mar 24 11:39 props.js
+-rw-r--r-- 1 olov olov  1873 mar 24 11:39 queue.js
+-rw-r--r-- 1 olov olov  1250 mar 24 11:39 race.js
+-rw-r--r-- 1 olov olov  5372 mar 24 11:39 reduce.js
+-rw-r--r-- 1 olov olov  2148 mar 24 11:39 schedule.js
+-rw-r--r-- 1 olov olov  1366 mar 24 11:39 settle.js
+-rw-r--r-- 1 olov olov  3959 mar 24 11:39 some.js
+-rw-r--r-- 1 olov olov  2813 mar 24 11:39 synchronous_inspection.js
+-rw-r--r-- 1 olov olov  2131 mar 24 11:39 thenables.js
+-rw-r--r-- 1 olov olov  2395 mar 24 11:39 timers.js
+-rw-r--r-- 1 olov olov  7525 mar 24 11:39 using.js
+-rw-r--r-- 1 olov olov 11379 mar 24 11:39 util.js
+./node_modules/bluebird/js/browser
+totalt 444
+-rw-r--r-- 1 olov olov 123379 mar 24 11:39 bluebird.core.js
+-rw-r--r-- 1 olov olov  57355 mar 24 11:39 bluebird.core.min.js
+-rw-r--r-- 1 olov olov 183390 mar 24 11:39 bluebird.js
+-rw-r--r-- 1 olov olov  81530 mar 24 11:39 bluebird.min.js
+./node_modules/cli-table
+totalt 20
+-rw-r--r-- 1 olov olov 1708 okt 26  1985 History.md
+drwxr-xr-x 2 olov olov 4096 mar 24 14:56 lib
+-rw-r--r-- 1 olov olov 1669 mar 24 14:56 package.json
+-rw-r--r-- 1 olov olov 5573 okt 26  1985 README.md
+./node_modules/cli-table/lib
+totalt 12
+-rw-r--r-- 1 olov olov 7706 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov 2029 okt 26  1985 utils.js
+./node_modules/mime-types
+totalt 24
+-rw-r--r-- 1 olov olov 7806 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 3663 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1167 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2344 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 3484 mar 24 11:39 README.md
+./node_modules/type-is
+totalt 32
+-rw-r--r-- 1 olov olov 5447 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 5562 mar 24 11:39 index.js
+-rw-r--r-- 1 olov olov 1172 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2251 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 5183 mar 24 11:39 README.md
+./node_modules/ipaddr.js
+totalt 36
+-rw-r--r-- 1 olov olov 9738 mar 24 11:39 ipaddr.min.js
+drwxr-xr-x 2 olov olov 4096 mar 24 11:39 lib
+-rw-r--r-- 1 olov olov 1087 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 1758 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 8309 mar 24 11:39 README.md
+./node_modules/ipaddr.js/lib
+totalt 24
+-rw-r--r-- 1 olov olov 19333 mar 24 11:39 ipaddr.js
+-rw-r--r-- 1 olov olov  2959 mar 24 11:39 ipaddr.js.d.ts
+./node_modules/negotiator
+totalt 28
+-rw-r--r-- 1 olov olov 2406 mar 24 11:39 HISTORY.md
+-rw-r--r-- 1 olov olov 3344 mar 24 11:39 index.js
+drwxr-xr-x 2 olov olov 4096 mar 24 11:39 lib
+-rw-r--r-- 1 olov olov 1177 mar 24 11:39 LICENSE
+-rw-r--r-- 1 olov olov 2166 mar 24 11:39 package.json
+-rw-r--r-- 1 olov olov 4811 mar 24 11:39 README.md
+./node_modules/negotiator/lib
+totalt 20
+-rw-r--r-- 1 olov olov 3081 mar 24 11:39 charset.js
+-rw-r--r-- 1 olov olov 3506 mar 24 11:39 encoding.js
+-rw-r--r-- 1 olov olov 3408 mar 24 11:39 language.js
+-rw-r--r-- 1 olov olov 5358 mar 24 11:39 mediaType.js
+./config
+totalt 4
+drwxr-xr-x 2 olov olov 4096 mar 24 13:56 db
+./config/db
+totalt 4
+-rw-r--r-- 1 olov olov 104 mar 24 13:55 exam.json
+./src
+totalt 4
+-rw-r--r-- 1 olov olov 599 mar 24 14:02 exam.js
