@@ -7,7 +7,7 @@ const port    = process.env.DBWEBB_PORT || 1337;
 const express = require("express");
 const app     = express();
 const routeBank  = require("./route/bank.js");
-const path    = require("path");
+// const path    = require("path");
 const middleware = require("./middleware/index.js");
 
 app.set("view engine", "ejs");

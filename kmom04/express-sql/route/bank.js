@@ -11,6 +11,7 @@ router.get("/", (req, res) => {
     let data = {
         title: "Welcome | The Bank"
     };
+
     console.log("So far...");
     res.render("index", data);
 });
