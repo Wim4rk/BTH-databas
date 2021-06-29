@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-</body>
-</html>
+<%- include("header", {title: title}); %>
+
+<h1>Welcome to the bank</h1>
+
+<p>What do you want to do?</p>
+
+<ul>
+    <li><a href="balance">View account balance</a></li>
+    <li><a href="move-to-adam">Move to Adam</a></li>
+</ul>
+
+<%- include("footer"); %>

@@ -11,8 +11,8 @@ router.get("/", (req, res) => {
     let data = {
         title: "Welcome | The Bank"
     };
-
-    res.render("bank/index", data);
+    console.log("So far...");
+    res.render("index", data);
 });
 
 router.get("/index", (req, res) => {
@@ -20,17 +20,19 @@ router.get("/index", (req, res) => {
         title: "Welcome | The Bank"
     };
 
-    res.render("bank/index", data);
+    res.render("index", data);
 });
 
 router.get("/balance", async (req, res) => {
+    // http://localhost:1337/bank/balance
+    // Should be localhost:1337/balance - wich works.
     let data = {
         title: "Balance | The Bank"
     };
 
     data.res = await bank.showBalance();
 
-    res.render("bank/balance", data);
+    res.render("balance", data);
 });
 
 router.get("/move-to-adam", async (req, res) => {
@@ -43,15 +45,7 @@ router.get("/move-to-adam", async (req, res) => {
 
     data.res = await bank.makeTransaction(1.5, "2222", "1111");
 
-    res.render("bank/move", data);
-});
-
-router.get("/test", (req, res) => {
-    let data = {
-        title: "Welcome | The Bank"
-    };
-
-    res.render("index", data);
+    res.render("move", data);
 });
 
 module.exports = router;

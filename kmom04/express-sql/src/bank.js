@@ -55,7 +55,7 @@ async function findAllInTable(table) {
     let res;
 
     res = await db.query(sql, [table]);
-    console.info(`SQL: ${sql} (${table}) got ${res.length} rows.`);
+    // console.info(`SQL: ${sql} (${table}) got ${res.length} rows.`);
 
     return res;
 }
@@ -63,7 +63,7 @@ async function findAllInTable(table) {
 
 
 /**
- * Show all entries in the selected table.
+ * Make a transaction
  *
  * @async
  * @param {string} amount A float
@@ -72,8 +72,8 @@ async function findAllInTable(table) {
  *
  * @returns {RowDataPacket} Resultset from the query.
  */
-async function makeTransaction(amount = 1.5, from = "2222", to = "1111") {
-// async function makeTransaction(amount, from, to) {
+// async function makeTransaction(amount = 1.5, from = "2222", to = "1111") {
+async function makeTransaction(amount, from, to) {
     db = await mysql.createConnection(config);
     let res;
 

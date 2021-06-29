@@ -4,21 +4,21 @@
 "use strict";
 
 const port    = process.env.DBWEBB_PORT || 1337;
-const path    = require("path");
 const express = require("express");
 const app     = express();
-
 const routeBank  = require("./route/bank.js");
+const path    = require("path");
 const middleware = require("./middleware/index.js");
 
 app.set("view engine", "ejs");
 
+// app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static("public"));
+// console.log(path.join(__dirname, "public"))
 app.use(middleware.logIncomingToConsole);
-console.log("Hejhej!");
-console.log(path.join(__dirname, "public"));
-app.use(express.static(path.join(__dirname, "public")));
-app.use("/bank", routeBank);
+app.use("/", routeBank);
 app.listen(port, logStartUpDetailsToConsole);
+// console.info("App is running at this point.");
 
 
 

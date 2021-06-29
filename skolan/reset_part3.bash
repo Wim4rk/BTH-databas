@@ -3,6 +3,8 @@ echo ">>> Reset skolan to after part 3"
 # shellcheck disable=SC2162
 read -r -sp ">>> Root password: " passvar
 
+mysql -uroot -p"$passvar" source setup.sql > /dev/null
+
 mysql -uroot -p"$passvar" skolan < setup.sql > /dev/null
 
 file="setup.sql"
