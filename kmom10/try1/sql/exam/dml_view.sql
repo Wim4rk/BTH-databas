@@ -11,7 +11,8 @@ SELECT
     mh.medlem_id,
     m.efternamn,
     m.fornamn,
-    CONCAT(m.fornamn, " ", m.alias, " ", m.efternamn) AS husse,
+    -- CONCAT(m.fornamn, " ", m.alias, " ", m.efternamn) AS husse,
+    CONCAT(m.fornamn, " ", m.efternamn) AS husse,
     m.ort
 FROM hund as h
     JOIN ras AS r

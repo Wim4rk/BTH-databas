@@ -31,7 +31,7 @@ async function showDogs() {
 
     res = await db.query(sql);
 
-    console.info (`SQL: ${sql} got ${res.length} rows`);
+    console.info (`SQL: ${sql} got ${res[0].length} rows`);
 
     return res;
 }

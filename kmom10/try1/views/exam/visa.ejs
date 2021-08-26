@@ -3,13 +3,16 @@
 <h1>Våra hundar</h1>
 
 <table>
-    <tr>
-        <th>Medlem</th>
-        <th>Ort</th>
-        <th>Hund</th>
-        <th>Ras</th>
-        <th>Godkänd?</th>
-    </tr>
+    <thead>
+        <tr>
+            <th>Medlem</th>
+            <th>Ort</th>
+            <th>Hund</th>
+            <th>Ras</th>
+            <th>Godkänd?</th>
+        </tr>
+    </thead>
+    <tbody>
 <% for (const row of dogs[0]) { %>
     <tr>
         <td><%= row.husse %></td>
@@ -19,6 +22,7 @@
         <td><%= row.godkand %></td>
     </tr>
 <% }; %>
+    </tbody>
 </table>
 
 <%- include("footer"); %>

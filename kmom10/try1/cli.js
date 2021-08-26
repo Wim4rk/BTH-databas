@@ -2,9 +2,8 @@
 
 
 // Read from commandline
-const readline = require("readline");
-const Table = require('cli-table');
-const rl = readline.createInterface({
+let readline = require("readline");
+let rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
@@ -33,6 +32,7 @@ let data;
                 break;
             case "exit":
             case "quit":
+            case "3":
                 exitProgram(0);
                 break;
 
@@ -65,16 +65,7 @@ exit, quit:                     Exit program
 
 
 function showOurDogs(data) {
-    let table = new Table();
-
-    for (const row of data) {
-        table.push([row.husse, row.ort, row.hund, row.ras, row.godkand]);
-    }
-
-
-    console.info("Våra hundar:\n");
-
-    console.table(table);
+    console.table(data, ["husse", "hund", "ras", "godkand"]);
 }
 
 

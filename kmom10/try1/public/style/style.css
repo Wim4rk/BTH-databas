@@ -1,8 +1,10 @@
+@import "table.css";
+
 body {
     margin: 1em auto;
     color: #1a0d00;
     background: #ffc;
-    width: 700px;
+    max-width: 900px;
     font-size: 16px;
     line-height: 1.6em;
 }
