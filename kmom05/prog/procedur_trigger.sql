@@ -84,7 +84,7 @@ ON account FOR EACH ROW
 DROP TRIGGER IF EXISTS trigger_test1;
 
 DELIMITER ;;
-
+CREATE TRIGGER trigger_test1
 AFTER UPDATE
 ON account FOR EACH ROW
 BEGIN
@@ -112,6 +112,8 @@ END
 ;;
 
 DELIMITER ;
+
+-- Delete test triggers
 
 DROP TRIGGER IF EXISTS trigger_test1;
 DROP TRIGGER IF EXISTS trigger_test2;

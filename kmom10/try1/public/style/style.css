@@ -1,72 +1,57 @@
 body {
-    margin: 8px auto;
-    background: #fff;
+    margin: 1em auto;
+    color: #1a0d00;
+    background: #ffc;
     width: 700px;
+    font-size: 16px;
+    line-height: 1.6em;
 }
 
-header {
-    background-color: #ddd;
+article {
+    max-width: 60em;
+}
+
+ul {
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+h2 {
+    border-bottom: 1px solid #313030;
+    margin-top: 2em;
+}
+
+figure {
+    float: right;
+    width: 20em;
     padding: 1em;
+    background-color: #ccc;
+    overflow: auto;
 }
 
-main {
-    min-height: 24em;
+img {
+    width: 100%;
 }
 
-footer {
-    background-color: #666;
-    color: #fff;
-    padding: 1em;
-}
-
-table {
-    border: 1px solid #ccc;
-}
-
-th {
-    border-bottom: 1px solid #999;
-}
-
-td {
+code,
+kbd,
+samp,
+var {
+    display: inline;
+    font-family: "Courier New", Courier, monospace;
+    font-style: normal;
+    color: #000;
+    background: #efefef;
+    border: 1px solid #777;
+    border-radius: 0.3em;
     padding: 0.2em;
 }
 
-td.right {
-    text-align: right;
-}
-
-tr:hover {
-    background-color: #eee;
-}
-
-form.label-left {
-    margin-bottom: 24px;
-}
-
-form.label-left label,
-form.label-left input[type=text],
-form.label-left input[type=number] {
-    height: 20px;
-    margin-bottom: 4px;
-}
-
-form.label-left label {
-    display: inline-block;
-    width: 5em;
-    float: left;
-    padding-top: 6px;
-    padding-right: 1em;
-
-    /* text-align: right; */
-}
-
-form.label-left label::after {
-    content: ":";
-}
-
-form.label-left input[type=text],
-form.label-left input[type=number] {
+code {
     display: block;
-    width: 20em;
-    height: 25px;
+    white-space: pre-wrap;
 }

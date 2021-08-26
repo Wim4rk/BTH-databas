@@ -16,7 +16,7 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(middleware.logIncomingToConsole);
 app.use(express.static(path.join(__dirname, "public")));
-app.use("/exam", routeBank);
+app.use("/", routeBank);
 app.listen(port, logStartUpDetailsToConsole);
 
 

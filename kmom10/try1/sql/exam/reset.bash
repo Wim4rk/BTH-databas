@@ -3,7 +3,7 @@ echo ">>> Reset kennelklubben"
 # shellcheck disable=SC2162
 read -r -sp ">>> Root password: " passvar
 
-mysql -uroot -p"$passvar" exam < setup.sql > /dev/null
+mysql -uroot -p"$passvar" < setup.sql > /dev/null
 
 file="setup.sql"
 printf "\n>>> Create database, set user (%s)\n" $file
