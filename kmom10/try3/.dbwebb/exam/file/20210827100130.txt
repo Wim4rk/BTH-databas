@@ -1,0 +1,20 @@
+20210827100130
+.
+totalt 20
+drwxr-xr-x 3 olov olov  4096 aug 27 10:01 .dbwebb
+-rw-r--r-- 1 olov olov 10355 aug 27 10:01 INSTRUKTION.md
+-rw-r--r-- 1 olov olov  3926 aug 27 10:01 README_FIRST.md
+./.dbwebb
+totalt 4
+drwxr-xr-x 4 olov olov 4096 aug 27 10:01 exam
+./.dbwebb/exam
+totalt 12
+drwxr-xr-x 2 olov olov 4096 aug 27 10:01 file
+-rw-r--r-- 1 olov olov   35 aug 27 10:01 id.md
+drwxr-xr-x 2 olov olov 4096 aug 27 10:01 receipt
+./.dbwebb/exam/file
+totalt 4
+-rw-r--r-- 1 olov olov 444 aug 27 10:01 20210827100130.txt
+./.dbwebb/exam/receipt
+totalt 4
+-rw-r--r-- 1 olov olov 582 aug 27 10:01 20210827080129.md

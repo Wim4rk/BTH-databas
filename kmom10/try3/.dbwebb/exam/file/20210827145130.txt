@@ -1,0 +1,946 @@
+20210827145130
+.
+totalt 108
+-rw-r--r--  1 olov olov  1740 aug 27 14:10 cli.js
+drwxr-xr-x  3 olov olov  4096 aug 27 10:04 config
+drwxr-xr-x  3 olov olov  4096 aug 27 10:01 .dbwebb
+drwxr-xr-x  2 olov olov  4096 aug 27 14:45 doc
+-rw-r--r--  1 olov olov  1362 aug 27 11:14 index.js
+-rw-r--r--  1 olov olov 10356 aug 27 10:21 INSTRUKTION.md
+drwxr-xr-x  2 olov olov  4096 aug 27 11:15 middleware
+drwxr-xr-x 65 olov olov  4096 aug 27 11:17 node_modules
+-rw-r--r--  1 olov olov   415 aug 27 11:17 package.json
+-rw-r--r--  1 olov olov 40538 aug 27 11:17 package-lock.json
+drwxr-xr-x  4 olov olov  4096 aug 27 11:15 public
+-rw-r--r--  1 olov olov  3926 aug 27 10:01 README_FIRST.md
+drwxr-xr-x  2 olov olov  4096 aug 27 11:15 route
+drwxr-xr-x  3 olov olov  4096 aug 27 10:23 sql
+drwxr-xr-x  2 olov olov  4096 aug 27 11:13 src
+drwxr-xr-x  3 olov olov  4096 aug 27 11:16 views
+./middleware
+totalt 4
+-rw-r--r-- 1 olov olov 523 aug 27 11:15 index.js
+./src
+totalt 4
+-rw-r--r-- 1 olov olov 609 aug 27 13:46 exam.js
+./.dbwebb
+totalt 4
+drwxr-xr-x 4 olov olov 4096 aug 27 10:01 exam
+./.dbwebb/exam
+totalt 12
+drwxr-xr-x 2 olov olov 4096 aug 27 14:51 file
+-rw-r--r-- 1 olov olov   35 aug 27 10:01 id.md
+drwxr-xr-x 2 olov olov 4096 aug 27 14:51 receipt
+./.dbwebb/exam/file
+totalt 48
+-rw-r--r-- 1 olov olov   602 aug 27 10:01 20210827100130.txt
+-rw-r--r-- 1 olov olov 40675 aug 27 14:47 20210827144718.txt
+-rw-r--r-- 1 olov olov  1250 aug 27 14:51 20210827145130.txt
+./.dbwebb/exam/receipt
+totalt 12
+-rw-r--r-- 1 olov olov 582 aug 27 10:01 20210827080129.md
+-rw-r--r-- 1 olov olov 663 aug 27 14:47 20210827124718.md
+-rw-r--r-- 1 olov olov 663 aug 27 14:51 20210827145130.md
+./route
+totalt 4
+-rw-r--r-- 1 olov olov 546 aug 27 13:22 exam.js
+./sql
+totalt 4
+drwxr-xr-x 2 olov olov 4096 aug 27 14:20 exam
+./sql/exam
+totalt 52
+-rw-r--r-- 1 olov olov  134 aug 27 10:10 anledning.csv
+-rw-r--r-- 1 olov olov 8898 aug 27 14:20 backup.sql
+-rw-r--r-- 1 olov olov  225 aug 27 10:10 bok.csv
+-rw-r--r-- 1 olov olov 1014 aug 27 13:55 ddl.sql
+-rw-r--r-- 1 olov olov  294 aug 27 13:57 dml_procedure.sql
+-rw-r--r-- 1 olov olov  437 aug 27 12:24 dml_view.sql
+-rw-r--r-- 1 olov olov   99 aug 27 10:11 hylla.csv
+-rw-r--r-- 1 olov olov  923 aug 27 13:27 insert.sql
+-rw-r--r-- 1 olov olov   80 aug 27 10:11 kategori.csv
+-rw-r--r-- 1 olov olov  755 aug 27 13:28 reset.bash
+-rw-r--r-- 1 olov olov  275 aug 27 10:25 setup.sql
+./public
+totalt 24
+-rw-r--r-- 1 olov olov 15406 aug 27 11:15 favicon.ico
+drwxr-xr-x 2 olov olov  4096 aug 27 11:15 js
+drwxr-xr-x 2 olov olov  4096 aug 27 11:15 style
+./public/js
+totalt 4
+-rw-r--r-- 1 olov olov 114 aug 27 11:15 main.js
+./public/style
+totalt 8
+-rw-r--r-- 1 olov olov 799 aug 27 11:15 style.css
+-rw-r--r-- 1 olov olov 355 aug 27 11:15 table.css
+./doc
+totalt 60
+-rw-r--r-- 1 olov olov 59519 aug 27 14:43 er.pdf
+./views
+totalt 4
+drwxr-xr-x 2 olov olov 4096 aug 27 11:16 exam
+./views/exam
+totalt 16
+-rw-r--r-- 1 olov olov 133 aug 27 11:16 footer.ejs
+-rw-r--r-- 1 olov olov 334 aug 27 13:12 header.ejs
+-rw-r--r-- 1 olov olov 154 aug 27 11:20 index.ejs
+-rw-r--r-- 1 olov olov 640 aug 27 14:05 visa.ejs
+./node_modules/body-parser
+totalt 52
+-rw-r--r-- 1 olov olov 15113 okt 26  1985 HISTORY.md
+-rw-r--r-- 1 olov olov  2656 okt 26  1985 index.js
+drwxr-xr-x 3 olov olov  4096 aug 27 11:17 lib
+-rw-r--r-- 1 olov olov  1172 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov  1556 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 17100 okt 26  1985 README.md
+./node_modules/body-parser/lib
+totalt 8
+-rw-r--r-- 1 olov olov 3894 okt 26  1985 read.js
+drwxr-xr-x 2 olov olov 4096 aug 27 11:17 types
+./node_modules/body-parser/lib/types
+totalt 24
+-rw-r--r-- 1 olov olov 4918 okt 26  1985 json.js
+-rw-r--r-- 1 olov olov 1884 okt 26  1985 raw.js
+-rw-r--r-- 1 olov olov 2285 okt 26  1985 text.js
+-rw-r--r-- 1 olov olov 5797 okt 26  1985 urlencoded.js
+./node_modules/unpipe
+totalt 20
+-rw-r--r-- 1 olov olov   59 jun 14  2015 HISTORY.md
+-rw-r--r-- 1 olov olov 1118 jun 14  2015 index.js
+-rw-r--r-- 1 olov olov 1114 jun 14  2015 LICENSE
+-rw-r--r-- 1 olov olov  770 jun 14  2015 package.json
+-rw-r--r-- 1 olov olov 1250 jun 14  2015 README.md
+./node_modules/isarray
+totalt 32
+-rw-r--r-- 1 olov olov  470 dec 10  2015 component.json
+-rw-r--r-- 1 olov olov  132 dec 10  2015 index.js
+-rw-r--r-- 1 olov olov   55 dec 10  2015 Makefile
+-rw-r--r-- 1 olov olov   13 dec 10  2015 .npmignore
+-rw-r--r-- 1 olov olov  958 dec 10  2015 package.json
+-rw-r--r-- 1 olov olov 1890 dec 10  2015 README.md
+-rw-r--r-- 1 olov olov  320 dec 10  2015 test.js
+-rw-r--r-- 1 olov olov   48 dec 10  2015 .travis.yml
+./node_modules/qs
+totalt 68
+-rw-r--r-- 1 olov olov 14655 okt 26  1985 CHANGELOG.md
+drwxr-xr-x 2 olov olov  4096 aug 27 11:17 dist
+-rw-r--r-- 1 olov olov   399 okt 26  1985 .editorconfig
+-rw-r--r-- 1 olov olov     5 okt 26  1985 .eslintignore
+-rw-r--r-- 1 olov olov   647 okt 26  1985 .eslintrc
+drwxr-xr-x 2 olov olov  4096 aug 27 11:17 lib
+-rw-r--r-- 1 olov olov  1654 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov  1716 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 18228 okt 26  1985 README.md
+drwxr-xr-x 2 olov olov  4096 aug 27 11:17 test
+./node_modules/qs/lib
+totalt 40
+-rw-r--r-- 1 olov olov  387 okt 26  1985 formats.js
+-rw-r--r-- 1 olov olov  211 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov 8492 okt 26  1985 parse.js
+-rw-r--r-- 1 olov olov 8230 okt 26  1985 stringify.js
+-rw-r--r-- 1 olov olov 6204 okt 26  1985 utils.js
+./node_modules/qs/test
+totalt 68
+-rw-r--r-- 1 olov olov   422 okt 26  1985 .eslintrc
+-rw-r--r-- 1 olov olov    81 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov 27758 okt 26  1985 parse.js
+-rw-r--r-- 1 olov olov 24073 okt 26  1985 stringify.js
+-rw-r--r-- 1 olov olov  5096 okt 26  1985 utils.js
+./node_modules/qs/dist
+totalt 28
+-rw-r--r-- 1 olov olov 24660 okt 26  1985 qs.js
+./node_modules/inherits
+totalt 20
+-rw-r--r-- 1 olov olov  672 maj 16  2013 inherits_browser.js
+-rw-r--r-- 1 olov olov  192 sep  7  2016 inherits.js
+-rw-r--r-- 1 olov olov  749 aug 20  2013 LICENSE
+-rw-r--r-- 1 olov olov  586 sep  8  2016 package.json
+-rw-r--r-- 1 olov olov 1625 maj 16  2013 README.md
+./node_modules/path-to-regexp
+totalt 20
+-rw-r--r-- 1 olov olov  694 jul 28  2015 History.md
+-rw-r--r-- 1 olov olov 3328 jul 28  2015 index.js
+-rw-r--r-- 1 olov olov 1103 jul 28  2015 LICENSE
+-rw-r--r-- 1 olov olov  554 jul 28  2015 package.json
+-rw-r--r-- 1 olov olov 1102 jul 28  2015 Readme.md
+./node_modules/statuses
+totalt 24
+-rw-r--r-- 1 olov olov 1821 mar 28  2018 codes.json
+-rw-r--r-- 1 olov olov 1023 mar 28  2018 HISTORY.md
+-rw-r--r-- 1 olov olov 2088 okt 20  2017 index.js
+-rw-r--r-- 1 olov olov 1172 okt 20  2017 LICENSE
+-rw-r--r-- 1 olov olov 1472 mar 28  2018 package.json
+-rw-r--r-- 1 olov olov 3458 okt 20  2017 README.md
+./node_modules/merge-descriptors
+totalt 20
+-rw-r--r-- 1 olov olov  363 jan 18  2016 HISTORY.md
+-rw-r--r-- 1 olov olov 1215 jan 18  2016 index.js
+-rw-r--r-- 1 olov olov 1167 jan 18  2016 LICENSE
+-rw-r--r-- 1 olov olov  931 jan 18  2016 package.json
+-rw-r--r-- 1 olov olov 1213 maj 22  2015 README.md
+./node_modules/iconv-lite
+totalt 32
+-rw-r--r-- 1 olov olov 4342 aug 22  2018 Changelog.md
+drwxr-xr-x 3 olov olov 4096 aug 27 11:17 encodings
+drwxr-xr-x 2 olov olov 4096 aug 27 11:17 lib
+-rw-r--r-- 1 olov olov 1064 jan 19  2016 LICENSE
+-rw-r--r-- 1 olov olov 1227 aug 22  2018 package.json
+-rw-r--r-- 1 olov olov 6534 aug 22  2018 README.md
+./node_modules/iconv-lite/encodings
+totalt 116
+-rw-r--r-- 1 olov olov 21415 aug 22  2018 dbcs-codec.js
+-rw-r--r-- 1 olov olov  8291 aug 22  2018 dbcs-data.js
+-rw-r--r-- 1 olov olov   710 aug 22  2018 index.js
+-rw-r--r-- 1 olov olov  6115 aug 22  2018 internal.js
+-rw-r--r-- 1 olov olov  2191 aug 22  2018 sbcs-codec.js
+-rw-r--r-- 1 olov olov 32034 aug 22  2018 sbcs-data-generated.js
+-rw-r--r-- 1 olov olov  4686 aug 22  2018 sbcs-data.js
+drwxr-xr-x 2 olov olov  4096 aug 27 11:17 tables
+-rw-r--r-- 1 olov olov  5011 aug 22  2018 utf16.js
+-rw-r--r-- 1 olov olov  9215 aug 22  2018 utf7.js
+./node_modules/iconv-lite/encodings/tables
+totalt 228
+-rw-r--r-- 1 olov olov 17717 jan 19  2016 big5-added.json
+-rw-r--r-- 1 olov olov 47320 jan 19  2016 cp936.json
+-rw-r--r-- 1 olov olov 38122 jan 19  2016 cp949.json
+-rw-r--r-- 1 olov olov 42356 jan 19  2016 cp950.json
+-rw-r--r-- 1 olov olov 41064 jan 19  2016 eucjp.json
+-rw-r--r-- 1 olov olov  2216 jan 19  2016 gb18030-ranges.json
+-rw-r--r-- 1 olov olov  1227 jan 19  2016 gbk-added.json
+-rw-r--r-- 1 olov olov 23782 jan 19  2016 shiftjis.json
+./node_modules/iconv-lite/lib
+totalt 32
+-rw-r--r-- 1 olov olov 1109 aug 22  2018 bom-handling.js
+-rw-r--r-- 1 olov olov 8701 aug 22  2018 extend-node.js
+-rw-r--r-- 1 olov olov  982 aug 22  2018 index.d.ts
+-rw-r--r-- 1 olov olov 5123 aug 22  2018 index.js
+-rw-r--r-- 1 olov olov 3387 aug 22  2018 streams.js
+./node_modules/mime-db
+totalt 208
+-rw-r--r-- 1 olov olov 183645 okt 26  1985 db.json
+-rw-r--r-- 1 olov olov  12066 okt 26  1985 HISTORY.md
+-rw-r--r-- 1 olov olov    136 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov   1099 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov   1596 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov   4062 okt 26  1985 README.md
+./node_modules/@types
+totalt 12
+drwxr-xr-x 3 olov olov 4096 aug 27 11:17 bluebird
+drwxr-xr-x 2 olov olov 4096 aug 27 11:17 mysql
+drwxr-xr-x 7 olov olov 4096 aug 27 11:17 node
+./node_modules/@types/node
+totalt 1648
+drwxr-xr-x 2 olov olov   4096 aug 27 11:17 assert
+-rwxr-xr-x 1 olov olov  38561 aug 26 03:01 assert.d.ts
+-rwxr-xr-x 1 olov olov  20761 aug 26 03:01 async_hooks.d.ts
+-rwxr-xr-x 1 olov olov  98882 aug 26 03:01 buffer.d.ts
+-rwxr-xr-x 1 olov olov  65539 aug 26 03:01 child_process.d.ts
+-rwxr-xr-x 1 olov olov  20539 aug 26 03:01 cluster.d.ts
+-rwxr-xr-x 1 olov olov  18165 aug 26 03:01 console.d.ts
+-rwxr-xr-x 1 olov olov    613 aug 26 03:01 constants.d.ts
+-rwxr-xr-x 1 olov olov 145396 aug 26 03:01 crypto.d.ts
+-rwxr-xr-x 1 olov olov  26725 aug 26 03:01 dgram.d.ts
+-rwxr-xr-x 1 olov olov   5103 aug 26 03:01 diagnostics_channel.d.ts
+drwxr-xr-x 2 olov olov   4096 aug 27 11:17 dns
+-rwxr-xr-x 1 olov olov  28953 aug 26 03:01 dns.d.ts
+-rwxr-xr-x 1 olov olov   7805 aug 26 03:01 domain.d.ts
+-rwxr-xr-x 1 olov olov  27848 aug 26 03:01 events.d.ts
+drwxr-xr-x 2 olov olov   4096 aug 27 11:17 fs
+-rwxr-xr-x 1 olov olov 169408 aug 26 03:01 fs.d.ts
+-rwxr-xr-x 1 olov olov   9074 aug 26 03:01 globals.d.ts
+-rwxr-xr-x 1 olov olov     39 aug 26 03:01 globals.global.d.ts
+-rwxr-xr-x 1 olov olov 112341 aug 26 03:01 http2.d.ts
+-rwxr-xr-x 1 olov olov  62922 aug 26 03:01 http.d.ts
+-rwxr-xr-x 1 olov olov  21371 aug 26 03:01 https.d.ts
+-rwxr-xr-x 1 olov olov   6486 aug 26 03:01 index.d.ts
+-rwxr-xr-x 1 olov olov 125174 aug 26 03:01 inspector.d.ts
+-rwxr-xr-x 1 olov olov   1141 aug 26 03:01 LICENSE
+-rwxr-xr-x 1 olov olov   4089 aug 26 03:01 module.d.ts
+-rwxr-xr-x 1 olov olov  36087 aug 26 03:01 net.d.ts
+-rwxr-xr-x 1 olov olov  16670 aug 26 03:01 os.d.ts
+-rwxr-xr-x 1 olov olov   7102 aug 26 03:01 package.json
+-rwxr-xr-x 1 olov olov   6870 aug 26 03:01 path.d.ts
+-rwxr-xr-x 1 olov olov  20898 aug 26 03:01 perf_hooks.d.ts
+-rwxr-xr-x 1 olov olov  72670 aug 26 03:01 process.d.ts
+-rwxr-xr-x 1 olov olov   5480 aug 26 03:01 punycode.d.ts
+-rwxr-xr-x 1 olov olov   6550 aug 26 03:01 querystring.d.ts
+-rwxr-xr-x 1 olov olov  23246 aug 26 03:01 readline.d.ts
+-rwxr-xr-x 1 olov olov   2585 aug 26 03:01 README.md
+-rwxr-xr-x 1 olov olov  19463 aug 26 03:01 repl.d.ts
+drwxr-xr-x 2 olov olov   4096 aug 27 11:17 stream
+-rwxr-xr-x 1 olov olov  60339 aug 26 03:01 stream.d.ts
+-rwxr-xr-x 1 olov olov   2818 aug 26 03:01 string_decoder.d.ts
+drwxr-xr-x 2 olov olov   4096 aug 27 11:17 timers
+-rwxr-xr-x 1 olov olov   4532 aug 26 03:01 timers.d.ts
+-rwxr-xr-x 1 olov olov  50629 aug 26 03:01 tls.d.ts
+-rwxr-xr-x 1 olov olov   6779 aug 26 03:01 trace_events.d.ts
+-rwxr-xr-x 1 olov olov   9876 aug 26 03:01 tty.d.ts
+-rwxr-xr-x 1 olov olov  34054 aug 26 03:01 url.d.ts
+-rwxr-xr-x 1 olov olov  62931 aug 26 03:01 util.d.ts
+-rwxr-xr-x 1 olov olov  15248 aug 26 03:01 v8.d.ts
+-rwxr-xr-x 1 olov olov   6894 aug 26 03:01 wasi.d.ts
+-rwxr-xr-x 1 olov olov  20810 aug 26 03:01 vm.d.ts
+-rwxr-xr-x 1 olov olov  32201 aug 26 03:01 worker_threads.d.ts
+-rwxr-xr-x 1 olov olov  19520 aug 26 03:01 zlib.d.ts
+./node_modules/@types/node/dns
+totalt 16
+-rwxr-xr-x 1 olov olov 14968 aug 26 03:01 promises.d.ts
+./node_modules/@types/node/assert
+totalt 4
+-rwxr-xr-x 1 olov olov 201 aug 26 03:01 strict.d.ts
+./node_modules/@types/node/fs
+totalt 44
+-rwxr-xr-x 1 olov olov 44691 aug 26 03:01 promises.d.ts
+./node_modules/@types/node/stream
+totalt 8
+-rwxr-xr-x 1 olov olov 2374 aug 26 03:01 promises.d.ts
+-rwxr-xr-x 1 olov olov  166 aug 26 03:01 web.d.ts
+./node_modules/@types/node/timers
+totalt 4
+-rwxr-xr-x 1 olov olov 1954 aug 26 03:01 promises.d.ts
+./node_modules/@types/mysql
+totalt 36
+-rwxr-xr-x 1 olov olov 22840 jul  7 02:01 index.d.ts
+-rwxr-xr-x 1 olov olov  1141 jul  7 02:01 LICENSE
+-rwxr-xr-x 1 olov olov  1411 jul  7 02:01 package.json
+-rwxr-xr-x 1 olov olov   724 jul  7 02:01 README.md
+./node_modules/@types/bluebird
+totalt 72
+-rwxr-xr-x 1 olov olov 55400 jul  6 20:05 index.d.ts
+-rwxr-xr-x 1 olov olov  1141 jul  6 20:05 LICENSE
+-rwxr-xr-x 1 olov olov   909 jul  6 20:05 package.json
+-rwxr-xr-x 1 olov olov   499 jul  6 20:05 README.md
+drwxr-xr-x 2 olov olov  4096 aug 27 11:17 ts4.1
+./node_modules/@types/bluebird/ts4.1
+totalt 56
+-rwxr-xr-x 1 olov olov 54241 jul  6 20:05 index.d.ts
+./node_modules/content-disposition
+totalt 32
+-rw-r--r-- 1 olov olov   952 okt 26  1985 HISTORY.md
+-rw-r--r-- 1 olov olov 10594 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov  1094 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov  1238 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov  5237 okt 26  1985 README.md
+./node_modules/fresh
+totalt 20
+-rw-r--r-- 1 olov olov 1500 sep 14  2017 HISTORY.md
+-rw-r--r-- 1 olov olov 2711 sep 14  2017 index.js
+-rw-r--r-- 1 olov olov 1174 feb 20  2017 LICENSE
+-rw-r--r-- 1 olov olov 1357 sep 14  2017 package.json
+-rw-r--r-- 1 olov olov 3374 sep 14  2017 README.md
+./node_modules/media-typer
+totalt 24
+-rw-r--r-- 1 olov olov  461 sep  8  2014 HISTORY.md
+-rw-r--r-- 1 olov olov 6375 sep  8  2014 index.js
+-rw-r--r-- 1 olov olov 1089 sep  8  2014 LICENSE
+-rw-r--r-- 1 olov olov  759 sep  8  2014 package.json
+-rw-r--r-- 1 olov olov 2371 sep  8  2014 README.md
+./node_modules/cookie-signature
+totalt 20
+-rw-r--r-- 1 olov olov  695 feb  3  2015 History.md
+-rw-r--r-- 1 olov olov 1230 feb  3  2015 index.js
+-rw-r--r-- 1 olov olov   29 jan 28  2014 .npmignore
+-rw-r--r-- 1 olov olov  492 feb  3  2015 package.json
+-rw-r--r-- 1 olov olov 1490 jun 19  2014 Readme.md
+./node_modules/readable-stream
+totalt 68
+-rw-r--r-- 1 olov olov 1443 okt 26  1985 CONTRIBUTING.md
+drwxr-xr-x 3 olov olov 4096 aug 27 11:17 doc
+-rw-r--r-- 1 olov olov   53 okt 26  1985 duplex-browser.js
+-rw-r--r-- 1 olov olov   46 okt 26  1985 duplex.js
+-rw-r--r-- 1 olov olov 5550 okt 26  1985 GOVERNANCE.md
+drwxr-xr-x 3 olov olov 4096 aug 27 11:17 lib
+-rw-r--r-- 1 olov olov 2337 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov 1370 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov   51 okt 26  1985 passthrough.js
+-rw-r--r-- 1 olov olov  351 okt 26  1985 readable-browser.js
+-rw-r--r-- 1 olov olov  771 okt 26  1985 readable.js
+-rw-r--r-- 1 olov olov 2999 okt 26  1985 README.md
+-rw-r--r-- 1 olov olov   49 okt 26  1985 transform.js
+-rw-r--r-- 1 olov olov  991 okt 26  1985 .travis.yml
+-rw-r--r-- 1 olov olov   55 okt 26  1985 writable-browser.js
+-rw-r--r-- 1 olov olov  229 okt 26  1985 writable.js
+./node_modules/readable-stream/lib
+totalt 72
+drwxr-xr-x 3 olov olov  4096 aug 27 11:17 internal
+-rw-r--r-- 1 olov olov  4015 okt 26  1985 _stream_duplex.js
+-rw-r--r-- 1 olov olov  1753 okt 26  1985 _stream_passthrough.js
+-rw-r--r-- 1 olov olov 31324 okt 26  1985 _stream_readable.js
+-rw-r--r-- 1 olov olov  7742 okt 26  1985 _stream_transform.js
+-rw-r--r-- 1 olov olov 20317 okt 26  1985 _stream_writable.js
+./node_modules/readable-stream/lib/internal
+totalt 4
+drwxr-xr-x 2 olov olov 4096 aug 27 11:17 streams
+./node_modules/readable-stream/lib/internal/streams
+totalt 16
+-rw-r--r-- 1 olov olov 2059 okt 26  1985 BufferList.js
+-rw-r--r-- 1 olov olov 1849 okt 26  1985 destroy.js
+-rw-r--r-- 1 olov olov   49 okt 26  1985 stream-browser.js
+-rw-r--r-- 1 olov olov   36 okt 26  1985 stream.js
+./node_modules/readable-stream/doc
+totalt 4
+drwxr-xr-x 2 olov olov 4096 aug 27 11:17 wg-meetings
+./node_modules/readable-stream/doc/wg-meetings
+totalt 4
+-rw-r--r-- 1 olov olov 2280 okt 26  1985 2015-01-30.md
+./node_modules/debug
+totalt 76
+-rw-r--r-- 1 olov olov 11707 sep 22  2017 CHANGELOG.md
+-rw-r--r-- 1 olov olov   321 sep 22  2017 component.json
+-rw-r--r-- 1 olov olov    46 jun 15  2017 .coveralls.yml
+-rw-r--r-- 1 olov olov   180 sep 22  2017 .eslintrc
+-rw-r--r-- 1 olov olov  1736 jun 15  2017 karma.conf.js
+-rw-r--r-- 1 olov olov  1107 jun 15  2017 LICENSE
+-rw-r--r-- 1 olov olov  1059 sep 22  2017 Makefile
+-rw-r--r-- 1 olov olov    40 jun 15  2017 node.js
+-rw-r--r-- 1 olov olov    72 jun 15  2017 .npmignore
+-rw-r--r-- 1 olov olov  1138 sep 22  2017 package.json
+-rw-r--r-- 1 olov olov 17918 sep 22  2017 README.md
+drwxr-xr-x 2 olov olov  4096 aug 27 11:17 src
+-rw-r--r-- 1 olov olov   140 sep 22  2017 .travis.yml
+./node_modules/debug/src
+totalt 32
+-rw-r--r-- 1 olov olov 4734 sep 22  2017 browser.js
+-rw-r--r-- 1 olov olov 4394 sep 22  2017 debug.js
+-rw-r--r-- 1 olov olov  263 sep 22  2017 index.js
+-rw-r--r-- 1 olov olov  373 sep 21  2017 inspector-log.js
+-rw-r--r-- 1 olov olov 6015 sep 22  2017 node.js
+./node_modules/proxy-addr
+totalt 28
+-rw-r--r-- 1 olov olov 2991 okt 26  1985 HISTORY.md
+-rw-r--r-- 1 olov olov 6000 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov 1094 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov 1183 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 4131 okt 26  1985 README.md
+./node_modules/mime-types
+totalt 28
+-rw-r--r-- 1 olov olov 8416 okt 26  1985 HISTORY.md
+-rw-r--r-- 1 olov olov 3663 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov 1167 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov 1149 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 3484 okt 26  1985 README.md
+./node_modules/parseurl
+totalt 20
+-rw-r--r-- 1 olov olov 1043 okt 26  1985 HISTORY.md
+-rw-r--r-- 1 olov olov 2809 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov 1173 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov 1180 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 4094 okt 26  1985 README.md
+./node_modules/core-util-is
+totalt 36
+-rw-r--r-- 1 olov olov 16278 nov 20  2015 float.patch
+drwxr-xr-x 2 olov olov  4096 aug 27 11:17 lib
+-rw-r--r-- 1 olov olov  1077 nov 20  2015 LICENSE
+-rw-r--r-- 1 olov olov   651 nov 20  2015 package.json
+-rw-r--r-- 1 olov olov    67 nov 20  2015 README.md
+-rw-r--r-- 1 olov olov  2101 nov 20  2015 test.js
+./node_modules/core-util-is/lib
+totalt 4
+-rw-r--r-- 1 olov olov 3021 nov 20  2015 util.js
+./node_modules/mysql
+totalt 104
+-rw-r--r-- 1 olov olov 21090 okt 26  1985 Changes.md
+-rw-r--r-- 1 olov olov  4533 okt 26  1985 index.js
+drwxr-xr-x 3 olov olov  4096 aug 27 11:17 lib
+-rw-r--r-- 1 olov olov  1118 okt 26  1985 License
+-rw-r--r-- 1 olov olov  1372 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 57600 okt 26  1985 Readme.md
+./node_modules/mysql/lib
+totalt 60
+-rw-r--r-- 1 olov olov  6614 okt 26  1985 ConnectionConfig.js
+-rw-r--r-- 1 olov olov 13831 okt 26  1985 Connection.js
+-rw-r--r-- 1 olov olov  6470 okt 26  1985 PoolCluster.js
+-rw-r--r-- 1 olov olov  1057 okt 26  1985 PoolConfig.js
+-rw-r--r-- 1 olov olov  1697 okt 26  1985 PoolConnection.js
+-rw-r--r-- 1 olov olov  7586 okt 26  1985 Pool.js
+-rw-r--r-- 1 olov olov  3220 okt 26  1985 PoolNamespace.js
+-rw-r--r-- 1 olov olov   588 okt 26  1985 PoolSelector.js
+drwxr-xr-x 5 olov olov  4096 aug 27 11:17 protocol
+./node_modules/mysql/lib/protocol
+totalt 76
+-rw-r--r-- 1 olov olov  4292 okt 26  1985 Auth.js
+-rw-r--r-- 1 olov olov   385 okt 26  1985 BufferList.js
+drwxr-xr-x 2 olov olov  4096 aug 27 11:17 constants
+-rw-r--r-- 1 olov olov   121 okt 26  1985 PacketHeader.js
+drwxr-xr-x 2 olov olov  4096 aug 27 11:17 packets
+-rw-r--r-- 1 olov olov  5372 okt 26  1985 PacketWriter.js
+-rw-r--r-- 1 olov olov 13406 okt 26  1985 Parser.js
+-rw-r--r-- 1 olov olov 11657 okt 26  1985 Protocol.js
+-rw-r--r-- 1 olov olov   233 okt 26  1985 ResultSet.js
+drwxr-xr-x 2 olov olov  4096 aug 27 11:17 sequences
+-rw-r--r-- 1 olov olov    39 okt 26  1985 SqlString.js
+-rw-r--r-- 1 olov olov   699 okt 26  1985 Timer.js
+./node_modules/mysql/lib/protocol/constants
+totalt 284
+-rw-r--r-- 1 olov olov  11398 okt 26  1985 charsets.js
+-rw-r--r-- 1 olov olov   1629 okt 26  1985 client.js
+-rw-r--r-- 1 olov olov 176038 okt 26  1985 errors.js
+-rw-r--r-- 1 olov olov   1066 okt 26  1985 field_flags.js
+-rw-r--r-- 1 olov olov   1449 okt 26  1985 server_status.js
+-rw-r--r-- 1 olov olov  82511 okt 26  1985 ssl_profiles.js
+-rw-r--r-- 1 olov olov   1763 okt 26  1985 types.js
+./node_modules/mysql/lib/protocol/sequences
+totalt 36
+-rw-r--r-- 1 olov olov 2071 okt 26  1985 ChangeUser.js
+-rw-r--r-- 1 olov olov 3723 okt 26  1985 Handshake.js
+-rw-r--r-- 1 olov olov  282 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov  434 okt 26  1985 Ping.js
+-rw-r--r-- 1 olov olov 5705 okt 26  1985 Query.js
+-rw-r--r-- 1 olov olov  861 okt 26  1985 Quit.js
+-rw-r--r-- 1 olov olov 3231 okt 26  1985 Sequence.js
+-rw-r--r-- 1 olov olov  727 okt 26  1985 Statistics.js
+./node_modules/mysql/lib/protocol/packets
+totalt 96
+-rw-r--r-- 1 olov olov  707 okt 26  1985 AuthSwitchRequestPacket.js
+-rw-r--r-- 1 olov olov  375 okt 26  1985 AuthSwitchResponsePacket.js
+-rw-r--r-- 1 olov olov 2080 okt 26  1985 ClientAuthenticationPacket.js
+-rw-r--r-- 1 olov olov  960 okt 26  1985 ComChangeUserPacket.js
+-rw-r--r-- 1 olov olov  289 okt 26  1985 ComPingPacket.js
+-rw-r--r-- 1 olov olov  405 okt 26  1985 ComQueryPacket.js
+-rw-r--r-- 1 olov olov  301 okt 26  1985 ComQuitPacket.js
+-rw-r--r-- 1 olov olov  313 okt 26  1985 ComStatisticsPacket.js
+-rw-r--r-- 1 olov olov  163 okt 26  1985 EmptyPacket.js
+-rw-r--r-- 1 olov olov  721 okt 26  1985 EofPacket.js
+-rw-r--r-- 1 olov olov 1007 okt 26  1985 ErrorPacket.js
+-rw-r--r-- 1 olov olov  649 okt 26  1985 Field.js
+-rw-r--r-- 1 olov olov 3264 okt 26  1985 FieldPacket.js
+-rw-r--r-- 1 olov olov 3958 okt 26  1985 HandshakeInitializationPacket.js
+-rw-r--r-- 1 olov olov 1360 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov  319 okt 26  1985 LocalDataFilePacket.js
+-rw-r--r-- 1 olov olov  609 okt 26  1985 LocalInfileRequestPacket.js
+-rw-r--r-- 1 olov olov 1414 okt 26  1985 OkPacket.js
+-rw-r--r-- 1 olov olov  367 okt 26  1985 OldPasswordPacket.js
+-rw-r--r-- 1 olov olov  381 okt 26  1985 ResultSetHeaderPacket.js
+-rw-r--r-- 1 olov olov 4088 okt 26  1985 RowDataPacket.js
+-rw-r--r-- 1 olov olov  983 okt 26  1985 SSLRequestPacket.js
+-rw-r--r-- 1 olov olov  544 okt 26  1985 StatisticsPacket.js
+-rw-r--r-- 1 olov olov  379 okt 26  1985 UseOldPasswordPacket.js
+./node_modules/negotiator
+totalt 28
+-rw-r--r-- 1 olov olov 2406 okt 26  1985 HISTORY.md
+-rw-r--r-- 1 olov olov 3344 okt 26  1985 index.js
+drwxr-xr-x 2 olov olov 4096 aug 27 11:17 lib
+-rw-r--r-- 1 olov olov 1177 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov 1011 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 4811 okt 26  1985 README.md
+./node_modules/negotiator/lib
+totalt 20
+-rw-r--r-- 1 olov olov 3081 okt 26  1985 charset.js
+-rw-r--r-- 1 olov olov 3506 okt 26  1985 encoding.js
+-rw-r--r-- 1 olov olov 3408 okt 26  1985 language.js
+-rw-r--r-- 1 olov olov 5358 okt 26  1985 mediaType.js
+./node_modules/ee-first
+totalt 16
+-rw-r--r-- 1 olov olov 1684 maj 25  2015 index.js
+-rw-r--r-- 1 olov olov 1099 aug 15  2014 LICENSE
+-rw-r--r-- 1 olov olov  859 maj 25  2015 package.json
+-rw-r--r-- 1 olov olov 2617 maj 25  2015 README.md
+./node_modules/content-type
+totalt 24
+-rw-r--r-- 1 olov olov  436 sep 11  2017 HISTORY.md
+-rw-r--r-- 1 olov olov 4809 sep 11  2017 index.js
+-rw-r--r-- 1 olov olov 1089 sep 11  2017 LICENSE
+-rw-r--r-- 1 olov olov 1070 sep 11  2017 package.json
+-rw-r--r-- 1 olov olov 2796 sep 11  2017 README.md
+./node_modules/bluebird
+totalt 20
+-rw-r--r-- 1 olov olov   87 okt 26  1985 changelog.md
+drwxr-xr-x 4 olov olov 4096 aug 27 11:17 js
+-rw-r--r-- 1 olov olov 1086 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov 2216 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 3058 okt 26  1985 README.md
+./node_modules/bluebird/js
+totalt 8
+drwxr-xr-x 2 olov olov 4096 aug 27 11:17 browser
+drwxr-xr-x 2 olov olov 4096 aug 27 11:17 release
+./node_modules/bluebird/js/browser
+totalt 444
+-rw-r--r-- 1 olov olov 123379 okt 26  1985 bluebird.core.js
+-rw-r--r-- 1 olov olov  57355 okt 26  1985 bluebird.core.min.js
+-rw-r--r-- 1 olov olov 183390 okt 26  1985 bluebird.js
+-rw-r--r-- 1 olov olov  81530 okt 26  1985 bluebird.min.js
+./node_modules/bluebird/js/release
+totalt 248
+-rw-r--r-- 1 olov olov   421 okt 26  1985 any.js
+-rw-r--r-- 1 olov olov  1653 okt 26  1985 assert.js
+-rw-r--r-- 1 olov olov  2876 okt 26  1985 async.js
+-rw-r--r-- 1 olov olov  1970 okt 26  1985 bind.js
+-rw-r--r-- 1 olov olov   291 okt 26  1985 bluebird.js
+-rw-r--r-- 1 olov olov  4355 okt 26  1985 call_get.js
+-rw-r--r-- 1 olov olov  3707 okt 26  1985 cancel.js
+-rw-r--r-- 1 olov olov  1426 okt 26  1985 catch_filter.js
+-rw-r--r-- 1 olov olov  2382 okt 26  1985 context.js
+-rw-r--r-- 1 olov olov 32170 okt 26  1985 debuggability.js
+-rw-r--r-- 1 olov olov  1395 okt 26  1985 direct_resolve.js
+-rw-r--r-- 1 olov olov   789 okt 26  1985 each.js
+-rw-r--r-- 1 olov olov  3717 okt 26  1985 errors.js
+-rw-r--r-- 1 olov olov  1978 okt 26  1985 es5.js
+-rw-r--r-- 1 olov olov   314 okt 26  1985 filter.js
+-rw-r--r-- 1 olov olov  4613 okt 26  1985 finally.js
+-rw-r--r-- 1 olov olov  7761 okt 26  1985 generators.js
+-rw-r--r-- 1 olov olov  8136 okt 26  1985 join.js
+-rw-r--r-- 1 olov olov  5602 okt 26  1985 map.js
+-rw-r--r-- 1 olov olov  1768 okt 26  1985 method.js
+-rw-r--r-- 1 olov olov  1560 okt 26  1985 nodeback.js
+-rw-r--r-- 1 olov olov  1647 okt 26  1985 nodeify.js
+-rw-r--r-- 1 olov olov  5252 okt 26  1985 promise_array.js
+-rw-r--r-- 1 olov olov 26986 okt 26  1985 promise.js
+-rw-r--r-- 1 olov olov 12182 okt 26  1985 promisify.js
+-rw-r--r-- 1 olov olov  3117 okt 26  1985 props.js
+-rw-r--r-- 1 olov olov  1873 okt 26  1985 queue.js
+-rw-r--r-- 1 olov olov  1250 okt 26  1985 race.js
+-rw-r--r-- 1 olov olov  5372 okt 26  1985 reduce.js
+-rw-r--r-- 1 olov olov  2148 okt 26  1985 schedule.js
+-rw-r--r-- 1 olov olov  1366 okt 26  1985 settle.js
+-rw-r--r-- 1 olov olov  3959 okt 26  1985 some.js
+-rw-r--r-- 1 olov olov  2813 okt 26  1985 synchronous_inspection.js
+-rw-r--r-- 1 olov olov  2131 okt 26  1985 thenables.js
+-rw-r--r-- 1 olov olov  2395 okt 26  1985 timers.js
+-rw-r--r-- 1 olov olov  7525 okt 26  1985 using.js
+-rw-r--r-- 1 olov olov 11379 okt 26  1985 util.js
+./node_modules/array-flatten
+totalt 16
+-rw-r--r-- 1 olov olov 1195 jul  9  2015 array-flatten.js
+-rw-r--r-- 1 olov olov 1103 mar 15  2014 LICENSE
+-rw-r--r-- 1 olov olov  879 jul  9  2015 package.json
+-rw-r--r-- 1 olov olov 1245 maj  9  2015 README.md
+./node_modules/accepts
+totalt 28
+-rw-r--r-- 1 olov olov 4972 okt 26  1985 HISTORY.md
+-rw-r--r-- 1 olov olov 5252 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov 1167 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov 1174 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 4081 okt 26  1985 README.md
+./node_modules/finalhandler
+totalt 24
+-rw-r--r-- 1 olov olov 4080 okt 26  1985 HISTORY.md
+-rw-r--r-- 1 olov olov 6518 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov 1119 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov 1314 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 4012 okt 26  1985 README.md
+./node_modules/serve-static
+totalt 36
+-rw-r--r-- 1 olov olov 10083 okt 26  1985 HISTORY.md
+-rw-r--r-- 1 olov olov  4570 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov  1189 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov  1269 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov  7783 okt 26  1985 README.md
+./node_modules/cookie
+totalt 28
+-rw-r--r-- 1 olov olov 2698 okt 26  1985 HISTORY.md
+-rw-r--r-- 1 olov olov 4037 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov 1175 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov 1139 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 8809 okt 26  1985 README.md
+./node_modules/encodeurl
+totalt 20
+-rw-r--r-- 1 olov olov  238 jan 22  2018 HISTORY.md
+-rw-r--r-- 1 olov olov 1586 jan 22  2018 index.js
+-rw-r--r-- 1 olov olov 1089 jan 22  2018 LICENSE
+-rw-r--r-- 1 olov olov 1091 jan 22  2018 package.json
+-rw-r--r-- 1 olov olov 3855 jan 22  2018 README.md
+./node_modules/sqlstring
+totalt 28
+-rw-r--r-- 1 olov olov  859 feb 25  2018 HISTORY.md
+-rw-r--r-- 1 olov olov   45 okt  2  2017 index.js
+drwxr-xr-x 2 olov olov 4096 aug 27 11:17 lib
+-rw-r--r-- 1 olov olov 1118 mar 31  2017 LICENSE
+-rw-r--r-- 1 olov olov 1188 feb 25  2018 package.json
+-rw-r--r-- 1 olov olov 7969 okt  2  2017 README.md
+./node_modules/sqlstring/lib
+totalt 8
+-rw-r--r-- 1 olov olov 5858 feb 25  2018 SqlString.js
+./node_modules/forwarded
+totalt 20
+-rw-r--r-- 1 olov olov  400 okt 26  1985 HISTORY.md
+-rw-r--r-- 1 olov olov 1578 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov 1094 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov 1150 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 1654 okt 26  1985 README.md
+./node_modules/toidentifier
+totalt 16
+-rw-r--r-- 1 olov olov  490 jul  2  2018 index.js
+-rw-r--r-- 1 olov olov 1108 jul  2  2018 LICENSE
+-rw-r--r-- 1 olov olov 1011 jul  9  2018 package.json
+-rw-r--r-- 1 olov olov 1718 jul  9  2018 README.md
+./node_modules/send
+totalt 64
+-rw-r--r-- 1 olov olov 12643 okt 26  1985 HISTORY.md
+-rw-r--r-- 1 olov olov 23287 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov  1128 okt 26  1985 LICENSE
+drwxr-xr-x 3 olov olov  4096 aug 27 11:17 node_modules
+-rw-r--r-- 1 olov olov  1673 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov  9442 okt 26  1985 README.md
+./node_modules/send/node_modules
+totalt 4
+drwxr-xr-x 2 olov olov 4096 aug 27 11:17 ms
+./node_modules/send/node_modules/ms
+totalt 16
+-rw-r--r-- 1 olov olov 3034 nov 30  2017 index.js
+-rw-r--r-- 1 olov olov 1077 nov 30  2017 license.md
+-rw-r--r-- 1 olov olov  705 nov 30  2017 package.json
+-rw-r--r-- 1 olov olov 2002 nov 30  2017 readme.md
+./node_modules/destroy
+totalt 16
+-rw-r--r-- 1 olov olov 1043 jan 13  2016 index.js
+-rw-r--r-- 1 olov olov 1099 aug 14  2014 LICENSE
+-rw-r--r-- 1 olov olov  870 jan 16  2016 package.json
+-rw-r--r-- 1 olov olov 2185 jan 13  2016 README.md
+./node_modules/string_decoder
+totalt 20
+drwxr-xr-x 2 olov olov 4096 aug 27 11:17 lib
+-rw-r--r-- 1 olov olov 2338 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov  795 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 1801 okt 26  1985 README.md
+-rw-r--r-- 1 olov olov  899 okt 26  1985 .travis.yml
+./node_modules/string_decoder/lib
+totalt 12
+-rw-r--r-- 1 olov olov 9465 okt 26  1985 string_decoder.js
+./node_modules/setprototypeof
+totalt 24
+-rw-r--r-- 1 olov olov   93 okt 26  1985 index.d.ts
+-rw-r--r-- 1 olov olov  384 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov  727 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov 1169 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov  850 okt 26  1985 README.md
+drwxr-xr-x 2 olov olov 4096 aug 27 11:17 test
+./node_modules/setprototypeof/test
+totalt 4
+-rw-r--r-- 1 olov olov 690 okt 26  1985 index.js
+./node_modules/etag
+totalt 24
+-rw-r--r-- 1 olov olov 1732 sep 13  2017 HISTORY.md
+-rw-r--r-- 1 olov olov 2479 sep 13  2017 index.js
+-rw-r--r-- 1 olov olov 1094 feb 19  2017 LICENSE
+-rw-r--r-- 1 olov olov 1306 sep 13  2017 package.json
+-rw-r--r-- 1 olov olov 4198 sep 13  2017 README.md
+./node_modules/util-deprecate
+totalt 24
+-rw-r--r-- 1 olov olov 1614 okt  7  2015 browser.js
+-rw-r--r-- 1 olov olov  282 okt  7  2015 History.md
+-rw-r--r-- 1 olov olov 1102 nov 25  2014 LICENSE
+-rw-r--r-- 1 olov olov  123 nov 25  2014 node.js
+-rw-r--r-- 1 olov olov  694 okt  7  2015 package.json
+-rw-r--r-- 1 olov olov 1666 nov 25  2014 README.md
+./node_modules/vary
+totalt 20
+-rw-r--r-- 1 olov olov  792 sep 24  2017 HISTORY.md
+-rw-r--r-- 1 olov olov 2930 sep 23  2017 index.js
+-rw-r--r-- 1 olov olov 1094 mar 20  2017 LICENSE
+-rw-r--r-- 1 olov olov 1215 sep 24  2017 package.json
+-rw-r--r-- 1 olov olov 2716 mar 20  2017 README.md
+./node_modules/mime
+totalt 68
+-rw-r--r-- 1 olov olov  9473 nov 25  2017 CHANGELOG.md
+-rwxr-xr-x 1 olov olov   149 nov 25  2017 cli.js
+-rw-r--r-- 1 olov olov  1098 nov 23  2017 LICENSE
+-rw-r--r-- 1 olov olov  2726 nov 25  2017 mime.js
+-rw-r--r-- 1 olov olov     0 nov 25  2017 .npmignore
+-rw-r--r-- 1 olov olov   933 nov 25  2017 package.json
+-rw-r--r-- 1 olov olov  2119 nov 25  2017 README.md
+drwxr-xr-x 2 olov olov  4096 aug 27 11:17 src
+-rw-r--r-- 1 olov olov 31555 nov 25  2017 types.json
+./node_modules/mime/src
+totalt 8
+-rwxr-xr-x 1 olov olov 1351 nov 25  2017 build.js
+-rw-r--r-- 1 olov olov 2334 nov 25  2017 test.js
+./node_modules/ms
+totalt 16
+-rw-r--r-- 1 olov olov 2764 maj 16  2017 index.js
+-rw-r--r-- 1 olov olov 1077 maj 16  2017 license.md
+-rw-r--r-- 1 olov olov  704 maj 16  2017 package.json
+-rw-r--r-- 1 olov olov 1721 maj 16  2017 readme.md
+./node_modules/depd
+totalt 40
+-rw-r--r-- 1 olov olov  2060 jan 12  2018 History.md
+-rw-r--r-- 1 olov olov 10669 jan 12  2018 index.js
+drwxr-xr-x 4 olov olov  4096 aug 27 11:17 lib
+-rw-r--r-- 1 olov olov  1094 jan 12  2018 LICENSE
+-rw-r--r-- 1 olov olov  1135 jan 12  2018 package.json
+-rw-r--r-- 1 olov olov 10025 jan 12  2018 Readme.md
+./node_modules/depd/lib
+totalt 8
+drwxr-xr-x 2 olov olov 4096 aug 27 11:17 browser
+drwxr-xr-x 2 olov olov 4096 aug 27 11:17 compat
+./node_modules/depd/lib/browser
+totalt 4
+-rw-r--r-- 1 olov olov 1512 jul 27  2017 index.js
+./node_modules/depd/lib/compat
+totalt 12
+-rw-r--r-- 1 olov olov 2229 jan 12  2018 callsite-tostring.js
+-rw-r--r-- 1 olov olov  338 jan 12  2018 event-listener-count.js
+-rw-r--r-- 1 olov olov 1421 jan 12  2018 index.js
+./node_modules/type-is
+totalt 32
+-rw-r--r-- 1 olov olov 5447 okt 26  1985 HISTORY.md
+-rw-r--r-- 1 olov olov 5562 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov 1172 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov 1133 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 5183 okt 26  1985 README.md
+./node_modules/ejs
+totalt 112
+-rw-r--r-- 1 olov olov 48484 nov 19  2019 ejs.js
+-rw-r--r-- 1 olov olov 23620 nov 19  2019 ejs.min.js
+-rw-r--r-- 1 olov olov  2033 nov 19  2019 jakefile.js
+drwxr-xr-x 2 olov olov  4096 aug 27 11:17 lib
+-rw-r--r-- 1 olov olov 11358 nov 19  2019 LICENSE
+-rw-r--r-- 1 olov olov   844 nov 19  2019 package.json
+-rwxr-xr-x 1 olov olov   544 nov 19  2019 postinstall.js
+-rw-r--r-- 1 olov olov  9683 nov 19  2019 README.md
+./node_modules/ejs/lib
+totalt 32
+-rwxr-xr-x 1 olov olov 28384 nov 19  2019 ejs.js
+-rw-r--r-- 1 olov olov  3863 nov 19  2019 utils.js
+./node_modules/.bin
+totalt 0
+lrwxrwxrwx 1 olov olov 14 aug 27 11:17 mime -> ../mime/cli.js
+./node_modules/methods
+totalt 20
+-rw-r--r-- 1 olov olov  427 jan 18  2016 HISTORY.md
+-rw-r--r-- 1 olov olov 1040 jan 18  2016 index.js
+-rw-r--r-- 1 olov olov 1180 jan 18  2016 LICENSE
+-rw-r--r-- 1 olov olov  947 jan 18  2016 package.json
+-rw-r--r-- 1 olov olov 1694 jan 18  2016 README.md
+./node_modules/raw-body
+totalt 36
+-rw-r--r-- 1 olov olov 5354 okt 26  1985 HISTORY.md
+-rw-r--r-- 1 olov olov 2286 okt 26  1985 index.d.ts
+-rw-r--r-- 1 olov olov 6059 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov 1181 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov 1473 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 6339 okt 26  1985 README.md
+./node_modules/promise-mysql
+totalt 28
+-rwxr-xr-x 1 olov olov 2221 okt 26  1985 index.d.ts
+-rwxr-xr-x 1 olov olov  397 okt 26  1985 index.js
+drwxr-xr-x 2 olov olov 4096 aug 27 11:17 lib
+-rwxr-xr-x 1 olov olov 1083 okt 26  1985 LICENSE
+-rwxr-xr-x 1 olov olov  940 okt 26  1985 package.json
+-rwxr-xr-x 1 olov olov 6457 okt 26  1985 README.md
+./node_modules/promise-mysql/lib
+totalt 16
+-rwxr-xr-x 1 olov olov 3804 okt 26  1985 connection.js
+-rwxr-xr-x 1 olov olov  515 okt 26  1985 helper.js
+-rwxr-xr-x 1 olov olov  513 okt 26  1985 poolConnection.js
+-rwxr-xr-x 1 olov olov 1242 okt 26  1985 pool.js
+./node_modules/on-finished
+totalt 24
+-rw-r--r-- 1 olov olov 1694 maj 27  2015 HISTORY.md
+-rw-r--r-- 1 olov olov 3686 maj 26  2015 index.js
+-rw-r--r-- 1 olov olov 1167 aug 16  2014 LICENSE
+-rw-r--r-- 1 olov olov  878 maj 27  2015 package.json
+-rw-r--r-- 1 olov olov 4886 maj 26  2015 README.md
+./node_modules/bytes
+totalt 20
+-rw-r--r-- 1 olov olov 1581 okt 26  1985 History.md
+-rw-r--r-- 1 olov olov 3469 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov 1153 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov  904 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 3890 okt 26  1985 Readme.md
+./node_modules/process-nextick-args
+totalt 16
+-rw-r--r-- 1 olov olov 1083 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov 1064 okt 26  1985 license.md
+-rw-r--r-- 1 olov olov  578 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov  450 okt 26  1985 readme.md
+./node_modules/utils-merge
+totalt 20
+-rw-r--r-- 1 olov olov  381 sep 20  2017 index.js
+-rw-r--r-- 1 olov olov 1084 sep 20  2017 LICENSE
+-rw-r--r-- 1 olov olov   79 sep 20  2017 .npmignore
+-rw-r--r-- 1 olov olov  857 sep 20  2017 package.json
+-rw-r--r-- 1 olov olov 1319 sep 20  2017 README.md
+./node_modules/bignumber.js
+totalt 328
+-rw-r--r-- 1 olov olov 67076 okt 26  1985 bignumber.d.ts
+-rw-r--r-- 1 olov olov 89253 okt 26  1985 bignumber.js
+-rw-r--r-- 1 olov olov 18598 okt 26  1985 bignumber.min.js
+-rw-r--r-- 1 olov olov 35516 okt 26  1985 bignumber.min.js.map
+-rw-r--r-- 1 olov olov 84325 okt 26  1985 bignumber.mjs
+-rw-r--r-- 1 olov olov  7851 okt 26  1985 CHANGELOG.md
+drwxr-xr-x 2 olov olov  4096 aug 27 11:17 doc
+-rw-r--r-- 1 olov olov  1104 okt 26  1985 LICENCE
+-rw-r--r-- 1 olov olov   885 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 10289 okt 26  1985 README.md
+./node_modules/bignumber.js/doc
+totalt 88
+-rw-r--r-- 1 olov olov 86676 okt 26  1985 API.html
+./node_modules/http-errors
+totalt 28
+-rw-r--r-- 1 olov olov 3145 okt 26  1985 HISTORY.md
+-rw-r--r-- 1 olov olov 5878 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov 1168 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov 1341 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 5554 okt 26  1985 README.md
+./node_modules/ipaddr.js
+totalt 36
+-rw-r--r-- 1 olov olov 9738 okt 26  1985 ipaddr.min.js
+drwxr-xr-x 2 olov olov 4096 aug 27 11:17 lib
+-rw-r--r-- 1 olov olov 1087 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov  719 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 8309 okt 26  1985 README.md
+./node_modules/ipaddr.js/lib
+totalt 24
+-rw-r--r-- 1 olov olov 19333 okt 26  1985 ipaddr.js
+-rw-r--r-- 1 olov olov  2959 okt 26  1985 ipaddr.js.d.ts
+./node_modules/escape-html
+totalt 16
+-rw-r--r-- 1 olov olov 1362 sep  1  2015 index.js
+-rw-r--r-- 1 olov olov 1157 sep  1  2015 LICENSE
+-rw-r--r-- 1 olov olov  434 sep  1  2015 package.json
+-rw-r--r-- 1 olov olov  707 sep  1  2015 Readme.md
+./node_modules/safe-buffer
+totalt 44
+-rw-r--r-- 1 olov olov  8738 okt 26  1985 index.d.ts
+-rw-r--r-- 1 olov olov  1529 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov  1081 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov   783 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 19555 okt 26  1985 README.md
+./node_modules/express
+totalt 132
+-rw-r--r-- 1 olov olov 109589 okt 26  1985 History.md
+-rw-r--r-- 1 olov olov    224 okt 26  1985 index.js
+drwxr-xr-x 4 olov olov   4096 aug 27 11:17 lib
+-rw-r--r-- 1 olov olov   1249 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov   2793 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov   4607 okt 26  1985 Readme.md
+./node_modules/express/lib
+totalt 84
+-rw-r--r-- 1 olov olov 14270 okt 26  1985 application.js
+-rw-r--r-- 1 olov olov  2409 okt 26  1985 express.js
+drwxr-xr-x 2 olov olov  4096 aug 27 11:17 middleware
+-rw-r--r-- 1 olov olov 12504 okt 26  1985 request.js
+-rw-r--r-- 1 olov olov 27124 okt 26  1985 response.js
+drwxr-xr-x 2 olov olov  4096 aug 27 11:17 router
+-rw-r--r-- 1 olov olov  5972 okt 26  1985 utils.js
+-rw-r--r-- 1 olov olov  3326 okt 26  1985 view.js
+./node_modules/express/lib/middleware
+totalt 8
+-rw-r--r-- 1 olov olov 853 okt 26  1985 init.js
+-rw-r--r-- 1 olov olov 885 okt 26  1985 query.js
+./node_modules/express/lib/router
+totalt 28
+-rw-r--r-- 1 olov olov 14883 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov  3296 okt 26  1985 layer.js
+-rw-r--r-- 1 olov olov  4149 okt 26  1985 route.js
+./node_modules/range-parser
+totalt 20
+-rw-r--r-- 1 olov olov  917 okt 26  1985 HISTORY.md
+-rw-r--r-- 1 olov olov 2900 okt 26  1985 index.js
+-rw-r--r-- 1 olov olov 1178 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov 1184 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 2278 okt 26  1985 README.md
+./node_modules/safer-buffer
+totalt 60
+-rw-r--r-- 1 olov olov  1483 okt 26  1985 dangerous.js
+-rw-r--r-- 1 olov olov  1094 okt 26  1985 LICENSE
+-rw-r--r-- 1 olov olov   822 okt 26  1985 package.json
+-rw-r--r-- 1 olov olov 12794 okt 26  1985 Porting-Buffer.md
+-rw-r--r-- 1 olov olov  8261 okt 26  1985 Readme.md
+-rw-r--r-- 1 olov olov  2110 okt 26  1985 safer.js
+-rw-r--r-- 1 olov olov 15735 okt 26  1985 tests.js
+./config
+totalt 4
+drwxr-xr-x 2 olov olov 4096 aug 27 10:04 db
+./config/db
+totalt 4
+-rw-r--r-- 1 olov olov 104 aug 27 10:04 exam.json

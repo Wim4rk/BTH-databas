@@ -1,0 +1,30 @@
+<%- include("header", {title: title}); %>
+
+<h1>Förbjudna</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titel</th>
+            <th>Författare</th>
+            <th>Hylla</th>
+            <th>Återlämnas</th>
+            <th>Klassificering</th>
+        </tr>
+    </thead>
+    <tbody>
+<% for (const row of books) { %>
+    <tr>
+        <td><%= row.bok %></td>
+        <td><%= row.titel %></td>
+        <td><%= row.forfattare %></td>
+        <td><%= row.hylla %></td>
+        <td><%= row.utlanad %></td>
+        <td><%= row.forbjuden %></td>
+    </tr>
+<% }; %>
+    </tbody>
+</table>
+
+<%- include("footer"); %>
