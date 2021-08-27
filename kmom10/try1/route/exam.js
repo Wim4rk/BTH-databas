@@ -11,7 +11,6 @@ const sitename   = "| Kennelklubben";
 module.exports = router;
 
 router.get("/", (req, res) => {
-    console.log("Inside /index route")
     let data = {
         title: `Welcome ${sitename}`
     };
