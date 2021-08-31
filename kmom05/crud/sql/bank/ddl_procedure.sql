@@ -3,6 +3,8 @@
 -- functions and triggers.
 --
 
+USE banken;
+
 --
 -- Setup
 --
@@ -71,7 +73,7 @@ END
 ;;
 DELIMITER ;
 
-CALL show_account("1111");
+-- CALL show_account("1111");
 
 
 --

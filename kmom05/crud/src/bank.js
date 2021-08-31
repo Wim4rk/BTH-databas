@@ -65,6 +65,9 @@ async function showAccount(id) {
  * @returns {void}
  */
 async function createAccount(id, name, balance) {
+    if (name.length > 8) {
+        console.info("Name is too long.")
+    }
     let sql = `CALL create_account(?, ?, ?);`;
     let res;
 

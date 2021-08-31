@@ -15,12 +15,12 @@
     </tr>
 <% for (const row of res) { %>
     <tr>
-        <td><a href="/bank/account/<%= row.id %>"><%= row.id %></a></td>
+        <td><a href="/account/<%= row.id %>"><%= row.id %></a></td>
         <td><%= row.name %></td>
         <td class="right"><%= row.balance %></td>
         <td>
-            <a href="/bank/edit/<%= row.id %>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-            <a href="/bank/delete/<%= row.id %>"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+            <a href="/edit/<%= row.id %>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+            <a href="/delete/<%= row.id %>"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
         </td>
     </tr>
 <% }; %>

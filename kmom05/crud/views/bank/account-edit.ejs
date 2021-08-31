@@ -2,12 +2,12 @@
 
 <h1>Edit account details</h1>
 
-<p>This is details for account <%= account %>.</p>
+<p>These are the details for account <%= account %>.</p>
 
-<pre><%#= JSON.stringify(res, null, 4) %></pre>
+<pre><%= JSON.stringify(res, null, 4) %></pre>
 
 <% res = res[0] %>
-<form class="label-left" method="post" action="/bank/edit">
+<form class="label-left" method="post" action="/edit">
     <fieldset>
         <legend>Edit account</legend>
 

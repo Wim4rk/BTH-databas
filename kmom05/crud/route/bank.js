@@ -12,7 +12,7 @@ const sitename   = "| The Bank";
 
 module.exports = router;
 
-router.get("/index", (req, res) => {
+router.get("/", (req, res) => {
     let data = {
         title: `Welcome ${sitename}`
     };
@@ -38,11 +38,13 @@ router.get("/create", (req, res) => {
     res.render("bank/create", data);
 });
 
+
 router.post("/create", urlencodedParser, async (req, res) => {
-    // console.log(JSON.stringify(req.body, null, 4));
+    console.log(JSON.stringify(req.body, null, 4));
     await bank.createAccount(req.body.id, req.body.name, req.body.balance);
-    res.redirect("/bank/balance");
+    res.redirect("/balance");
 });
+
 
 router.get("/account/:id", async (req, res) => {
     let id = req.params.id;
@@ -71,7 +73,7 @@ router.get("/edit/:id", async (req, res) => {
 router.post("/edit", urlencodedParser, async (req, res) => {
     //console.log(JSON.stringify(req.body, null, 4));
     await bank.editAccount(req.body.id, req.body.name, req.body.balance);
-    res.redirect(`/bank/edit/${req.body.id}`);
+    res.redirect(`/edit/${req.body.id}`);
 });
 
 router.get("/delete/:id", async (req, res) => {
@@ -87,7 +89,7 @@ router.get("/delete/:id", async (req, res) => {
 });
 
 router.post("/delete", urlencodedParser, async (req, res) => {
-    //console.log(JSON.stringify(req.body, null, 4));
+    console.log(JSON.stringify(req.body, null, 4));
     await bank.deleteAccount(req.body.id);
-    res.redirect(`/bank/balance`);
+    res.redirect(`/balance`);
 });
