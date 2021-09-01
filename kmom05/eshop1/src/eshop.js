@@ -4,7 +4,8 @@
 "use strict";
 
 module.exports = {
-    categories: getCategories
+    categories: getCategories,
+    products: getProducts
 };
 
 const mysql = require("promise-mysql");
@@ -32,6 +33,20 @@ async function getCategories() {
     res = await db.query(sql);
 
     console.info (`SQL: ${sql} got ${res[0].length} rows`);
+    console.info (res);
+
+    return res[0];
+}
+
+
+async function getProducts() {
+    let sql = `CALL get_products();`;
+    let res;
+
+    res = await db.query(sql);
+
+    console.info (`SQL: ${sql} got ${res[0].length} rows`);
+    console.info (res);
 
     return res[0];
 }

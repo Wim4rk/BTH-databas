@@ -27,22 +27,6 @@ IGNORE 2 LINES
 SELECT * FROM lager;
 
 --
--- Insert into produktkategori.
---
-LOAD DATA LOCAL INFILE 'produktkategori.csv'
-INTO TABLE produktkategori
-CHARSET utf8
-FIELDS
-    TERMINATED BY ','
-    ENCLOSED BY '"'
-LINES
-    TERMINATED BY '\n'
-IGNORE 2 LINES
-;
-
-SELECT * FROM produktkategori;
-
---
 -- Insert into kategori.
 --
 LOAD DATA LOCAL INFILE 'kategori.csv'
@@ -86,10 +70,28 @@ FIELDS
 LINES
     TERMINATED BY '\n'
 IGNORE 2 LINES
-(id, benamning, beskrivning, pris, inkopskostnad, leverantor, lev_prod_nr)
+(id, benamning, beskrivning, pris, antal, inkopskostnad, leverantor, lev_prod_nr)
 ;
 
 SELECT * FROM produkt;
+
+
+--
+-- Insert into produktkategori.
+--
+LOAD DATA LOCAL INFILE 'produktkategori.csv'
+INTO TABLE produktkategori
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 2 LINES
+(produkt, kategori)
+;
+
+SELECT * FROM produktkategori;
 
 
 --

@@ -14,7 +14,12 @@
     <tbody>
 <% for (const row of kategorier) { %>
     <tr>
-        <td><%= row.namn %></td>
+        <% if (row.super != '') { %>
+            <td><%= row.super %> &gt; <%= row.namn %></td>
+        <% }else{ %>
+
+            <td><%= row.namn %></td>
+        <% } %>
     </tr>
 <% }; %>
     </tbody>

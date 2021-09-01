@@ -41,6 +41,7 @@ CREATE TABLE produkt
     benamning CHAR(20) NOT NULL,
     beskrivning TEXT,
     pris DOUBLE(6, 2),
+    antal INT,
     inkopskostnad DOUBLE(6, 2),
     leverantor VARCHAR(20),
     lev_prod_nr VARCHAR(20)
@@ -64,8 +65,8 @@ CREATE TABLE kategori
 -- Skapa tabeller med sekundärnycklar
 CREATE TABLE produktkategori
 (
-    produkt INT,
-    kategori INT,
+    produkt INT NOT NULL,
+    kategori INT NOT NULL,
     PRIMARY KEY (produkt, kategori),
     FOREIGN KEY (produkt) REFERENCES produkt(id),
     FOREIGN KEY (kategori) REFERENCES kategori(id)

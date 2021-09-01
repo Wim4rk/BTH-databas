@@ -28,7 +28,23 @@ END
 DROP PROCEDURE IF EXISTS get_categories;;
 CREATE PROCEDURE get_categories()
 BEGIN
-    SELECT namn FROM kategori ORDER BY namn;
+    SELECT namn, super FROM kategori ORDER BY super, namn;
+END
+;;
+
+DROP PROCEDURE IF EXISTS get_products;;
+CREATE PROCEDURE get_products()
+BEGIN
+    SELECT
+        p.*,
+        GROUP_CONCAT(k.namn) AS 'kategori'
+    FROM produkt AS p
+        JOIN produktkategori AS pk
+            ON p.id = pk.produkt
+        JOIN kategori AS k
+            ON k.id = pk.kategori
+    GROUP BY
+        p.id;
 END
 ;;
 

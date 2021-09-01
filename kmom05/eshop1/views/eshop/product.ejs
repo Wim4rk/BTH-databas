@@ -1,0 +1,30 @@
+<%- include("header", {title: title}); %>
+
+<h1>Produkter</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Benämning</th>
+            <th>Beskrivning</th>
+            <th>Pris</th>
+            <th>I lager</th>
+            <th>Kategorier</th>
+        </tr>
+    </thead>
+    <tbody>
+<% for (const row of produkter) { %>
+    <tr>
+        <td><%= row.id %></td>
+        <td><%= row.benamning %></td>
+        <td><%= row.beskrivning %></td>
+        <td><%= row.pris %></td>
+        <td><%= row.antal %></td>
+        <td><%= row.kategori %></td>
+    </tr>
+<% }; %>
+    </tbody>
+</table>
+
+<%- include("footer"); %>

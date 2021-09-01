@@ -1,7 +1,7 @@
-produkt,,,,,,
-id,benamning,beskrivning,pris,inkopskostnad,levereantor,lev_prod_nr
-1,87 BDL Chassi,Chassi för tangentbord med 87 tangenter,799,"399,5",Wim4rk milling,Azerty
-2,Tactile Switch,"Zealios 65g, den bästa moderna switch vi hittat.","12,5","6,25",Zealios MD,Zeal_65
-3,Silentz,"Tyst, vadderad switch. Underbar på jobbet, men en smula svampig i bottentrycket.","9,75","4,875",Cherry MX,red_silent
-4,Clicky switch,"Otrolig feedback, otroligt störande","13,2","6,6",Box ltd,white_bar
-5,Standard linear,"Lätt, intetsägande och lite skrapig.","9,75","4,875",Cherry MX,red_linear
+produkt,,,,,,,
+id,benamning,beskrivning,pris,antal,inkopskostnad,levereantor,lev_prod_nr
+1,87 BDL Chassi,Chassi för tangentbord med 87 tangenter,799,8,"399,5",Wim4rk milling,Azerty
+2,Tactile Switch,"Zealios 65g, den bästa moderna switch vi hittat.","12,5",20000,"6,25",Zealios MD,Zeal_65
+3,Silentz,"Tyst, vadderad switch. Underbar på jobbet, men en smula svampig i bottentrycket.","9,75",13000,"4,875",Cherry MX,red_silent
+4,Clicky switch,"Otrolig feedback, otroligt störande","13,2",12000,"6,6",Box ltd,white_bar
+5,Standard linear,"Lätt, intetsägande och lite skrapig.","9,75",12000,"4,875",Cherry MX,red_linear

@@ -19,12 +19,23 @@ router.get("/", (req, res) => {
 });
 
 
-router.get("/kategorier", async (req, res) => {
+router.get("/category", async (req, res) => {
     let data = {
         title: `Kategorier ${sitename}`
     };
 
     data.kategorier = await eshop.categories();
 
-    res.render("eshop/kategorier", data);
+    res.render("eshop/category", data);
+});
+
+
+router.get("/product", async (req, res) => {
+    let data = {
+        title: `Produkter ${sitename}`
+    };
+
+    data.produkter = await eshop.products();
+
+    res.render("eshop/product", data);
 });
