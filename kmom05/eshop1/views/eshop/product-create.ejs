@@ -1,0 +1,25 @@
+<%- include("header", {title: title}); %>
+
+<h1>Skapa ny produkt</h1>
+
+<form class="label-left" method="post">
+    <fieldset>
+        <legend>Ny Produkt</legend>
+
+        <label for="namn">Benämning</label>
+        <input id="namn" type="text" name="namn">
+
+        <label for="beskrivning">Beskrivning</label>
+        <input id="beskrivning" type="text" name="beskrivning">
+
+        <label for="pris">Pris</label>
+        <input id="pris" type="text" name="pris">
+
+        <label for="stock">Lagerantal</label>
+        <input id="stock" type="number" name="stock">
+
+        <input type="submit" name="create" value="Lägg till">
+    </fieldset>
+</form>
+
+<%- include("footer"); %>

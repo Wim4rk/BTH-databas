@@ -50,3 +50,13 @@ async function getProducts() {
 
     return res[0];
 }
+
+
+async function createProduct(namn, beskrivning, pris, antal) {
+    let sql = `CALL create_product(?, ?, ?, ?);`;
+    let res;
+
+    res = await db.query(sql, [namn, beskrivning, pris, antal]);
+    console.log(res);
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
+}

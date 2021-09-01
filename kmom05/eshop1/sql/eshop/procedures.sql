@@ -48,4 +48,20 @@ BEGIN
 END
 ;;
 
+--
+-- Create procedure for insert into account
+--
+DROP PROCEDURE IF EXISTS create_account;
+CREATE PROCEDURE create_product(
+    a_benamning CHAR(20),
+    a_beskrivning TEXT,
+    a_pris DOUBLE(6, 2),
+    a_antal INT
+)
+BEGIN
+    INSERT INTO produkt
+        VALUES (a_benamning, a_beskrivning, a_pris, a_antal);
+END
+;;
+
 DELIMITER ;
