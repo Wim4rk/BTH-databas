@@ -1,0 +1,23 @@
+<%- include("header", {title: title}); %>
+
+<h1>Kategorier</h1>
+
+<p>Du kan välja varor bland dessa kategorier.</p>
+
+<table>
+    <thead>
+        <tr>
+
+            <th>Kategori</th>
+        </tr>
+    </thead>
+    <tbody>
+<% for (const row of kategorier) { %>
+    <tr>
+        <td><%= row.namn %></td>
+    </tr>
+<% }; %>
+    </tbody>
+</table>
+
+<%- include("footer"); %>

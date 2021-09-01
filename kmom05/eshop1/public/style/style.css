@@ -1,0 +1,59 @@
+@import "table.css";
+
+body {
+    margin: 1em auto;
+    color: #1a0d00;
+    background: #ffc;
+    max-width: 900px;
+    font-size: 16px;
+    line-height: 1.6em;
+}
+
+article {
+    max-width: 60em;
+}
+
+ul {
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+h2 {
+    border-bottom: 1px solid #313030;
+    margin-top: 2em;
+}
+
+figure {
+    float: right;
+    width: 20em;
+    padding: 1em;
+    background-color: #ccc;
+    overflow: auto;
+}
+
+img {
+    width: 100%;
+}
+
+code,
+kbd,
+samp,
+var {
+    display: inline;
+    font-family: "Courier New", Courier, monospace;
+    font-style: normal;
+    color: #000;
+    background: #efefef;
+    border: 1px solid #777;
+    border-radius: 0.3em;
+    padding: 0.2em;
+}
+
+code {
+    display: block;
+    white-space: pre-wrap;
+}

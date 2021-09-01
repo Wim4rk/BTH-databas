@@ -13,8 +13,12 @@ file="ddl.sql"
 printf "\n>>> Setup tables (%s)\n" $file
 mysql -uroot -p"$passvar" webshop < $file > /dev/null
 
+file="procedures.sql"
+printf "\n>>> Set up procedures (%s)\n" $file
+mysql -uroot -p"$passvar" webshop < $file > /dev/null
+
 file="triggers.sql"
-printf "\n>>> Create triggers and functions (%s)\n" $file
+printf "\n>>> Create triggers (%s)\n" $file
 mysql -uroot -p"$passvar" webshop < $file > /dev/null
 
 file="insert.sql"
