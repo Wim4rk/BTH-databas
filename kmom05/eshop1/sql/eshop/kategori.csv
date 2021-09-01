@@ -1,0 +1,15 @@
+kategori,,
+id,benamning,superkategori
+1,switch,
+2,chassi,
+3,tangenter,
+4,storlek,tangenter
+5,material,tangenter
+6,taktil,switch
+7,linjär,switch
+8,clicky,switch
+9,87 tangenter,chassi
+10,Komplett,storlek
+11,65 tangenter,storlek
+12,ABS,material
+13,PBT,material

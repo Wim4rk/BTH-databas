@@ -4,6 +4,7 @@ SET NAMES `utf8`;
 SET default_storage_engine=InnoDB;
 --
 -- Töm databasen i omvänd ordning
+DROP TABLE IF EXISTS produkt_log;
 DROP TABLE IF EXISTS kund_logg;
 DROP TABLE IF EXISTS db_logg;
 DROP TABLE IF EXISTS bild;
@@ -19,6 +20,8 @@ DROP TABLE IF EXISTS kategori;
 DROP TABLE IF EXISTS hylla;
 DROP TABLE IF EXISTS produkt;
 DROP TABLE IF EXISTS kund;
+
+DROP TABLE IF EXISTS produkt_log;
 --
 -- Skapa tabeller utan sekundärnycklar
 CREATE TABLE kund
@@ -46,7 +49,7 @@ CREATE TABLE produkt
 CREATE TABLE hylla
 (
     id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    lokal VARCHAR(20),
+    lokal VARCHAR(20) NOT NULL,
     hylla VARCHAR(8),
     antal INT
 );
@@ -156,25 +159,34 @@ CREATE TABLE bild
 );
 --
 -- Loggar
-CREATE TABLE db_logg
-(
-    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    faktura INT,
-    kundorder INT,
-    kund INT,
-    fakturastatus VARCHAR(12),
-    orderstatus VARCHAR(12),
-    tidpunkt TIMESTAMP,
-    FOREIGN KEY (faktura) REFERENCES faktura(id),
-    FOREIGN KEY (kundorder) REFERENCES kundorder(id),
-    FOREIGN KEY (kund) REFERENCES kund(kundnummer)
-);
+-- CREATE TABLE db_logg
+-- (
+--     id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+--     faktura INT,
+--     kundorder INT,
+--     kund INT,
+--     fakturastatus VARCHAR(12),
+--     orderstatus VARCHAR(12),
+--     tidpunkt TIMESTAMP,
+--     FOREIGN KEY (faktura) REFERENCES faktura(id),
+--     FOREIGN KEY (kundorder) REFERENCES kundorder(id),
+--     FOREIGN KEY (kund) REFERENCES kund(kundnummer)
+-- );
+--
+-- CREATE TABLE kund_logg
+-- (
+--     id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+--     kund INT,
+--     status VARCHAR(8),
+--     tidpunkt TIMESTAMP,
+--     FOREIGN KEY (kund) REFERENCES kund(kundnummer)
+-- );
 
-CREATE TABLE kund_logg
+
+-- Above to be used later
+CREATE TABLE produkt_log
 (
     id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    kund INT,
-    status VARCHAR(8),
-    tidpunkt TIMESTAMP,
-    FOREIGN KEY (kund) REFERENCES kund(kundnummer)
-);
+    tidpunkt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    handelse TINYTEXT
+)
