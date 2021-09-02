@@ -90,9 +90,9 @@ router.get("/update/:id", async (req, res) => {
 });
 
 
-router.post("/update/:id", urlencodedParser, async (req, res) => {
-    console.log(JSON.stringify(req.body, null, 4));
-    let v_id = req.params.f_id
+router.post("/update", urlencodedParser, async (req, res) => {
+    // console.log(JSON.stringify(req.body, null, 4));
+    let v_id = req.params.f_id;
     await eshop.updateProduct(
         v_id,
         req.body.namn,
@@ -102,3 +102,22 @@ router.post("/update/:id", urlencodedParser, async (req, res) => {
     );
     res.redirect(`/product`);
 });
+
+
+router.get("/delete/:id", async (req, res) => {
+    // console.log(JSON.stringify(req.body, null, 4));
+    let v_id = req.params.id;
+    let data = {
+        title: "Radera"
+    };
+    data.produkt = await eshop.product(v_id);
+
+    res.render("eshop/product-delete", data)
+});
+
+router.post("/delete", urlencodedParser, async (req, res) => {
+    let v_id = req.params.f_id;
+    await eshop.deleteProduct(v_id);
+
+    res.redirect('/product');
+})

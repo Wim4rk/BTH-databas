@@ -1,26 +1,38 @@
 <%- include("header", {title: title}); %>
 
-<h1>Delete account</h1>
+<h1>Ta bort produkt</h1>
 
-<p>This is details for account <%= account %>.</p>
+<pre><%= JSON.stringify(produkt, null, 4) %></pre>
 
-<pre><%#= JSON.stringify(res, null, 4) %></pre>
+<% produkt = produkt[0] %>
 
-<% res = res[0] %>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Benämning</th>
+            <th>Beskrivning</th>
+            <th>Pris</th>
+            <th>I lager</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td><%= produkt.id %></td>
+        <td><%- produkt.link %></td>
+        <td><%= produkt.beskrivning %></td>
+        <td><%= produkt.pris %></td>
+        <td><%= produkt.antal %></td>
+        <td><a href="/update/<%= produkt.id %>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+    </tr>
+    </tbody>
+</table>
 <form class="label-left" method="post" action="/delete">
     <fieldset>
-        <legend>Delete account</legend>
-
-        <label for="id">Id</label>
-        <input id="id" type="text" name="id" readonly value="<%= res.id %>">
-
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name" readonly value="<%= res.name %>">
-
-        <label for="balance">Balance</label>
-        <input id="balance" type="number" name="balance" readonly value="<%= res.balance %>">
-
-        <input type="submit" name="doit" value="Delete account">
+        <input type="hidden" id="f_id" name="f_id" value="<%= produkt.id %>">
+        <input type="submit" name="create" value="Delete">
     </fieldset>
 </form>
 

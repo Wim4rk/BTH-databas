@@ -98,7 +98,7 @@ CREATE PROCEDURE update_product(
     a_antal INT
 )
 BEGIN
-    UPDATE product SET
+    UPDATE produkt SET
         `benamning` = a_benamning,
         `beskrivning` = a_beskrivning,
         `pris` = a_pris,
@@ -117,7 +117,7 @@ CREATE PROCEDURE delete_product(
     a_id INT
 )
 BEGIN
-    DELETE FROM product
+    DELETE FROM produkt
         WHERE
         `id` = a_id;
 END

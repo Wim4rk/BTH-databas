@@ -8,7 +8,8 @@ module.exports = {
     product: getOneProduct,
     products: getProducts,
     newProduct: createProduct,
-    updateProduct: updateProduct
+    updateProduct: updateProduct,
+    deleteProduct: deleteProduct
 };
 
 const mysql = require("promise-mysql");
@@ -82,4 +83,9 @@ async function updateProduct(id, namn, beskrivning, pris, antal) {
     let res;
 
     res = await db.query(sql, [id, namn, beskrivning, pris, antal]);
+}
+
+async function deleteProduct(id) {
+    let sql = `CALL delete_product(?);`;
+    let res = await db.query(sql, [id]);
 }
