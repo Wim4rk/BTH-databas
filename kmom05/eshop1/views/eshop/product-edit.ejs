@@ -1,26 +1,34 @@
 <%- include("header", {title: title}); %>
 
-<h1>Edit account details</h1>
+<h1>Uppdatera produkt</h1>
 
-<p>These are the details for account <%= account %>.</p>
+<pre><%= JSON.stringify(produkt[0], null, 4) %></pre>
 
-<pre><%= JSON.stringify(res, null, 4) %></pre>
+<pre><%= produkt[0].id %></pre>
 
-<% res = res[0] %>
-<form class="label-left" method="post" action="/edit">
+<form class="label-left" method="post" action="/update/<%= produkt[0].id %>">
     <fieldset>
-        <legend>Edit account</legend>
-
-        <label for="id">Id</label>
-        <input id="id" type="text" name="id" readonly value="<%= res.id %>">
-
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name" value="<%= res.name %>">
-
-        <label for="balance">Balance</label>
-        <input id="balance" type="number" name="balance" value="<%= res.balance %>">
-
-        <input type="submit" name="doit" value="Edit">
+        <legend>Redigera produkt</legend>
+        <p>
+            <input type="hidden" id="f_id" name="f_id" value="<%= produkt.id %>">
+            <label for="namn">Benämning</label>
+            <input id="namn" type="text" name="namn" value="<%= produkt[0].benamning %>">
+        </p>
+        <p>
+            <label for="beskrivning">Beskrivning</label>
+            <input id="beskrivning" type="text" name="beskrivning" value="<%= produkt[0].beskrivning %>">
+        </p>
+        <p>
+            <label for="pris">Pris</label>
+            <input id="pris" type="text" name="pris" value="<%= produkt[0].pris %>">
+        </p>
+        <p>
+            <label for="stock">Lagerantal</label>
+            <input id="stock" type="number" name="stock" value="<%= produkt[0].antal %>">
+        </p>
+        <p>
+            <input type="submit" name="create" value="Uppdatera">
+        </p>
     </fieldset>
 </form>
 

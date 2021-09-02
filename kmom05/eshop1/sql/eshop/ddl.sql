@@ -38,7 +38,7 @@ CREATE TABLE kund
 CREATE TABLE produkt
 (
     id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    benamning CHAR(20) NOT NULL,
+    benamning VARCHAR(20) NOT NULL,
     beskrivning TEXT,
     pris DOUBLE(6, 2),
     antal INT,

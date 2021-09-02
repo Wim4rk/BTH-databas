@@ -7,7 +7,8 @@ module.exports = {
     categories: getCategories,
     product: getOneProduct,
     products: getProducts,
-    newProduct: createProduct
+    newProduct: createProduct,
+    updateProduct: updateProduct
 };
 
 const mysql = require("promise-mysql");
@@ -47,8 +48,8 @@ async function getProducts() {
 
     res = await db.query(sql);
 
-    console.info (`SQL: ${sql} got ${res[0].length} rows`);
-    console.info (res);
+    // console.info (`SQL: ${sql} got ${res[0].length} rows`);
+    // console.info (res);
 
     return res[0];
 }
@@ -61,7 +62,7 @@ async function getOneProduct(a_id) {
     res = await db.query(sql, [a_id]);
 
     console.info (`SQL: ${sql} got ${res[0].length} rows`);
-    console.info (res);
+    console.info (res[0]);
 
     return res[0];
 }
@@ -74,4 +75,11 @@ async function createProduct(namn, beskrivning, pris, antal) {
     res = await db.query(sql, [namn, beskrivning, pris, antal]);
     // console.log(res);
     // console.info(`SQL: ${sql} got ${res.length} rows.`);
+}
+
+async function updateProduct(id, namn, beskrivning, pris, antal) {
+    let sql = `CALL update_product(?, ?, ?, ?, ?);`;
+    let res;
+
+    res = await db.query(sql, [id, namn, beskrivning, pris, antal]);
 }

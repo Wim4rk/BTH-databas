@@ -10,6 +10,8 @@
             <th>Beskrivning</th>
             <th>Pris</th>
             <th>I lager</th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -20,6 +22,8 @@
         <td><%= row.beskrivning %></td>
         <td><%= row.pris %></td>
         <td><%= row.antal %></td>
+        <td><a href="/update/<%= row.id %>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+        <td><a href="/delete/<%= row.id %>"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
     </tr>
 <% }; %>
     </tbody>

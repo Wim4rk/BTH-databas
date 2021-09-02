@@ -72,9 +72,9 @@ END
 --
 -- Create procedure for insert into account
 --
-DROP PROCEDURE IF EXISTS create_product;
+DROP PROCEDURE IF EXISTS create_product;;
 CREATE PROCEDURE create_product(
-    a_benamning CHAR(20),
+    a_benamning VARCHAR(20),
     a_beskrivning TEXT,
     a_pris DOUBLE(6, 2),
     a_antal INT
@@ -82,6 +82,44 @@ CREATE PROCEDURE create_product(
 BEGIN
     INSERT INTO produkt (benamning, beskrivning, pris,  antal)
         VALUES (a_benamning, a_beskrivning, a_pris, a_antal);
+END
+;;
+
+--
+-- Create procedure to edit product
+--
+DROP PROCEDURE IF EXISTS update_product;;
+
+CREATE PROCEDURE update_product(
+    a_id INT,
+    a_benamning VARCHAR(20),
+    a_beskrivning TEXT,
+    a_pris DOUBLE(6, 2),
+    a_antal INT
+)
+BEGIN
+    UPDATE product SET
+        `benamning` = a_benamning,
+        `beskrivning` = a_beskrivning,
+        `pris` = a_pris,
+        `antal` = a_antal
+    WHERE
+        `id` = a_id;
+END
+;;
+
+--
+-- Create procedure to delete product
+--
+DROP PROCEDURE IF EXISTS delete_product;;
+
+CREATE PROCEDURE delete_product(
+    a_id INT
+)
+BEGIN
+    DELETE FROM product
+        WHERE
+        `id` = a_id;
 END
 ;;
 
