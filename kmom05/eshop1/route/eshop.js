@@ -33,14 +33,30 @@ router.get("/category", async (req, res) => {
 
 
 router.get("/product", async (req, res) => {
+    console.log("Lambs amongst the lions");
     let data = {
         title: `Produkter ${sitename}`
     };
 
     data.produkter = await eshop.products();
 
+    console.log(data);
+
     res.render("eshop/product", data);
 });
+
+
+router.get("/product/:id", async (req, res) => {
+    let id = req.params.id;
+    let data = {
+        title: `Prod ${id} ${sitename}`,
+    };
+
+    data.produkter = await eshop.product(id);
+
+    res.render("eshop/product", data);
+});
+
 
 router.get("/create", (req, res) => {
     let data = {
@@ -59,15 +75,4 @@ router.post("/create", urlencodedParser, async (req, res) => {
         req.body.stock
     );
     res.redirect(`/product`);
-});
-
-router.get("/product/:id", async (req, res) => {
-    let id = req.params.id;
-    let data = {
-        title: `Prod ${id} ${sitename}`,
-    };
-
-    data.res = await bank.showProduct(id);
-
-    res.render("eshop/product-view", data);
 });

@@ -5,6 +5,7 @@
 
 module.exports = {
     categories: getCategories,
+    product: getOneProduct,
     products: getProducts,
     newProduct: createProduct
 };
@@ -33,8 +34,8 @@ async function getCategories() {
 
     res = await db.query(sql);
 
-    console.info (`SQL: ${sql} got ${res[0].length} rows`);
-    console.info (res);
+    // console.info (`SQL: ${sql} got ${res[0].length} rows`);
+    // console.info (res);
 
     return res[0];
 }
@@ -53,11 +54,24 @@ async function getProducts() {
 }
 
 
+async function getOneProduct(a_id) {
+    let sql = `CALL get_product(?);`;
+    let res;
+
+    res = await db.query(sql, [a_id]);
+
+    console.info (`SQL: ${sql} got ${res[0].length} rows`);
+    console.info (res);
+
+    return res[0];
+}
+
+
 async function createProduct(namn, beskrivning, pris, antal) {
     let sql = `CALL create_product(?, ?, ?, ?);`;
     let res;
 
     res = await db.query(sql, [namn, beskrivning, pris, antal]);
-    console.log(res);
-    console.info(`SQL: ${sql} got ${res.length} rows.`);
+    // console.log(res);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
 }

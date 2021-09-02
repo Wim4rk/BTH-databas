@@ -32,11 +32,32 @@ BEGIN
 END
 ;;
 
+DROP PROCEDURE IF EXISTS get_product;;
+CREATE PROCEDURE get_product(
+    a_id INT
+)
+BEGIN
+    SELECT
+        p.*,
+        p.benamning AS 'link',
+        GROUP_CONCAT(k.namn) AS 'kategori'
+    FROM produkt AS p
+        JOIN produktkategori AS pk
+            ON p.id = pk.produkt
+        LEFT OUTER JOIN kategori AS k
+            ON k.id = pk.kategori
+    WHERE p.id = a_id
+    GROUP BY
+        p.id;
+END
+;;
+
 DROP PROCEDURE IF EXISTS get_products;;
 CREATE PROCEDURE get_products()
 BEGIN
     SELECT
         p.*,
+        CONCAT('<a href="product/', p.id, '">', p.benamning, '</a>') AS 'link',
         GROUP_CONCAT(k.namn) AS 'kategori'
     FROM produkt AS p
         JOIN produktkategori AS pk
