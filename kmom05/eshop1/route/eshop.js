@@ -52,11 +52,11 @@ router.get("/create", (req, res) => {
 
 router.post("/create", urlencodedParser, async (req, res) => {
     console.log(JSON.stringify(req.body, null, 4));
-    await eshop.createProduct(
-        req.body.benamning,
+    await eshop.newProduct(
+        req.body.namn,
         req.body.beskrivning,
         req.body.pris,
-        req.body.antal
+        req.body.stock
     );
     res.redirect(`/product`);
 });

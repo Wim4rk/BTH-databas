@@ -41,7 +41,7 @@ BEGIN
     FROM produkt AS p
         JOIN produktkategori AS pk
             ON p.id = pk.produkt
-        JOIN kategori AS k
+        LEFT OUTER JOIN kategori AS k
             ON k.id = pk.kategori
     GROUP BY
         p.id;
@@ -51,7 +51,7 @@ END
 --
 -- Create procedure for insert into account
 --
-DROP PROCEDURE IF EXISTS create_account;
+DROP PROCEDURE IF EXISTS create_product;
 CREATE PROCEDURE create_product(
     a_benamning CHAR(20),
     a_beskrivning TEXT,
@@ -59,7 +59,7 @@ CREATE PROCEDURE create_product(
     a_antal INT
 )
 BEGIN
-    INSERT INTO produkt
+    INSERT INTO produkt (benamning, beskrivning, pris,  antal)
         VALUES (a_benamning, a_beskrivning, a_pris, a_antal);
 END
 ;;

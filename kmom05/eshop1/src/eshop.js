@@ -5,7 +5,8 @@
 
 module.exports = {
     categories: getCategories,
-    products: getProducts
+    products: getProducts,
+    newProduct: createProduct
 };
 
 const mysql = require("promise-mysql");

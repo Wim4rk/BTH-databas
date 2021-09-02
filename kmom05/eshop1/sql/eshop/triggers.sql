@@ -26,4 +26,13 @@ ON produkt FOR EACH ROW
         VALUES(verbose('radering', OLD.id))
 ;;
 
+DROP TRIGGER IF EXISTS prod_kat;;
+
+CREATE TRIGGER prod_kat
+AFTER INSERT
+ON produkt FOR EACH ROW
+    INSERT INTO produktkategori (produkt, kategori)
+        VALUES(NEW.id, 14);
+;;
+
 DELIMITER ;
