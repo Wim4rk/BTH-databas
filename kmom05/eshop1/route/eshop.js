@@ -33,7 +33,6 @@ router.get("/category", async (req, res) => {
 
 
 router.get("/product", async (req, res) => {
-    console.log("Lambs amongst the lions");
     let data = {
         title: `Produkter ${sitename}`
     };
@@ -78,23 +77,25 @@ router.post("/create", urlencodedParser, async (req, res) => {
 });
 
 router.get("/update/:id", async (req, res) => {
-    // console.log(JSON.stringify(req.body, null, 4));
-    let v_id = req.params.id;
+    console.log(JSON.stringify(req.body, null, 4));
+    let vid = req.params.id;
     let data = {
         title: "Redigera"
     };
-    data.produkt = await eshop.product(v_id);
-    console.log(data.produkt)
 
-    res.render("eshop/product-edit", data)
+    data.produkt = await eshop.product(vid);
+    console.log("Data - produkt ", data.produkt);
+
+    res.render("eshop/product-edit", data);
 });
 
 
 router.post("/update", urlencodedParser, async (req, res) => {
     // console.log(JSON.stringify(req.body, null, 4));
-    let v_id = req.params.f_id;
+    let vid = req.body.f_id;
+
     await eshop.updateProduct(
-        v_id,
+        vid,
         req.body.namn,
         req.body.beskrivning,
         req.body.pris,
@@ -105,19 +106,22 @@ router.post("/update", urlencodedParser, async (req, res) => {
 
 
 router.get("/delete/:id", async (req, res) => {
-    // console.log(JSON.stringify(req.body, null, 4));
-    let v_id = req.params.id;
+    console.log(JSON.stringify(req.body, null, 4));
+    let vid = req.params.id;
     let data = {
         title: "Radera"
     };
-    data.produkt = await eshop.product(v_id);
 
-    res.render("eshop/product-delete", data)
+    data.produkt = await eshop.product(vid);
+
+    res.render("eshop/product-delete", data);
 });
 
 router.post("/delete", urlencodedParser, async (req, res) => {
-    let v_id = req.params.f_id;
-    await eshop.deleteProduct(v_id);
+    let vId = req.body.f_id;
+
+    console.log(req.body);
+    await eshop.deleteProduct(vId);
 
     res.redirect('/product');
-})
+});

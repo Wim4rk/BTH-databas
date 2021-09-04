@@ -10,7 +10,7 @@
     <fieldset>
         <legend>Redigera produkt</legend>
         <p>
-            <input type="hidden" id="f_id" name="f_id" value="<%= produkt.id %>">
+            <input type="hidden" id="f_id" name="f_id" value="<%= produkt[0].id %>">
             <label for="namn">Benämning</label>
             <input id="namn" type="text" name="namn" value="<%= produkt[0].benamning %>">
         </p>
@@ -27,7 +27,7 @@
             <input id="stock" type="number" name="stock" value="<%= produkt[0].antal %>">
         </p>
         <p>
-            <input type="submit" name="create" value="Uppdatera">
+            <input type="submit" name="update" value="Uppdatera">
         </p>
     </fieldset>
 </form>

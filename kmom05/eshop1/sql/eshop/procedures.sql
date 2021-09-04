@@ -99,12 +99,12 @@ CREATE PROCEDURE update_product(
 )
 BEGIN
     UPDATE produkt SET
-        `benamning` = a_benamning,
-        `beskrivning` = a_beskrivning,
-        `pris` = a_pris,
-        `antal` = a_antal
+        benamning = a_benamning,
+        beskrivning = a_beskrivning,
+        pris = a_pris,
+        antal = a_antal
     WHERE
-        `id` = a_id;
+        id = a_id;
 END
 ;;
 
@@ -117,6 +117,9 @@ CREATE PROCEDURE delete_product(
     a_id INT
 )
 BEGIN
+    DELETE FROM produktkategori
+        WHERE
+        `produkt` = a_id;
     DELETE FROM produkt
         WHERE
         `id` = a_id;

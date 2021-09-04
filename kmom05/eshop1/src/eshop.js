@@ -56,11 +56,11 @@ async function getProducts() {
 }
 
 
-async function getOneProduct(a_id) {
+async function getOneProduct(vid) {
     let sql = `CALL get_product(?);`;
     let res;
 
-    res = await db.query(sql, [a_id]);
+    res = await db.query(sql, [vid]);
 
     console.info (`SQL: ${sql} got ${res[0].length} rows`);
     console.info (res[0]);
@@ -74,8 +74,9 @@ async function createProduct(namn, beskrivning, pris, antal) {
     let res;
 
     res = await db.query(sql, [namn, beskrivning, pris, antal]);
-    // console.log(res);
+    console.log(res);
     // console.info(`SQL: ${sql} got ${res.length} rows.`);
+    return res;
 }
 
 async function updateProduct(id, namn, beskrivning, pris, antal) {
@@ -83,9 +84,12 @@ async function updateProduct(id, namn, beskrivning, pris, antal) {
     let res;
 
     res = await db.query(sql, [id, namn, beskrivning, pris, antal]);
+    return res;
 }
 
 async function deleteProduct(id) {
     let sql = `CALL delete_product(?);`;
     let res = await db.query(sql, [id]);
+
+    return res;
 }

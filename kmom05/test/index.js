@@ -10,10 +10,7 @@ const middleware = require("./middleware/index.js");
 
 app.set("view engine", "ejs");
 
-app.use(function logIncomingToConsole(req, res, next) {
-    console.info(`Got request on ${req.path} (${req.method}).`);
-    next();
-});
+app.use(middleware.logIncomingToConsole);
 
 app.use(express.static(path.join(__dirname, "public")));
 app.get("/", function (req, res) {
