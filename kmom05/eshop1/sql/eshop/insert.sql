@@ -11,22 +11,6 @@ DELETE FROM kund;
 DELETE FROM produkt_log;
 
 --
--- Insert into lager.
---
-LOAD DATA LOCAL INFILE 'lager.csv'
-INTO TABLE lager
-CHARSET utf8
-FIELDS
-    TERMINATED BY ','
-    ENCLOSED BY '"'
-LINES
-    TERMINATED BY '\n'
-IGNORE 2 LINES
-;
-
-SELECT * FROM lager;
-
---
 -- Insert into kategori.
 --
 LOAD DATA LOCAL INFILE 'kategori.csv'
@@ -40,7 +24,7 @@ LINES
 IGNORE 2 LINES
 ;
 
-SELECT * FROM kategori;
+-- SELECT * FROM kategori;
 
 --
 -- Insert hylla
@@ -50,13 +34,12 @@ INTO TABLE hylla
 CHARSET utf8
 FIELDS
     TERMINATED BY ','
-    ENCLOSED BY '"'
 LINES
     TERMINATED BY '\n'
 IGNORE 2 LINES
 ;
 
-SELECT * FROM hylla;
+-- SELECT * FROM hylla;
 
 --
 -- Insert into produkt.
@@ -73,7 +56,24 @@ IGNORE 2 LINES
 (id, benamning, beskrivning, pris, antal, inkopskostnad, leverantor, lev_prod_nr)
 ;
 
-SELECT * FROM produkt;
+-- SELECT * FROM produkt;
+
+--
+-- Insert into lager.
+--
+LOAD DATA LOCAL INFILE 'lager.csv'
+INTO TABLE lager
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 2 LINES
+(hylla, produkt, antal)
+;
+
+-- SELECT * FROM lager;
 
 
 --
@@ -91,7 +91,7 @@ IGNORE 2 LINES
 (produkt, kategori)
 ;
 
-SELECT * FROM produktkategori;
+-- SELECT * FROM produktkategori;
 
 
 --
@@ -109,4 +109,4 @@ IGNORE 2 LINES
 (kundnummer, namn, address, postaddress, epost, telefon, kod)
 ;
 
-SELECT * FROM kund;
+-- SELECT * FROM kund;

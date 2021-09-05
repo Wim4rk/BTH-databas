@@ -126,4 +126,85 @@ BEGIN
 END
 ;;
 
+--
+-- Create procedure to read from log
+--
+DROP PROCEDURE IF EXISTS show_log;;
+
+CREATE PROCEDURE show_log(
+    v_rows INT
+)
+BEGIN
+    SELECT * FROM produkt_log
+        ORDER BY `tidpunkt` DESC
+        LIMIT v_rows;
+END
+;;
+
+
+--
+-- Create procedure that shows shelves
+--
+DROP PROCEDURE IF EXISTS show_shelves;;
+
+CREATE PROCEDURE show_shelves()
+BEGIN
+    SELECT DISTINCT lokal, hylla, hyllplan FROM hylla;
+END
+;;
+
+--
+-- Create procedures to search inventory
+--
+DROP PROCEDURE IF EXISTS inventory;;
+
+CREATE PROCEDURE inventory()
+BEGIN
+    SELECT * FROM v_lagerstatus;
+END
+;;
+
+DROP PROCEDURE IF EXISTS inventory_search;;
+
+CREATE PROCEDURE inventory_search(
+    s_term VARCHAR(20)
+)
+BEGIN
+    SELECT * FROM v_lagerstatus
+        WHERE id LIKE CONCAT("%", s_term, "%")
+        OR namn LIKE CONCAT("%", s_term, "%")
+        OR hylla LIKE CONCAT("%", s_term, "%")
+    ;
+END
+;;
+
+
+DROP PROCEDURE IF EXISTS add_inventory;;
+
+CREATE PROCEDURE add_inventory(
+    prod INT,
+    shelf INT,
+    num INT
+)
+BEGIN
+    INSERT INTO lager
+        (hylla, produkt, antal)
+    VALUES (shelf, prod, num);
+END
+;;
+
+DROP PROCEDURE IF EXISTS del_inventory;;
+
+CREATE PROCEDURE del_inventory(
+    prod INT,
+    shelf INT,
+    num INT
+)
+BEGIN
+    UPDATE `lager`
+        SET `antal` = `antal` - num
+    WHERE `antal` > 0 AND `produkt` = prod AND `hylla` = shelf;
+END
+;;
+
 DELIMITER ;

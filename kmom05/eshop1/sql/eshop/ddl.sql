@@ -52,6 +52,7 @@ CREATE TABLE hylla
     id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     lokal VARCHAR(20) NOT NULL,
     hylla VARCHAR(8),
+    hyllplan char(4),
     antal INT
 );
 
@@ -78,6 +79,7 @@ CREATE TABLE lager
     id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     hylla INT,
     produkt INT,
+    antal INT,
     FOREIGN KEY (hylla) REFERENCES hylla(id),
     FOREIGN KEY (produkt) REFERENCES produkt(id)
 );
@@ -190,4 +192,24 @@ CREATE TABLE produkt_log
     id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     tidpunkt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     handelse TINYTEXT
-)
+);
+
+--
+-- Create view to help with stock
+--
+
+DROP VIEW IF EXISTS v_lagerstatus;
+
+CREATE VIEW v_lagerstatus
+AS
+SELECT
+    p.id,
+    p.benamning as `namn`,
+    CONCAT(h.hylla, " ", h.hyllplan) AS `hylla`,
+    l.antal
+FROM produkt AS p
+    JOIN lager AS l
+        ON p.id = l.produkt
+    LEFT OUTER JOIN hylla as h
+        ON l.hylla = h.id
+    GROUP BY p.id;

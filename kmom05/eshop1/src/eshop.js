@@ -9,7 +9,12 @@ module.exports = {
     products: getProducts,
     newProduct: createProduct,
     updateProduct: updateProduct,
-    deleteProduct: deleteProduct
+    deleteProduct: deleteProduct,
+    showLog: showLog,
+    showShelves: showShelves,
+    showInventory: showInventory,
+    addInventory: addInventory,
+    delInventory: delInventory
 };
 
 const mysql = require("promise-mysql");
@@ -90,6 +95,52 @@ async function updateProduct(id, namn, beskrivning, pris, antal) {
 async function deleteProduct(id) {
     let sql = `CALL delete_product(?);`;
     let res = await db.query(sql, [id]);
+
+    return res;
+}
+
+async function showLog(rows) {
+    // Check data type for rows (== integer)
+    let sql = `CALL show_log(?)`;
+    let res = await db.query(sql, [rows]);
+
+    return res;
+}
+
+async function showShelves() {
+    let sql = `CALL show_shelves()`;
+    let res = await db.query(sql);
+
+    return res;
+}
+
+async function showInventory(s_term) {
+    s_term = s_term || false;
+
+    let sql;
+    let res;
+
+    if (s_term) {
+        sql = `CALL inventory_search(?)`;
+        res = await db.query(sql, [s_term]);
+    } else {
+        sql = `CALL inventory()`;
+        res = await db.query(sql);
+    }
+
+    return res;
+}
+
+async function addInventory(prod, shelf, num) {
+    let sql = `CALL add_inventory(?,?,?)`;
+    let res = await db.query(sql, [prod, shelf, num]);
+
+    return res;
+}
+
+async function delInventory(prod, shelf, num) {
+    let sql = `CALL del_inventory(?,?,?)`;
+    let res = await db.query(sql, [prod, shelf, num]);
 
     return res;
 }
